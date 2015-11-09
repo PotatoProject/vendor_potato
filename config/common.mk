@@ -125,6 +125,16 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.disable_rescue=true
 
+# exFAT
+WITH_EXFAT ?= true
+ifeq ($(WITH_EXFAT),true)
+TARGET_USES_EXFAT := true
+PRODUCT_PACKAGES += \
+    mount.exfat \
+    fsck.exfat \
+    mkfs.exfat
+endif
+
 # Markup libs
 PRODUCT_COPY_FILES += \
     vendor/potato/prebuilt/common/lib/libsketchology_native.so:system/lib/libsketchology_native.so \
