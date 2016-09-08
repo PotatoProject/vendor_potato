@@ -88,16 +88,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.potato.date=$(shell date -u +%Y%m%d)
 
 # LatinIME gesture typing
-ifneq ($(filter tenderloin,$(TARGET_PRODUCT)),)
-ifneq ($(filter shamu,$(TARGET_PRODUCT)),)
-PRODUCT_COPY_FILES += \
-    vendor/potato/prebuilt/common/lib/libjni_latinime.so:system/lib/libjni_latinime.so \
-    vendor/potato/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
-else
+ifeq ($(TARGET_ARCH),arm64)
 PRODUCT_COPY_FILES += \
     vendor/potato/prebuilt/common/lib64/libjni_latinime.so:system/lib64/libjni_latinime.so \
     vendor/potato/prebuilt/common/lib64/libjni_latinimegoogle.so:system/lib64/libjni_latinimegoogle.so
-endif
+else
+PRODUCT_COPY_FILES += \
+    vendor/potato/prebuilt/common/lib/libjni_latinime.so:system/lib/libjni_latinime.so \
+    vendor/potato/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
 endif
 
 # Fix Google dialer
