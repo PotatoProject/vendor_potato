@@ -14,6 +14,13 @@ PRODUCT_COPY_FILES += \
     vendor/potato/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
     vendor/potato/prebuilt/common/bin/50-base.sh:system/addon.d/50-base.sh \
 
+ifeq ($(AB_OTA_UPDATER),true)
+PRODUCT_COPY_FILES += \
+    vendor/potato/prebuilt/common/bin/backuptool_ab.sh:system/bin/backuptool_ab.sh \
+    vendor/potato/prebuilt/common/bin/backuptool_ab.functions:system/bin/backuptool_ab.functions \
+    vendor/potato/prebuilt/common/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
+endif
+
 # Bootanimation
 PRODUCT_COPY_FILES += \
     vendor/potato/prebuilt/common/media/bootanimation.zip:system/media/bootanimation.zip \
