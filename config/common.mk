@@ -69,6 +69,9 @@ PRODUCT_COPY_FILES += \
     vendor/potato/prebuilt/common/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml:system/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml
 endif
 
+# Disable vendor restrictions
+PRODUCT_RESTRICT_VENDOR_FILES := false
+
 # POSP Common
 PRODUCT_COPY_FILES += \
     vendor/potato/prebuilt/common/etc/permissions/privapp-permissions-potato.xml:system/etc/permissions/privapp-permissions-potato.xml
