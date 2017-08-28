@@ -153,6 +153,9 @@ ADDITIONAL_FONTS_FILE := vendor/potato/prebuilt/common/fonts/google-sans.xml
 PRODUCT_PACKAGE_OVERLAYS += vendor/potato/overlay/common
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/potato/overlay/common
 
+# Pixel sounds
+include vendor/potato/config/sounds.mk
+
 # Packages
 include vendor/potato/config/packages.mk
 
