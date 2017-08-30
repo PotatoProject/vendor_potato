@@ -11,4 +11,8 @@
          Blank sends the user to the Chooser first.
          This name is in the ComponentName flattened format (package/class)  -->
     <string name="config_screenshotEditor" translatable="false">com.google.android.markup/com.google.android.markup.AnnotateActivity</string>
+
+    <!-- Doze: does this device support STATE_DOZE and STATE_DOZE_SUSPEND?  -->
+    <bool name="doze_display_state_supported">true</bool>
+
 </resources>
