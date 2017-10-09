@@ -46,6 +46,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.wfd.virtual=0 \
     ro.build.selinux=1 \
     ro.boot.vendor.overlay.theme=com.potato.overlay.accent.purple;com.potato.overlay.base.stockfixed;com.potato.overlay.lawnconf;com.potato.overlay.shape.circle \
+    persist.sys.disable_rescue=true \
     ro.opa.eligible_device=true
 
 # LatinIME gesture typing
