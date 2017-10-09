@@ -36,5 +36,9 @@ PRODUCT_COPY_FILES += \
 endif
 endif
 
+# Fix Google dialer
+PRODUCT_COPY_FILES += \
+    vendor/potato/prebuilt/common/etc/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml
+
 # Packages
 include vendor/potato/config/packages.mk
