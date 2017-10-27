@@ -17,7 +17,7 @@
 package com.potato.support.preference;
 
 import android.content.Context;
-import android.preference.SwitchPreference;
+import android.support.v14.preference.SwitchPreference;
 import android.provider.Settings;
 import android.util.AttributeSet;
 
@@ -65,10 +65,5 @@ public class SystemSettingSwitchPreference extends SwitchPreference {
         // Using getString instead of getInt so we can simply check for null
         // instead of catching an exception. (All values are stored as strings.)
         return Settings.System.getString(getContext().getContentResolver(), getKey()) != null;
-    }
-
-    @Override
-    protected void onClick() {
-        // Do nothing
     }
 }
