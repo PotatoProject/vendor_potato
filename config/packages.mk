@@ -58,3 +58,11 @@ PRODUCT_PACKAGES += \
     Turbo \
     vendor/potato/prebuilt/common/etc/permissions/privapp-permissions-turbo.xml:system/etc/permissions/privapp-permissions-turbo.xml \
     vendor/potato/prebuilt/common/etc/sysconfig/turbo.xml:system/etc/sysconfig/turbo.xml
+
+# Substratum
+PRODUCT_PACKAGES += \
+    SubstratumHelperService \
+    substratum-sysconfig.xml
+
+PRODUCT_SYSTEM_SERVER_APPS += \
+    SubstratumHelperService
