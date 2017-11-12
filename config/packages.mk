@@ -102,3 +102,11 @@ PRODUCT_PACKAGES += \
 # Weather
 PRODUCT_PACKAGES += \
     WeatherClient
+
+# Substratum
+PRODUCT_PACKAGES += \
+    SubstratumHelperService \
+    substratum-sysconfig.xml
+
+PRODUCT_SYSTEM_SERVER_APPS += \
+    SubstratumHelperService
