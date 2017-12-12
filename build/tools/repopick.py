@@ -123,7 +123,7 @@ def fetch_query(remote_url, query):
 
 if __name__ == '__main__':
     # Default to POSP Gerrit
-    default_gerrit = 'http://potato-gerrit.del.dog'
+    default_gerrit = 'https://potato-gerrit.del.dog'
 
     parser = argparse.ArgumentParser(formatter_class=argparse.RawDescriptionHelpFormatter, description=textwrap.dedent('''\
         repopick.py is a utility to simplify the process of cherry picking
