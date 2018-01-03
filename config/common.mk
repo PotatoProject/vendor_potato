@@ -90,6 +90,10 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/potato/prebuilt/common/etc/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml
 
+# Clean up packages cache to avoid wrong strings and resources
+PRODUCT_COPY_FILES += \
+    vendor/potato/prebuilt/common/bin/clean_cache.sh:system/bin/clean_cache.sh
+
 # Overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/potato/overlay/common
 
