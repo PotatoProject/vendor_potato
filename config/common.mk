@@ -121,3 +121,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Disable Rescue Party
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.disable_rescue=true
+
+# Charger
+PRODUCT_PACKAGES += \
+    charger_res_images
