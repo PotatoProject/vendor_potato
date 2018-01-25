@@ -24,4 +24,5 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     SettingsDarkThemeOverlay \
     SystemDarkThemeOverlay \
-    SysuiQsDarkThemeOverlay
+    SysuiQsDarkThemeOverlay \
+    GBoardDarkTheme
