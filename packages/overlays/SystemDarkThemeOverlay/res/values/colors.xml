@@ -9,4 +9,6 @@
     <!-- Resolver -->
     <color name="resolver_list_bg">@*android:color/background_material_dark</color>
 
+    <color name="autofill_save_title_color">@android:color/black</color>
+    <color name="autofill_autofill_save_custom_subtitle_color">@android:color/black</color>
 </resources>
