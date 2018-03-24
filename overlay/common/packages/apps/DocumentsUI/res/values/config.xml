@@ -16,4 +16,5 @@
 
 <resources>
     <bool name="show_documents_root">true</bool>
+    <bool name="config_default_show_device_root">true</bool>
 </resources>
