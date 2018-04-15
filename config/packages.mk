@@ -1,0 +1,2 @@
+PRODUCT_PACKAGES += \
+    Lawnchair
