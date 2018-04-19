@@ -40,5 +40,8 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/potato/prebuilt/common/etc/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml
 
+# Overlays
+PRODUCT_PACKAGE_OVERLAYS += vendor/potato/overlay/common
+
 # Packages
 include vendor/potato/config/packages.mk
