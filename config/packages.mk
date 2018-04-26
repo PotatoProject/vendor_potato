@@ -12,3 +12,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     org.dirtyunicorns.utils
 
+PRODUCT_PACKAGES += \
+    PixelTheme \
+    StockTheme \
+    PixelBaseTheme \
+    StockBaseTheme

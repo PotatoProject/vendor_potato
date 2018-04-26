@@ -7,5 +7,5 @@
     <overlay android:priority="1" android:targetPackage="android" />
 
     <application android:hasCode="false"
-                 android:label="PixelBase" />
+                 android:label="Pixel" />
 </manifest>
