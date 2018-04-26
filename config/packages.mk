@@ -12,8 +12,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     org.dirtyunicorns.utils
 
+# Accent and Base packages
 PRODUCT_PACKAGES += \
     PixelTheme \
     StockTheme \
     PixelBaseTheme \
     StockBaseTheme
+
+# DarkUI Packages
+PRODUCT_PACKAGES += \
+    SettingsDarkThemeOverlay \
+    SystemDarkThemesOverlay
