@@ -22,4 +22,5 @@ PRODUCT_PACKAGES += \
 # DarkUI Packages
 PRODUCT_PACKAGES += \
     SettingsDarkThemeOverlay \
-    SystemDarkThemeOverlay
+    SystemDarkThemeOverlay \
+    SysuiQsDarkThemeOverlay
