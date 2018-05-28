@@ -21,10 +21,12 @@ PRODUCT_PACKAGES += \
     StockBaseTheme \
     StockBaseFixedTheme
 
-# DarkUI Packages
+# Dark/BlackUI Packages
 PRODUCT_PACKAGES += \
     SettingsDarkThemeOverlay \
     SystemDarkThemeOverlay \
     SystemSettingsIconTintOverlay \
     SysuiQsDarkThemeOverlay \
-    GBoardDarkTheme
+    GBoardDarkTheme \
+    SettingsBlackThemeOverlay \
+    SystemBlackThemeOverlay
