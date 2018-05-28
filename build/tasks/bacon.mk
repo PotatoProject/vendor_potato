@@ -16,9 +16,6 @@
 # -----------------------------------------------------------------
 # Potato OTA update package
 
-POTATO_VERSION := $(TARGET_DEVICE)-$(PLATFORM_VERSION)-$(shell date +%Y%m%d).$(USER)
-POTATO_TARGET_PACKAGE := $(PRODUCT_OUT)/potato-$(POTATO_VERSION).zip
-
 .PHONY: bacon
 bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(POTATO_TARGET_PACKAGE)

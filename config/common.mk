@@ -23,6 +23,32 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.wfd.virtual=0 \
     ro.build.selinux=1
 
+POTATO_DISH := Aligot
+POTATO_VERNUM := 1.0
+POTATO_VERSION := $(TARGET_PRODUCT)-$(PLATFORM_VERSION)-$(shell date -u +%Y%m%d)
+CURRENT_DEVICE := $(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
+LIST := $(shell cat vendor/potato/potato.devices)
+ifndef BUILD_TYPE
+    BUILD_TYPE := COMMUNITY
+endif
+
+ifndef BUILD_STATE
+    BUILD_STATE := UNKNOWN
+endif
+
+ifeq ($(filter $(CURRENT_DEVICE), $(LIST)), $(CURRENT_DEVICE))
+    ifeq ($(filter-out OFFICIAL WEEKLY, $(BUILD_TYPE)),)
+        POTATO_VERSION := $(POTATO_VERSION).$(POTATO_DISH)-v$(POTATO_VERNUM)
+        ifeq ($(filter-out EXPERIMENTAL EXPERIMENTS TESTING TEST, $(BUILD_STATE)),)
+            POTATO_VERSION :=$(POTATO_VERSION).MASHED
+        endif
+    endif
+else
+    POTATO_VERSION := $(POTATO_VERSION).CHIPS-v$(POTATO_VERNUM).$(BUILD_TYPE)
+endif
+
+POTATO_TARGET_PACKAGE := $(PRODUCT_OUT)/$(POTATO_VERSION).zip
+
 # LatinIME gesture typing
 ifneq ($(filter tenderloin,$(TARGET_PRODUCT)),)
 ifneq ($(filter shamu,$(TARGET_PRODUCT)),)
