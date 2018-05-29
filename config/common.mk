@@ -41,13 +41,31 @@ ifeq ($(filter $(CURRENT_DEVICE), $(LIST)), $(CURRENT_DEVICE))
         POTATO_VERSION := $(POTATO_VERSION).$(POTATO_DISH)-v$(POTATO_VERNUM)
         ifeq ($(filter-out EXPERIMENTAL EXPERIMENTS TESTING TEST, $(BUILD_STATE)),)
             POTATO_VERSION :=$(POTATO_VERSION).MASHED
+            PRODUCT_PROPERTY_OVERRIDES += persist.potato.otasupport=false
+        else
+            PRODUCT_PROPERTY_OVERRIDES += persist.potato.otasupport=true
         endif
+        PRODUCT_PROPERTY_OVERRIDES += persist.potato.official=true
     else
+        POTATO_DISH += (Chips)
         POTATO_VERSION := $(POTATO_VERSION).CHIPS-v$(POTATO_VERNUM).$(BUILD_TYPE)
+        PRODUCT_PROPERTY_OVERRIDES += \
+            persist.potato.community=true \
+            persist.potato.otasupport=false \
+            persist.potato.official=false
     endif
 else
+    POTATO_DISH += (Chips)
     POTATO_VERSION := $(POTATO_VERSION).CHIPS-v$(POTATO_VERNUM).$(BUILD_TYPE)
+    PRODUCT_PROPERTY_OVERRIDES += \
+        persist.potato.community=true \
+        persist.potato.otasupport=false \
+        persist.potato.official=false
 endif
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.potato.dish=$(POTATO_DISH) \
+    persist.potato.version=$(POTATO_VERNUM) \
+    persist.potato.time=$(shell date -u +%Y%m%d)
 
 # LatinIME gesture typing
 ifneq ($(filter tenderloin,$(TARGET_PRODUCT)),)
