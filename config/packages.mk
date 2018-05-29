@@ -1,4 +1,5 @@
-#PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
+    messaging
 #    Lawnchair
 
 # Include librsjni explicitly to workaround GMS issue
