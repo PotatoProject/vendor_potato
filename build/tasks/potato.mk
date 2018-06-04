@@ -24,5 +24,5 @@ potato: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) $(MD5SUM) $(POTATO_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(POTATO_TARGET_PACKAGE).md5sum
 	@echo "Package Complete: $(POTATO_TARGET_PACKAGE)" >&2
 	echo "";
-	cat $(gettop)/build/make/potato_ascii_logo;
+	cat build/make/potato_ascii_logo;
 	echo "";
