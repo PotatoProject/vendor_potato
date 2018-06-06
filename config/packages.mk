@@ -14,12 +14,26 @@ PRODUCT_BOOT_JARS += \
 
 # Accent and Base packages
 PRODUCT_PACKAGES += \
-    PixelTheme \
-    StockTheme \
+    AmberTheme \
+    BlueTheme \
+    CyanTheme \
+    DeepOrangeTheme \
+    DeepPurpleTheme \
+    GreenTheme \
+    IndigoTheme \
+    LightBlueTheme \
+    LightGreenTheme \
+    LimeTheme \
+    OrangeTheme \
     PinkTheme \
     PixelBaseTheme \
+    PixelTheme \
+    PurpleTheme \
+    RedTheme \
     StockBaseTheme \
-    StockFixedBaseTheme
+    StockFixedBaseTheme \
+    StockTheme \
+    YellowTheme
 
 # Dark/BlackUI Packages
 PRODUCT_PACKAGES += \

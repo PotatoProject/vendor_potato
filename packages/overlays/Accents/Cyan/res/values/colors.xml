@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="user_icon_1">#ff00BCD4</color>
+    <color name="accent_device_default_700">#ff0097A7</color>
+    <color name="accent_device_default_light">#ff00ACC1</color>
+    <color name="accent_device_default_dark">#ff00BCD4</color>
+</resources>
