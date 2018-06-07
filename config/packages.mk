@@ -1,5 +1,5 @@
-#PRODUCT_PACKAGES += \
-#    Lawnchair
+PRODUCT_PACKAGES += \
+    Lean
 
 # Include librsjni explicitly to workaround GMS issue
 PRODUCT_PACKAGES += \
