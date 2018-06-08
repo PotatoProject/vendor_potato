@@ -53,7 +53,6 @@ ifeq ($(filter $(CURRENT_DEVICE), $(LIST)), $(CURRENT_DEVICE))
         endif
         PRODUCT_PROPERTY_OVERRIDES += persist.potato.official=true
     else
-        POTATO_DISH := $(POTATO_DISH) (Chips)
         POTATO_VERSION := $(POTATO_VERSION).CHIPS-v$(POTATO_VERNUM).$(BUILD_TYPE)
         PRODUCT_PROPERTY_OVERRIDES += \
             persist.potato.community=true \
@@ -61,7 +60,6 @@ ifeq ($(filter $(CURRENT_DEVICE), $(LIST)), $(CURRENT_DEVICE))
             persist.potato.official=false
     endif
 else
-    POTATO_DISH := $(POTATO_DISH) (Chips)
     POTATO_VERSION := $(POTATO_VERSION).CHIPS-v$(POTATO_VERNUM).$(BUILD_TYPE)
     PRODUCT_PROPERTY_OVERRIDES += \
         persist.potato.community=true \
