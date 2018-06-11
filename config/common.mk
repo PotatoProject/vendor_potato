@@ -37,11 +37,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.wfd.virtual=0 \
     ro.build.selinux=1
 
-POTATO_DISH := Aligot
-POTATO_VERNUM := 1.0
-POTATO_VERSION := $(TARGET_PRODUCT)-$(PLATFORM_VERSION)-$(shell date -u +%Y%m%d)
-CURRENT_DEVICE := $(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
-LIST := $(shell cat vendor/potato/potato.devices)
 ifndef BUILD_TYPE
     BUILD_TYPE := COMMUNITY
 endif
@@ -49,6 +44,21 @@ endif
 ifndef BUILD_STATE
     BUILD_STATE := UNKNOWN
 endif
+
+POTATO_DISH := Aligot
+POTATO_VERNUM := 1.0
+ifeq ($(USE_TIME_IN_NAME), true)
+    ifeq ($(BUILD_TYPE), COMMUNITY)
+       POTATO_VERSION := $(TARGET_PRODUCT)-$(PLATFORM_VERSION)-$(shell date -u +%Y%m%d_%H%M)
+    endif
+endif
+
+ifndef POTATO_VERSION
+    POTATO_VERSION := $(TARGET_PRODUCT)-$(PLATFORM_VERSION)-$(shell date -u +%Y%m%d)
+endif
+
+CURRENT_DEVICE := $(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
+LIST := $(shell cat vendor/potato/potato.devices)
 
 ifeq ($(filter $(CURRENT_DEVICE), $(LIST)), $(CURRENT_DEVICE))
     ifeq ($(filter-out OFFICIAL WEEKLY, $(BUILD_TYPE)),)
@@ -77,7 +87,7 @@ endif
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.potato.dish=$(POTATO_DISH) \
     persist.potato.version=$(POTATO_VERNUM) \
-    persist.potato.time=$(shell date -u +%Y%m%d)
+    persist.potato.date=$(shell date -u +%Y%m%d)
 
 # LatinIME gesture typing
 ifneq ($(filter tenderloin,$(TARGET_PRODUCT)),)
