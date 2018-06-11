@@ -13,6 +13,14 @@ PRODUCT_COPY_FILES += \
     vendor/potato/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
     vendor/potato/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
     vendor/potato/prebuilt/common/bin/50-base.sh:system/addon.d/50-base.sh \
+    
+PRODUCT_COPY_FILES += \
+    vendor/potato/fonts/GoogleSans-Regular.ttf:system/fonts/GoogleSans-Regular.ttf \
+    vendor/potato/fonts/GoogleSans-Medium.ttf:system/fonts/GoogleSans-Medium.ttf \
+    vendor/potato/fonts/GoogleSans-MediumItalic.ttf:system/fonts/GoogleSans-MediumItalic.ttf \
+    vendor/potato/fonts/GoogleSans-Italic.ttf:system/fonts/GoogleSans-Italic.ttf \
+    vendor/potato/fonts/GoogleSans-Bold.ttf:system/fonts/GoogleSans-Bold.ttf \
+    vendor/potato/fonts/GoogleSans-BoldItalic.ttf:system/fonts/GoogleSans-BoldItalic.ttf
 
 PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true \
