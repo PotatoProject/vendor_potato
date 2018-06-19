@@ -32663,4 +32663,11 @@
       port="80"
       type="default,supl,mms"
   />
+
+  <apn carrier="Geocell (Republic of Georgia)"
+      mcc="282"
+      mnc="01"
+      apn="internet"
+      type="default.supl,mms"
+  />
 </apns>
