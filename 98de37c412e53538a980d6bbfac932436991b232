@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "92038878_f0b8f596",
+        "filename": "prebuilt/common/etc/apns-conf.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 32677,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2018-06-20T22:07:12Z",
+      "side": 1,
+      "message": "You shouldn\u0027t have to specify empty fields. This can be safely discarded.",
+      "range": {
+        "startLine": 32671,
+        "startChar": 0,
+        "endLine": 32677,
+        "endChar": 13
+      },
+      "revId": "98de37c412e53538a980d6bbfac932436991b232",
+      "serverId": "8720d348-3d66-43e6-b480-1d69039ac554",
+      "unresolved": true
+    }
+  ]
+}
