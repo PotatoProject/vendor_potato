@@ -5,6 +5,7 @@ Additional PotatoROM functions:
 - mmp:             Builds all of the modules in the current directory and pushes them to the device.
 - mmap:            Builds all of the modules in the current directory and its dependencies, then pushes the package to the device.
 - mmmp:            Builds all of the modules in the supplied directories and pushes them to the device.
+- gerritpush:      Push changes to the gerrit code review server.
 - aospremote:      Add git remote for matching AOSP repository.
 - cafremote:       Add git remote for matching CodeAurora repository.
 - mka:             Builds using SCHED_BATCH on all processors.
@@ -251,6 +252,41 @@ function dddclient()
   else
        echo "Unable to determine build system output dir."
    fi
+}
+
+function gerritpush()
+{
+
+    GERRIT_URL=review.potatoproject.co;
+    DEFAULT_BRANCH=aligot-release;
+    PROJECT_PREFIX=;
+
+    if ! git rev-parse --git-dir &> /dev/null
+    then
+        echo "fatal: not a git repository (or any of the parent directories): .git"
+        return 1
+    fi
+    local c=$(pwd);
+    while [ ! -d ".git" ]; do
+      cd ../;
+    done;
+    if [[ ! -z "${PROJECT_PREFIX}" ]]; then
+      PROJECT_PREFIX=$(echo "${PROJECT_PREFIX}_");
+    fi
+    local PROJECT=${PROJECT_PREFIX}$(echo $(pwd -P | sed -e "s#$ANDROID_BUILD_TOP\/##; s#-caf.*##; s#\/default##") | sed 's/\//_/g');
+    if (echo $PROJECT | grep -qv "^device")
+    then
+      local PFX="PotatoProject/";
+    else
+      local PFX="PotatoDevices/";
+    fi
+    cd $c;
+    if [[ -z "${GERRIT_USER}" ]]; then
+      printf 'Enter gerrit username: ';
+      read -r GERRIT_USER;
+    fi
+    export GERRIT_USER;
+    git push ssh://${GERRIT_USER}@${GERRIT_URL}:29418/$PFX$PROJECT HEAD:refs/for/${DEFAULT_BRANCH};
 }
 
 function aospremote()
