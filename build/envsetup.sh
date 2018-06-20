@@ -253,6 +253,41 @@ function dddclient()
    fi
 }
 
+function gerritpush()
+{
+
+    GERRIT_URL=review.potatoproject.co;
+    DEFAULT_BRANCH=aligot-release;
+    PROJECT_PREFIX=;
+
+    if ! git rev-parse --git-dir &> /dev/null
+    then
+        echo "fatal: not a git repository (or any of the parent directories): .git"
+        return 1
+    fi
+    local c=$(pwd);
+    while [ ! -d ".git" ]; do
+      cd ../;
+    done;
+    if [[ ! -z "${PROJECT_PREFIX}" ]]; then
+      PROJECT_PREFIX=$(echo "${PROJECT_PREFIX}_");
+    fi
+    local PROJECT=${PROJECT_PREFIX}$(echo $(pwd -P | sed -e "s#$ANDROID_BUILD_TOP\/##; s#-caf.*##; s#\/default##") | sed 's/\//_/g');
+    if (echo $PROJECT | grep -qv "^device")
+    then
+      local PFX="PotatoProject/";
+    else
+      local PFX="PotatoDevices/";
+    fi
+    cd $c;
+    if [[ -z "${GERRIT_USER}" ]]; then
+      printf 'Enter gerrit username: ';
+      read -r GERRIT_USER;
+    fi
+    export GERRIT_USER;
+    git push ssh://${GERRIT_USER}@${GERRIT_URL}:29418/$PFX$PROJECT HEAD:refs/for/${DEFAULT_BRANCH};
+}
+
 function aospremote()
 {
     if ! git rev-parse --git-dir &> /dev/null
