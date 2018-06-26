@@ -45,7 +45,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1 \
     ro.boot.vendor.overlay.theme=com.potato.overlay.accent.purple;com.potato.overlay.base.stockfixed;com.potato.overlay.lawnconf;com.potato.overlay.shape.circle \
     persist.sys.disable_rescue=true \
-    ro.opa.eligible_device=true
+    ro.opa.eligible_device=true \
+    ro.setupwizard.rotation_locked=true
 
 # LatinIME gesture typing
 ifneq ($(filter tenderloin,$(TARGET_PRODUCT)),)
