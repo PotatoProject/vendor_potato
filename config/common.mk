@@ -24,7 +24,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.disable_rescue=true \
     ro.build.selinux=1 \
     ro.boot.vendor.overlay.theme=com.potato.overlay.accent.purple;com.potato.overlay.base.stockfixed;com.potato.overlay.lawnconf;com.potato.overlay.shape.circle \
-    ro.opa.eligible_device=true
+    ro.opa.eligible_device=true \
+    ro.setupwizard.rotation_locked=true
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
