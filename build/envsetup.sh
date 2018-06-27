@@ -286,7 +286,7 @@ function gerritpush()
       read -r GERRIT_USER;
     fi
     export GERRIT_USER;
-    git push ssh://${GERRIT_USER}@${GERRIT_URL}:29418/$PFX$PROJECT HEAD:refs/for/${DEFAULT_BRANCH};
+    git push ssh://${GERRIT_USER}@${GERRIT_URL}:29418/$PFX$PROJECT HEAD:refs/for/${DEFAULT_BRANCH}$@;
 }
 
 function aospremote()
