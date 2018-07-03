@@ -261,7 +261,18 @@ function gerritpush()
     GERRIT_URL=review.potatoproject.co;
     DEFAULT_BRANCH=aligot-release;
     PROJECT_PREFIX=;
+    ref=for;
 
+    while getopts "td" OPTION; do
+      case $OPTION in
+        t)
+                USE_TOPIC="true"
+                ;;
+        d)
+                ref=heads
+                ;;
+      esac
+    done
     if ! git rev-parse --git-dir &> /dev/null
     then
         echo "fatal: not a git repository (or any of the parent directories): .git"
@@ -287,7 +298,13 @@ function gerritpush()
       read -r GERRIT_USER;
     fi
     export GERRIT_USER;
-    git push ssh://${GERRIT_USER}@${GERRIT_URL}:29418/$PFX$PROJECT HEAD:refs/for/${DEFAULT_BRANCH};
+    if [[ "${USE_TOPIC}" == true ]]; then
+      printf 'Enter topic: '
+      read -r topic;
+      git push ssh://${GERRIT_USER}@${GERRIT_URL}:29418/$PFX$PROJECT HEAD:refs/${ref}/${DEFAULT_BRANCH}%topic=${topic};
+    else
+      git push ssh://${GERRIT_USER}@${GERRIT_URL}:29418/$PFX$PROJECT HEAD:refs/${ref}/${DEFAULT_BRANCH};
+    fi
 }
 
 function aospremote()
