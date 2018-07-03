@@ -8,6 +8,7 @@ Additional PotatoROM functions:
 - gerritpush:      Push changes to the gerrit code review server.
 - aospremote:      Add git remote for matching AOSP repository.
 - cafremote:       Add git remote for matching CodeAurora repository.
+- mergeaosptag:    Merge specified AOSP tag to all relevant repos.
 - mka:             Builds using SCHED_BATCH on all processors.
 - mkap:            Builds the module(s) using mka and pushes them to the device.
 - cmka:            Cleans and builds using mka.
@@ -451,6 +452,111 @@ function makerecipe() {
 
 function mka() {
     m -j "$@"
+}
+
+function mergeaosptag()
+{
+  # ==================================================
+  # Set branch and git user/org-name here
+  # ==================================================
+  username=PotatoProject
+  default_branch=aligot-release
+  # ==================================================
+  # Make a list of all repos to not modify
+  # ==================================================
+
+  for var in "$@"
+  do
+    if [[ "$var" == "-p" ]]; then
+      PUSH=true
+    fi
+  done
+
+  whitelist=(
+    build_make
+    device_potato_sepolicy
+    device_qcom_sepolicy
+    external_json-c
+    external_sony_boringssl-compat
+    hardware_libhardware_legacy
+    hardware_potato_interfaces
+    hardware_qcom_power
+    manifest
+    packages_apps_DUI
+    packages_apps_Lean
+    packages_apps_Wedges
+    vendor_potato
+  )
+  whitelist_detected=();
+  conflicts=();
+  # ==================================================
+  # Repo root
+  # ==================================================
+  if [ !$(declare -f croot > /dev/null; echo $?) ]; then
+    while [ ! -e './build/envsetup.sh' ]; do
+      cd ../;
+    done;
+    source ./build/envsetup.sh;
+  fi;
+  croot;
+  # ==================================================
+  # Merge
+  for repo in $(curl -s https://api.github.com/users/${username}/repos\?per_page\=200 \
+    | grep html_url | awk 'NR%2 == 0' | cut -d ':' -f 2-3 | tr -d '",'); do
+  {
+    for clone_repo in ${whitelist[@]}; do
+    {
+      if [ "$(echo $repo | cut -d '/' -f 5)" = "$clone_repo" ]
+      then
+        whitelist_detected+=("$repo");
+        continue 2;
+      fi
+    }
+    done;
+    echo "";
+    echo -e "\e[1;32mUpdating $(echo $repo | cut -d '/' -f 5)...\e[0m";
+    cd $(echo $repo | cut -d '/' -f 5 | sed 's/_/\//g');
+    aospremote;
+    git branch $default_branch;
+    git update-ref refs/heads/$default_branch HEAD;
+    git checkout $default_branch;
+    git pull aosp $1 --no-edit;
+    if [[ $? != 0 ]]; then
+        conflicts+=("$repo");
+    else
+        if [[ "$PUSH" == true ]]; then
+            git push potato $default_branch;
+        fi
+    fi
+    croot;
+  }
+  done;
+  echo "";
+  # ==================================================
+  # Print detected whitelist repos
+  # ==================================================
+  for repo in ${whitelist_detected[@]}; do
+    echo -e "\e[0;36mIgnored whitelisted repo: \e[0m$(echo $repo)";
+  done;
+  echo "";
+  # ==================================================
+  # Print repos with conflicts
+  # ==================================================
+  for repo in ${conflicts[@]}; do
+    echo -e "\e[0;31mCONFLICT: \e[0m$(echo $repo)";
+  done;
+  # ==================================================
+  # unset all used variables
+  # ==================================================
+  unset branch;
+  unset clone_repo;
+  unset conflicts;
+  unset remote_name;
+  unset repo;
+  unset username;
+  unset whitelist;
+  unset whitelist_detected;
+  # ==================================================
 }
 
 function cmka() {
