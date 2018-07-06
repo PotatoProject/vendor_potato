@@ -263,13 +263,15 @@ function gerritpush()
     PROJECT_PREFIX=;
     ref=for;
 
-    while getopts "td" OPTION; do
+    while getopts "tdb" OPTION; do
       case $OPTION in
         t)
-                USE_TOPIC="true"
+                local USE_TOPIC="true"
                 ;;
         d)
                 ref=heads
+                ;;
+        b)      local CUSTOM_BRANCH="true"
                 ;;
       esac
     done
@@ -298,6 +300,10 @@ function gerritpush()
       read -r GERRIT_USER;
     fi
     export GERRIT_USER;
+    if [[ "${CUSTOM_BRANCH}" == true ]]; then
+      printf 'Enter branch: ';
+      read -r DEFAULT_BRANCH;
+    fi
     if [[ "${USE_TOPIC}" == true ]]; then
       printf 'Enter topic: '
       read -r topic;
