@@ -263,6 +263,11 @@ function gerritpush()
     PROJECT_PREFIX=;
     ref=for;
 
+    local PROJECT_EXCLUSIONS=(
+        "device_qcom_sepolicy"
+        "device_potato_sepolicy"
+    );
+
     while getopts "tdb" OPTION; do
       case $OPTION in
         t)
@@ -288,7 +293,7 @@ function gerritpush()
       PROJECT_PREFIX=$(echo "${PROJECT_PREFIX}_");
     fi
     local PROJECT=${PROJECT_PREFIX}$(echo $(pwd -P | sed -e "s#$ANDROID_BUILD_TOP\/##; s#-caf.*##; s#\/default##") | sed 's/\//_/g');
-    if (echo $PROJECT | grep -qv "^device")
+    if (echo $PROJECT | grep -qv "^device") || [[ "${PROJECT_EXCLUSIONS[@]}" =~ "$PROJECT" ]]
     then
       local PFX="PotatoProject/";
     else
