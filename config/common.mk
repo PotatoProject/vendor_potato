@@ -75,6 +75,7 @@ ifeq ($(filter $(CURRENT_DEVICE), $(LIST)), $(CURRENT_DEVICE))
             persist.potato.official=false
     endif
 else
+    BUILD_TYPE := COMMUNITY
     POTATO_VERSION := $(POTATO_VERSION).CHIPS-v$(POTATO_VERNUM).$(BUILD_TYPE)
     PRODUCT_PROPERTY_OVERRIDES += \
         persist.potato.community=true \
