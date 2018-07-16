@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e79c7bb6_15f74cba",
+        "filename": "potato.devices",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2018-07-16T11:19:11Z",
+      "side": 1,
+      "message": "Keep things ordered please. Reorder to alphabetical.",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 7
+      },
+      "revId": "e99acd3f9cd8ad5fd3668437ab5007b597222c17",
+      "serverId": "8720d348-3d66-43e6-b480-1d69039ac554",
+      "unresolved": true
+    }
+  ]
+}
