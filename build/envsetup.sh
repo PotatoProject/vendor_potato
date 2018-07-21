@@ -87,7 +87,7 @@ function breakfast()
         else
             # This is probably just the Potato model name
             if [ -z "$variant" ]; then
-                variant="userdebug"
+                variant="user"
             fi
 
             lunch potato_$target-$variant
