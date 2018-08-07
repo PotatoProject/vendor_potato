@@ -508,6 +508,9 @@ function mergeaosptag()
     packages_apps_Lean
     packages_apps_Wedges
     vendor_potato
+    prebuilts_clang_host_linux-x86
+    website
+    PotatoBot_tg
   )
 
   whitelist_detected=();
