@@ -1,13 +1,13 @@
-# Insert new variables inside the Potato structure
-potato_soong:
-	$(hide) mkdir -p $(dir $@)
-	$(hide) (\
-	echo '{'; \
-	echo '"Potato": {'; \
-	echo '    "Uses_generic_camera_parameter_library": $(if $(TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY),false,true),'; \
-	echo '    "Specific_camera_parameter_library": "$(TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY)",'; \
-	echo '    "Needs_text_relocations": $(if $(filter true,$(TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS)),true,false),'; \
-	echo '    "Uses_qcom_bsp_legacy": $(if $(filter true,$(TARGET_USES_QCOM_BSP_LEGACY)),true,false),'; \
-	echo '    "Target_shim_libs": "$(subst $(space),:,$(TARGET_LD_SHIM_LIBS))"'; \
-	echo '},'; \
-	echo '') > $(SOONG_VARIABLES_TMP)
+_contents := $(_contents)    "Potato":{$(newline)
+
+# See build/core/soong_config.mk for the add_json_* functions you can use here.
+$(call add_json_bool, Needs_text_relocations,                $(filter true,$(TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS)))
+$(call add_json_str,  Specific_camera_parameter_library,     $(TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY))
+$(call add_json_str,  Target_shim_libs,                      $(TARGET_LD_SHIM_LIBS))
+$(call add_json_bool, Uses_generic_camera_parameter_library, $(if $(TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY),false,true))
+$(call add_json_bool, Uses_qcom_bsp_legacy,                  $(filter true,$(TARGET_USES_QCOM_BSP_LEGACY)))
+
+# This causes the build system to strip out the last comma in our nested struct, to keep the JSON valid.
+_contents := $(_contents)__SV_END
+
+_contents := $(_contents)    },$(newline)
