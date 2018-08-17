@@ -23,6 +23,7 @@ type Product_variables struct {
 }
 
 type ProductVariables struct {
+	Java_Source_Overlays *string `json:",omitempty"`
 	Needs_text_relocations  *bool `json:",omitempty"`
 	Specific_camera_parameter_library  *string `json:",omitempty"`
 	Target_process_sdk_version_override *string `json:",omitempty"`
