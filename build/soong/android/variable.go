@@ -1,5 +1,8 @@
 package android
 type Product_variables struct {
+	Additional_gralloc_10_usage_bits struct {
+		Cppflags []string
+	}
 	Bootloader_message_offset struct {
 		Cflags []string
 	}
@@ -48,6 +51,7 @@ type Product_variables struct {
 }
 
 type ProductVariables struct {
+	Additional_gralloc_10_usage_bits  *string `json:",omitempty"`
 	Bootloader_message_offset  *int `json:",omitempty"`
 	Has_legacy_camera_hal1  *bool `json:",omitempty"`
 	Device_support_hwfde  *bool `json:",omitempty"`
