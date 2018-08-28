@@ -14,6 +14,9 @@ type Product_variables struct {
 	Device_support_hwfde_perf struct {
 		Cflags []string
 	}
+	Device_support_legacy_hwfde struct {
+		Cflags []string
+	}
 	Target_shim_libs struct {
 		Cppflags []string
 	}
@@ -33,6 +36,7 @@ type Product_variables struct {
 type ProductVariables struct {
 	Device_support_hwfde  *bool `json:",omitempty"`
 	Device_support_hwfde_perf  *bool `json:",omitempty"`
+	Device_support_legacy_hwfde  *bool `json:",omitempty"`
 	Java_Source_Overlays *string `json:",omitempty"`
 	Needs_text_relocations  *bool `json:",omitempty"`
 	Specific_camera_parameter_library  *string `json:",omitempty"`
