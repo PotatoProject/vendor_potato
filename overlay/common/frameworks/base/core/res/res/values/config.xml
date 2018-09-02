@@ -9,4 +9,8 @@
 
     <!-- Whether or not swipe up gesture's opt-in setting is available on this device -->
     <bool name="config_swipe_up_gesture_setting_available">true</bool>
+
+    <!-- Re-enable keyguard shortcuts -->
+    <bool name="config_keyguardShowCameraAffordance">true</bool>
+    <bool name="config_keyguardShowLeftAffordance">true</bool>
 </resources>
