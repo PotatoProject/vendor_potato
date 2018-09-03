@@ -258,7 +258,7 @@ function gerritpush()
 {
 
     GERRIT_URL=review.potatoproject.co;
-    DEFAULT_BRANCH=aligot-release;
+    DEFAULT_BRANCH=baked-release;
     PROJECT_PREFIX=;
     ref=for;
 
@@ -485,7 +485,7 @@ function mka() {
 function mergeaosptag()
 {
   username=PotatoProject
-  default_branch=aligot-release
+  default_branch=baked-release
 
   for var in "$@"
   do
