@@ -258,7 +258,7 @@ function gerritpush()
 {
 
     GERRIT_URL=review.potatoproject.co;
-    DEFAULT_BRANCH=aligot-release;
+    DEFAULT_BRANCH=baked-release;
     PROJECT_PREFIX=;
     ref=for;
 
