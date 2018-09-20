@@ -15,4 +15,7 @@
     <string name="config_headlineFontFamilyLight">google-sans</string>
     <string name="config_headlineFontFeatureSettings">ss03</string>
     <string name="config_headlineFontFamilyMedium">google-sans-medium</string>
+    
+    <!-- Enable Smart Battery -->
+    <bool name="config_smart_battery_available">true</bool>
 </resources>
