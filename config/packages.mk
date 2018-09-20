@@ -37,4 +37,10 @@ PRODUCT_PACKAGES += \
 #    SettingsBlackTheme \
 #    SystemBlackTheme \
 #    SystemSettingsIconTint \
-#    SysuiQsBlackTheme \
+#    SysuiQsBlackTheme 
+
+PRODUCT_PACKAGES += \
+    SoundPickerPrebuilt \
+    SettingsIntelligenceGooglePrebuilt \
+    WellbeingPrebuilt \
+    MarkupGoogle
