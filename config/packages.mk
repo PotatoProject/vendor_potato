@@ -43,4 +43,7 @@ PRODUCT_PACKAGES += \
     SoundPickerPrebuilt \
     SettingsIntelligenceGooglePrebuilt \
     WellbeingPrebuilt \
-    MarkupGoogle
+    MarkupGoogle \
+	Turbo \
+    turbo.xml \
+    privapp-permissions-turbo.xml
