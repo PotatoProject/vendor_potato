@@ -9,4 +9,10 @@
 
     <!-- Whether or not swipe up gesture's opt-in setting is available on this device -->
     <bool name="config_swipe_up_gesture_setting_available">true</bool>
+
+    <!-- Set usage of GoogleSans -->
+    <string name="config_headlineFontFamily">google-sans</string>
+    <string name="config_headlineFontFamilyLight">google-sans</string>
+    <string name="config_headlineFontFeatureSettings">ss03</string>
+    <string name="config_headlineFontFamilyMedium">google-sans-medium</string>
 </resources>
