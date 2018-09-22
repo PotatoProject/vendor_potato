@@ -5,3 +5,5 @@ include vendor/potato/config/BoardConfigQcom.mk
 endif
 
 include vendor/potato/config/BoardConfigSoong.mk
+
+PRODUCT_SOONG_NAMESPACES += $(PATHMAP_SOONG_NAMESPACES)
