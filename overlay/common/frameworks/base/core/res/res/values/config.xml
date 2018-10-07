@@ -5,7 +5,7 @@
     <bool name="config_useRoundIcon">true</bool>
 
     <!-- Allow always on display -->
-	<bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
+    <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
 
     <!-- Whether or not swipe up gesture's opt-in setting is available on this device -->
     <bool name="config_swipe_up_gesture_setting_available">true</bool>
@@ -15,4 +15,10 @@
 
     <!-- Lift to wake -->
     <bool name="config_dozePulsePickup">true</bool>
+
+    <!-- Define usage of Google Sans font -->
+    <string name="config_headlineFontFamily">google-sans</string>
+    <string name="config_headlineFontFamilyLight">google-sans</string>
+    <string name="config_headlineFontFeatureSettings">ss03</string>
+    <string name="config_headlineFontFamilyMedium">google-sans-medium</string>
 </resources>
