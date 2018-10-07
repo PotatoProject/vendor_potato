@@ -12,4 +12,7 @@
 
     <!-- Lawnstep -->
     <string name="config_recentsComponentName" translatable="false">ch.deletescape.lawnchair.ci/com.android.quickstep.RecentsActivity</string>
+
+    <!-- Lift to wake-->
+    <bool name="doze_pulse_on_significant_motion">true</bool>
 </resources>
