@@ -39,6 +39,10 @@ PRODUCT_PACKAGES += \
 #    SystemSettingsIconTint \
 #    SysuiQsBlackTheme
 
+# Lawnchair Default Configuration
+PRODUCT_PACKAGES += \
+    LawnConf
+
 PRODUCT_COPY_FILES += \
    vendor/potato/prebuilt/common/fonts/GoogleSans-Regular.ttf:system/fonts/GoogleSans-Regular.ttf \
    vendor/potato/prebuilt/common/fonts/GoogleSans-Medium.ttf:system/fonts/GoogleSans-Medium.ttf \

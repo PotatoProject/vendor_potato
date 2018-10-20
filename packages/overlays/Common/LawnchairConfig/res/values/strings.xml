@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * Copyright (c) 2017, The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="lawnchair_overlay">LawnConf</string>
+
+    <!-- Whether or not blur is enabled per default -->
+    <bool name="config_default_enable_blur">true</bool>
+
+    <!--
+        Which color resolver to use per default; Possible values:
+            ch.deletescape.lawnchair.colors.SystemAccentResolver
+            ch.deletescape.lawnchair.colors.PixelAccentResolver
+            ch.deletescape.lawnchair.colors.RGBColorResolver|R|G|B
+            ch.deletescape.lawnchair.colors.WallpaperMainColorResolver
+            ch.deletescape.lawnchair.colors.WallpaperSecondaryColorResolver
+            ch.deletescape.lawnchair.colors.WallpaperTertiaryColorResolver
+    -->
+    <string name="config_default_color_resolver" translatable="false">ch.deletescape.lawnchair.colors.SystemAccentResolver</string>
+
+</resources>
