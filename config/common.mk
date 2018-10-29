@@ -144,6 +144,9 @@ PRODUCT_PACKAGES += \
     MarkupGoogle \
     MatchmakerPrebuilt
 
+# Weather
+include vendor/potato/config/weather.mk
+
 # Markup libs
 PRODUCT_COPY_FILES += \
     vendor/potato/prebuilt/common/lib/libsketchology_native.so:system/lib/libsketchology_native.so \
