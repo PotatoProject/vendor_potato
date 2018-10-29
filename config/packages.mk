@@ -63,3 +63,7 @@ PRODUCT_PACKAGES += \
     Turbo \
     vendor/potato/prebuilt/common/etc/permissions/privapp-permissions-turbo.xml:system/etc/permissions/privapp-permissions-turbo.xml \
     vendor/potato/prebuilt/common/etc/sysconfig/turbo.xml:system/etc/sysconfig/turbo.xml
+
+# Weather
+PRODUCT_PACKAGES += \
+    WeatherClient
