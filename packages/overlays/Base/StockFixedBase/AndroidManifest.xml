@@ -4,7 +4,7 @@
     android:versionCode="1"
     android:versionName="1.0">
 
-    <overlay android:priority="1" android:targetPackage="android" />
+    <overlay android:priority="1" android:targetPackage="android" android:category="android.base_theme" />
 
     <application android:hasCode="false"
                  android:label="Stocktato" />
