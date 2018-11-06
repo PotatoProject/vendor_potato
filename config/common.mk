@@ -14,6 +14,10 @@ PRODUCT_COPY_FILES += \
     vendor/potato/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
     vendor/potato/prebuilt/common/bin/50-base.sh:system/addon.d/50-base.sh \
 
+# Ambient Play
+PRODUCT_PACKAGES += \
+    AmbientPlayHistoryProvider
+
 # Bootanimation
 PRODUCT_COPY_FILES += \
     vendor/potato/prebuilt/common/media/bootanimation.zip:system/media/bootanimation.zip \
