@@ -16,4 +16,12 @@
         <item name="android:layout_gravity">center</item>
         <item name="android:fontFamily">google-sans</item>
     </style>
+
+    <style name="SuggestionCardText">
+        <item name="android:textAlignment">center</item>
+    </style>
+    <style name="SuggestionCardIcon">
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_alignParentStart">false</item>
+    </style>
 </resources>
