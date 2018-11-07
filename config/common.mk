@@ -144,7 +144,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     SoundPickerPrebuilt \
     SettingsIntelligenceGooglePrebuilt \
-    MarkupGoogle
+    MarkupGoogle \
+    MatchmakerPrebuilt
 
 # We modify several neverallows, so let the build proceed
 ifneq ($(TARGET_BUILD_VARIANT),user)
