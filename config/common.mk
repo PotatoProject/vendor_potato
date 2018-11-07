@@ -149,6 +149,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.disable_rescue=true
 
+# Substratum Key
+PRODUCT_COPY_FILES += \
+    vendor/potato/prebuilt/common/priv-app/SubstratumKey.apk:system/priv-app/SubstratumKey/SubstratumKey.apk
+
 # exFAT
 WITH_EXFAT ?= true
 ifeq ($(WITH_EXFAT),true)
