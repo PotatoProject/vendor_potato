@@ -99,3 +99,7 @@ PRODUCT_PACKAGES += \
 # Weather
 PRODUCT_PACKAGES += \
     WeatherClient
+
+# Substratum Key
+PRODUCT_PACKAGES += \
+    SubstratumKey
