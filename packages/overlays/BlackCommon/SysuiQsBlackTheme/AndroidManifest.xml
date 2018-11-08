@@ -2,7 +2,7 @@
     package="com.android.systemui.qstheme.black"
     android:versionCode="1"
     android:versionName="1.0">
-    <overlay android:targetPackage="com.android.systemui" android:priority="1"/>
+    <overlay android:targetPackage="com.android.systemui" android:priority="1" android:category="android.theme.black" />
 
     <application android:label="@string/sysui_overlay_black" android:hasCode="false"/>
 </manifest>
