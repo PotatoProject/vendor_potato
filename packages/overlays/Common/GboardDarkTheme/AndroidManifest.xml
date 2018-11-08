@@ -2,7 +2,7 @@
     package="com.android.gboard.theme.dark"
     android:versionCode="1"
     android:versionName="1.0">
-    <overlay android:targetPackage="com.google.android.inputmethod.latin" android:priority="1"/>
+    <overlay android:targetPackage="com.google.android.inputmethod.latin" android:priority="1" android:category="android.theme.common" />
 
     <application android:label="@string/gboard_overlay_dark" android:hasCode="false"/>
 </manifest>

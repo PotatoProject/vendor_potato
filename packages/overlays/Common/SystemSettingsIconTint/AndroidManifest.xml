@@ -2,7 +2,7 @@
     package="com.android.system.theme.settingsicontint"
     android:versionCode="1"
     android:versionName="1.0">
-    <overlay android:targetPackage="android" android:priority="1"/>
+    <overlay android:targetPackage="android" android:priority="1" android:category="android.theme.common" />
 
     <application android:label="@string/system_overlay_dark" android:hasCode="false"/>
 </manifest>
