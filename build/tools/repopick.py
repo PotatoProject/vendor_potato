@@ -351,7 +351,9 @@ if __name__ == '__main__':
         #   - check that the project path exists
         project_path = None
 
-        if item['project'] in project_name_to_data and item['branch'] in project_name_to_data[item['project']]:
+        if item['project'] == 'manifest':
+            project_path = '.repo/manifests'
+        elif item['project'] in project_name_to_data and item['branch'] in project_name_to_data[item['project']]:
             project_path = project_name_to_data[item['project']][item['branch']]
         elif args.path:
             project_path = args.path
