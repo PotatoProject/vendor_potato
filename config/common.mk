@@ -68,6 +68,9 @@ ifeq ($(filter $(CURRENT_DEVICE), $(LIST)), $(CURRENT_DEVICE))
             POTATO_VERSION :=$(POTATO_VERSION).MASHED
             PRODUCT_PROPERTY_OVERRIDES += persist.potato.otasupport=false
         else
+            ifeq ($(BUILD_TYPE), WEEKLY)
+              POTATO_VERSION :=$(POTATO_VERSION).WEEKLY
+            endif
             PRODUCT_PROPERTY_OVERRIDES += persist.potato.otasupport=true
         endif
         PRODUCT_PROPERTY_OVERRIDES += persist.potato.official=true
