@@ -31,7 +31,7 @@ potato_generator {
     cmd: "make $(KERNEL_MAKE_FLAGS) -C $(TARGET_KERNEL_SOURCE) O=$(genDir) ARCH=$(KERNEL_ARCH) $(KERNEL_CROSS_COMPILE) $(KERNEL_CLANG_TRIPLE) $(KERNEL_CC) headers_install",
 
     // Directories that can be imported by a cc_* module generated_headers property
-    export_include_dirs: ["usr/include"],
+    export_include_dirs: ["usr/include", "usr/techpack/audio/include"],
 
     // Sources for dependency tracking
     dep_root: "$(TARGET_KERNEL_SOURCE)",
