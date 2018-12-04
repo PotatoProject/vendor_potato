@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "997b87ed_9a5c4137",
+        "filename": "overlay/common/frameworks/base/core/res/res/values/config.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000001
+      },
+      "writtenOn": "2018-12-04T23:41:35Z",
+      "side": 1,
+      "message": "?",
+      "revId": "a7b0591577efb8ec849dfb545452ca5716287894",
+      "serverId": "8720d348-3d66-43e6-b480-1d69039ac554",
+      "unresolved": false
+    }
+  ]
+}
