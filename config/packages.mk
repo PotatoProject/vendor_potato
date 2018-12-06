@@ -66,6 +66,10 @@ PRODUCT_PACKAGES += \
     SettingsIntelligenceDark \
     SettingsIntelligenceBlack
 
+# Doze
+PRODUCT_PACKAGES += \
+    CustomDoze
+
 # Oreo Settings Tiles Required Packages
 PRODUCT_PACKAGES += \
     SettingsOreoTiles \
