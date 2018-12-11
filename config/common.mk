@@ -70,6 +70,7 @@ ifeq ($(filter $(CURRENT_DEVICE), $(LIST)), $(CURRENT_DEVICE))
         else
             ifeq ($(BUILD_TYPE), WEEKLY)
               POTATO_VERSION :=$(POTATO_VERSION).WEEKLY
+              PRODUCT_PROPERTY_OVERRIDES += persist.potato.otachannel=weekly
             endif
             PRODUCT_PROPERTY_OVERRIDES += persist.potato.otasupport=true
         endif
