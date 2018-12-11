@@ -47,7 +47,7 @@ ifndef BUILD_STATE
 endif
 
 POTATO_DISH := Baked
-POTATO_VERNUM := 2.0
+POTATO_VERNUM := 2.1
 ifeq ($(USE_TIME_IN_NAME), true)
     ifeq ($(BUILD_TYPE), COMMUNITY)
        POTATO_VERSION := $(TARGET_PRODUCT)-$(PLATFORM_VERSION)-$(shell date -u +%Y%m%d_%H%M)
