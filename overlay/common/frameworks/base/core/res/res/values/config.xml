@@ -29,4 +29,8 @@
 
     <!-- Enable the RingtonePickerActivity in 'com.android.providers.media'. -->
     <bool name="config_defaultRingtonePickerEnabled">false</bool>
+
+    <!-- Specify custom blanking delay of the display -->
+    <integer name="config_screen_off_delay">0</integer>
+
 </resources>
