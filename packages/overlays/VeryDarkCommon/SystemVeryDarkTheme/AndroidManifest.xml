@@ -1,0 +1,8 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.system.theme.verydark"
+    android:versionCode="1"
+    android:versionName="1.0">
+    <overlay android:targetPackage="android" android:priority="1" android:category="android.theme.verydark" />
+
+    <application android:label="@string/system_overlay_verydark" android:hasCode="false"/>
+</manifest>

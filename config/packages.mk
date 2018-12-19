@@ -10,9 +10,15 @@ PRODUCT_PACKAGES += \
     AmberTheme \
     BlueTheme \
     CyanTheme \
+    DeepBlueTheme \
     DeepOrangeTheme \
     DeepPurpleTheme \
+    GoogleBlueTheme \
+    GoogleRedTheme \
+    GoogleYellowTheme \
+    GoogleGreenTheme \
     GreenTheme \
+    GreyTheme \
     IndigoTheme \
     LightBlueTheme \
     LightGreenTheme \
