@@ -4,9 +4,8 @@
         <item name="android:colorPrimary">@*android:color/primary_device_default_dark</item>
         <item name="android:colorPrimaryDark">@*android:color/primary_dark_device_default_settings</item>
         <item name="android:colorSecondary">@*android:color/secondary_device_default_settings</item>
-        <item name="android:colorAccent">@*android:color/accent_device_default_dark</item>
+        <item name="android:colorAccent">@*android:color/qs_accent</item>
         <item name="android:colorControlNormal">?android:attr/textColorPrimary</item>
         <item name="android:colorBackgroundFloating">@*android:color/material_grey_900</item>
     </style>
-
 </resources>
