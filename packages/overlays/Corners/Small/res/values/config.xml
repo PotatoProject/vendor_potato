@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <dimen name="config_dialogCornerRadius">6.0dip</dimen>
+    <dimen name="config_buttonCornerRadius">3.0dip</dimen>
+    <dimen name="config_progressBarCornerRadius">1000.0dip</dimen>
+</resources>

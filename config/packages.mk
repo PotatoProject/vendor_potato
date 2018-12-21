@@ -29,6 +29,13 @@ PRODUCT_PACKAGES += \
     YellowTheme \
     MintGreenTheme
 
+#Corner Packages
+PRODUCT_PACKAGES += \
+    NoneCorner \
+    SmallCorner \
+    MediumCorner \
+    LargeCorner
+
 # Dark/BlackUI Packages
 PRODUCT_PACKAGES += \
     GBoardDarkTheme \
