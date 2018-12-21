@@ -39,6 +39,11 @@ PRODUCT_PACKAGES += \
     SystemBlackTheme \
     SysuiQsBlackTheme
 
+# QS Accent Packages
+PRODUCT_PACKAGES += \
+    QsAccentBlack \
+    QsAccentWhite
+
 # Lawnchair Default Configuration
 PRODUCT_PACKAGES += \
     LawnConf
