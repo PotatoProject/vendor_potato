@@ -121,6 +121,11 @@ PRODUCT_COPY_FILES += \
 # Overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/potato/overlay/common
 
+# Weather client
+PRODUCT_COPY_FILES += \
+    vendor/potato/etc/permissions/org.pixelexperience.weather.client.xml:system/etc/permissions/org.pixelexperience.weather.client.xml \
+    vendor/potato/etc/default-permissions/org.pixelexperience.weather.client.xml:system/etc/default-permissions/org.pixelexperience.weather.client.xml
+
 # Packages
 include vendor/potato/config/packages.mk
 
@@ -143,9 +148,6 @@ PRODUCT_PACKAGES += \
     SettingsIntelligenceGooglePrebuilt \
     MarkupGoogle \
     MatchmakerPrebuilt
-
-# Weather
-include vendor/potato/config/weather.mk
 
 # Markup libs
 PRODUCT_COPY_FILES += \
