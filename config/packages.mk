@@ -48,6 +48,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     LawnConf
 
+# Cutout control overlays
+PRODUCT_PACKAGES += \
+    HideCutout \
+    StatusBarStock
+
 PRODUCT_COPY_FILES += \
    vendor/potato/prebuilt/common/fonts/GoogleSans-Regular.ttf:system/fonts/GoogleSans-Regular.ttf \
    vendor/potato/prebuilt/common/fonts/GoogleSans-Medium.ttf:system/fonts/GoogleSans-Medium.ttf \
