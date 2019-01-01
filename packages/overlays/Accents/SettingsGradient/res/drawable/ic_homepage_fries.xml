@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape android:shape="oval">
+            <gradient
+                android:angle="315"
+                android:startColor="#7F00FF"
+                android:endColor="#E100FF"
+                android:type="linear" />
+            <size
+                android:width="@dimen/dashboard_tile_image_size"
+                android:height="@dimen/dashboard_tile_image_size" />
+        </shape>
+    </item>
+
+    <item
+        android:width="@dimen/dashboard_tile_foreground_image_size"
+        android:height="@dimen/dashboard_tile_foreground_image_size"
+        android:start="@dimen/dashboard_tile_foreground_image_inset"
+        android:top="@dimen/dashboard_tile_foreground_image_inset"
+        android:drawable="@drawable/ic_fries" />
+</layer-list>
