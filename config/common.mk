@@ -141,6 +141,10 @@ PRODUCT_COPY_FILES += \
     vendor/potato/prebuilt/common/etc/permissions/privapp-permissions-turbo.xml:system/etc/permissions/privapp-permissions-turbo.xml \
     vendor/potato/prebuilt/common/etc/sysconfig/turbo.xml:system/etc/sysconfig/turbo.xml
 
+# Power whitelist
+PRODUCT_COPY_FILES += \
+    vendor/potato/config/permissions/custom-power-whitelist.xml:system/etc/sysconfig/custom-power-whitelist.xml
+
 # Disable Rescue Party
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.disable_rescue=true
