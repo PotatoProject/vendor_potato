@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="28dp"
+    android:height="28dp"
+    android:viewportWidth="28"
+    android:viewportHeight="28">
+
+    <group>
+        <path
+            android:fillColor="@android:color/navbar_color"
+            android:fillType="evenOdd"
+            android:pathData="M 5 14 C 5 9.033 9.033 5 14 5 C 18.967 5 23 9.033 23 14 C 23 18.967 18.967 23 14 23 C 9.033 23 5 18.967 5 14 Z M 7 14 C 7 10.137 10.137 7 14 7 C 17.863 7 21 10.137 21 14 C 21 17.863 17.863 21 14 21 C 10.137 21 7 17.863 7 14 Z" />
+    </group>
+</vector>
