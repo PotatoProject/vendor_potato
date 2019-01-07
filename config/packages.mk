@@ -50,6 +50,12 @@ PRODUCT_PACKAGES += \
     GMSOreoTiles \
     WellbeingOreoTiles
 
+# Navbar Overlays
+PRODUCT_PACKAGES += \
+    NavbarMarshmallow \
+    NavbarNougat \
+    NavbarOreo
+
 # Lawnchair Default Configuration
 PRODUCT_PACKAGES += \
     LawnConf
