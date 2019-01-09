@@ -29,6 +29,20 @@ PRODUCT_PACKAGES += \
     YellowTheme \
     MintGreenTheme
 
+# QSTile Styles Packages
+PRODUCT_PACKAGES += \
+	AbstractTileStyle \
+	Abstract2TileStyle \
+	DiamondsTileStyle \
+	LeafTileStyle \
+	HexagonTileStyle \
+	OreoTileStyle \
+	PaintTileStyle \
+	PotatoTileStyle \
+	SquareTileStyle \
+	SquircleTileStyle \
+	TrimTileStyle
+
 # Dark/BlackUI Packages
 PRODUCT_PACKAGES += \
     GBoardDarkTheme \
