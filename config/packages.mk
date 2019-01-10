@@ -108,3 +108,7 @@ PRODUCT_PACKAGES += \
 # Weather
 PRODUCT_PACKAGES += \
     WeatherClient
+
+#Font package
+PRODUCT_PACKAGES += \
+    Custom-Fonts
