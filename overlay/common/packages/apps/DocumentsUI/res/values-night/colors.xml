@@ -59,4 +59,6 @@
     <color name="inspector_value">#ff6c6c6c</color>
     <color name="inspector_section_title">#ff6c6c6c</color>
 
+    <color name="navigation_bar_color">@*android:color/primary_device_default_dark</color>
+
 </resources>
