@@ -10,6 +10,8 @@
         <item name="android:navigationBarColor">@*android:color/black</item>
         <item name="android:textColorPrimaryInverse">@*android:color/black</item>
         <item name="android:colorBackground">@*android:color/black</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
     </style>
     <style name="Theme.Material.Settings.BaseDialog" parent="@*android:style/Theme.Material.BaseDialog">
         <item name="android:colorPrimary">@*android:color/black</item>
