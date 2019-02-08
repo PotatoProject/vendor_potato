@@ -1,6 +1,4 @@
 # POSP Common packages
-PRODUCT_PACKAGES += \
-    Lawnchair
 
 # PotatoCenter
 ifeq ($(filter-out OFFICIAL WEEKLY MASHED, $(BUILD_TYPE)),)
@@ -60,10 +58,6 @@ PRODUCT_PACKAGES += \
     SettingsBlackTheme \
     SystemBlackTheme \
     SysuiQsBlackTheme
-
-# Lawnchair Default Configuration
-PRODUCT_PACKAGES += \
-    LawnConf
 
 # Turbo
 PRODUCT_PACKAGES += \
