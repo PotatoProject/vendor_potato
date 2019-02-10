@@ -39,6 +39,12 @@ PRODUCT_PACKAGES += \
     SystemBlackTheme \
     SysuiQsBlackTheme
 
+# Navbar Styles
+PRODUCT_PACKAGES += \
+    NavbarMarshmallow
+    NavbarNougat
+    NavbarOreo
+
 # QS Accent Packages
 PRODUCT_PACKAGES += \
     QsAccentBlack \
