@@ -1,0 +1,4 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <dimen name="quick_qs_offset_height">48dp</dimen>
+    <dimen name="quick_qs_total_height">184dp</dimen>
+</resources>
