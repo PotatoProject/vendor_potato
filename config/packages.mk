@@ -63,6 +63,12 @@ PRODUCT_PACKAGES += \
     SystemBlackTheme \
     SysuiQsBlackTheme
 
+# Oreo Settings Tiles Required Packages
+PRODUCT_PACKAGES += \
+    SettingsOreoTiles \
+    GMSOreoTiles \
+    WellbeingOreoTiles
+
 # Lawnchair Default Configuration
 ifeq ($(LAWNCHAIR_OPTOUT),)
 PRODUCT_PACKAGES += \
