@@ -1,0 +1,8 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.google.android.gms.tiles.oreo"
+    android:versionCode="1"
+    android:versionName="1.0">
+    <overlay android:targetPackage="com.google.android.gms" android:priority="1" android:category="android.settings_tiles.oreo" />
+
+    <application android:label="Oreo Tiles" android:hasCode="false"/>
+</manifest>

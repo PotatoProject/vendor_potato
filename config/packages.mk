@@ -44,6 +44,12 @@ PRODUCT_PACKAGES += \
     QsAccentBlack \
     QsAccentWhite
 
+# Oreo Settings Tiles Required Packages
+PRODUCT_PACKAGES += \
+    SettingsOreoTiles \
+    GMSOreoTiles \
+    WellbeingOreoTiles
+
 # Lawnchair Default Configuration
 PRODUCT_PACKAGES += \
     LawnConf
