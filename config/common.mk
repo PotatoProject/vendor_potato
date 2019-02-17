@@ -152,6 +152,9 @@ PRODUCT_COPY_FILES += \
     vendor/potato/prebuilt/common/lib/libsketchology_native.so:system/lib/libsketchology_native.so \
     vendor/potato/prebuilt/common/lib64/libsketchology_native.so:system/lib64/libsketchology_native.so
 
+# GSans font
+include vendor/potato/config/fonts.mk
+
 # We modify several neverallows, so let the build proceed
 ifneq ($(TARGET_BUILD_VARIANT),user)
     SELINUX_IGNORE_NEVERALLOWS := true
