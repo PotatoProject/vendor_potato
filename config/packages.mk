@@ -34,7 +34,13 @@ PRODUCT_PACKAGES += \
     StockFixedBaseTheme \
     StockTheme \
     YellowTheme \
-    MintGreenTheme
+    MintGreenTheme \
+    FadedPink \
+    DeepRed \
+    PinkRed \
+    KindaIndigo \
+    ArmyGreen \
+    Grey
 
 # Charger
 PRODUCT_PACKAGES += \
