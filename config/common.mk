@@ -129,6 +129,9 @@ PRODUCT_COPY_FILES += \
 # Packages
 include vendor/potato/config/packages.mk
 
+# Mantainers gen
+include vendor/potato/config/mantainer_gen.mk
+
 # Set custom volume steps
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.media_vol_steps=30 \
