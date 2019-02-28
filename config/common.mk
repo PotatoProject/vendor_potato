@@ -130,6 +130,9 @@ PRODUCT_COPY_FILES += \
     vendor/potato/etc/permissions/org.pixelexperience.weather.client.xml:system/etc/permissions/org.pixelexperience.weather.client.xml \
     vendor/potato/etc/default-permissions/org.pixelexperience.weather.client.xml:system/etc/default-permissions/org.pixelexperience.weather.client.xml
 
+# Mantainers gen
+include vendor/potato/config/mantainer_gen.mk
+
 # Set custom volume steps
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.media_vol_steps=30 \

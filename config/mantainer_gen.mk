@@ -1,0 +1,35 @@
+ifeq($(PRODUCT_DEVICE), bacon)
+    DEVICE_MANTAINERS := AgentFabulous
+else ifeq($(PRODUCT_DEVICE), berkeley)
+    DEVICE_MANTAINERS := DavidSn
+else ifeq($(PRODUCT_DEVICE), beryllium)
+    DEVICE_MANTAINERS := AgentFabulous
+else ifeq($(PRODUCT_DEVICE), cheeseburger)
+    DEVICE_MANTAINERS := georgemath24
+else ifeq($(PRODUCT_DEVICE), chiron)
+    DEVICE_MANTAINERS := HrX
+else ifeq($(PRODUCT_DEVICE), dipper)
+    DEVICE_MANTAINERS := Argraur
+else ifeq($(PRODUCT_DEVICE), enchilada)
+    DEVICE_MANTAINERS := SamriddhaBasu
+else ifeq($(PRODUCT_DEVICE), fajita)
+    DEVICE_MANTAINERS := Ujwal
+else ifeq($(PRODUCT_DEVICE), kenzo)
+    DEVICE_MANTAINERS := AbsarRahman
+else ifeq($(PRODUCT_DEVICE), mido)
+    DEVICE_MANTAINERS := Rahul
+else ifeq($(PRODUCT_DEVICE), oneplus2)
+    DEVICE_MANTAINERS := ShreyanshLodha
+else ifeq($(PRODUCT_DEVICE), oneplus3)
+    DEVICE_MANTAINERS := JagravNaik
+else ifeq($(PRODUCT_DEVICE), onyx)
+    DEVICE_MANTAINERS := kushagra57
+else ifeq($(PRODUCT_DEVICE), potter)
+    DEVICE_MANTAINERS := AshWINRC
+else ifeq($(PRODUCT_DEVICE), sanders)
+    DEVICE_MANTAINERS := DybyajyotiSamal
+else ifeq($(PRODUCT_DEVICE), whyred)
+    DEVICE_MANTAINERS := RajJadeja
+else ifeq($(PRODUCT_DEVICE), X00T)
+    DEVICE_MANTAINERS := AkashKhatri
+endif
