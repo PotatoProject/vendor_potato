@@ -25,4 +25,7 @@ potato: $(INTERNAL_OTA_PACKAGE_TARGET)
 	@echo "Package Complete: $(POTATO_TARGET_PACKAGE)" >&2
 	echo "";
 	cat build/make/potato_ascii_logo;
+        if [ $BUILD_TYPE == "WEEKLY" ]
+            python vendor/potato/build/tools/posp_ota_jenerator.py;
+        fi
 	echo "";
