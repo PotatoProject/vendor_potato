@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "359b2d52_749920ca",
+        "filename": "config/mantainer_gen.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2019-03-01T08:56:17Z",
+      "side": 1,
+      "message": "Also, let\u0027s have it as \"Name (Username)\". Name isn\u0027t mandatory for all, but Username is.",
+      "range": {
+        "startLine": 2,
+        "startChar": 24,
+        "endLine": 2,
+        "endChar": 37
+      },
+      "revId": "921b4e4575e6ce68ae6558f0d154ba3c3c5d6442",
+      "serverId": "8720d348-3d66-43e6-b480-1d69039ac554",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "317ca088_04d7c0a9",
+        "filename": "config/mantainer_gen.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2019-03-01T08:56:17Z",
+      "side": 1,
+      "message": "Use DEVICE_MAINTAINERS instead.\nSee: https://github.com/PotatoProject/build_make/blob/baked-release/tools/buildinfo.sh#L73",
+      "range": {
+        "startLine": 2,
+        "startChar": 4,
+        "endLine": 2,
+        "endChar": 20
+      },
+      "revId": "921b4e4575e6ce68ae6558f0d154ba3c3c5d6442",
+      "serverId": "8720d348-3d66-43e6-b480-1d69039ac554",
+      "unresolved": true
+    }
+  ]
+}
