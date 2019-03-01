@@ -63,33 +63,22 @@ ifeq ($(filter $(CURRENT_DEVICE), $(LIST)), $(CURRENT_DEVICE))
         POTATO_VERSION := $(POTATO_VERSION).$(POTATO_DISH)-v$(POTATO_VERNUM)
         ifeq ($(filter-out EXPERIMENTAL EXPERIMENTS TESTING TEST, $(BUILD_STATE)),)
             POTATO_VERSION :=$(POTATO_VERSION).MASHED
-            PRODUCT_PROPERTY_OVERRIDES += persist.potato.otasupport=false
         else
             ifeq ($(BUILD_TYPE), WEEKLY)
               POTATO_VERSION :=$(POTATO_VERSION).WEEKLY
-              PRODUCT_PROPERTY_OVERRIDES += persist.potato.otachannel=weekly
+              PRODUCT_PROPERTY_OVERRIDES += ro.potato.type=weekly
             endif
-            PRODUCT_PROPERTY_OVERRIDES += persist.potato.otasupport=true
         endif
-        PRODUCT_PROPERTY_OVERRIDES += persist.potato.official=true
     else
         POTATO_VERSION := $(POTATO_VERSION).CHIPS-v$(POTATO_VERNUM).$(BUILD_TYPE)
-        PRODUCT_PROPERTY_OVERRIDES += \
-            persist.potato.community=true \
-            persist.potato.otasupport=false \
-            persist.potato.official=false
     endif
 else
     POTATO_VERSION := $(POTATO_VERSION).CHIPS-v$(POTATO_VERNUM).$(BUILD_TYPE)
-    PRODUCT_PROPERTY_OVERRIDES += \
-        persist.potato.community=true \
-        persist.potato.otasupport=false \
-        persist.potato.official=false
 endif
+
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.potato.dish=$(POTATO_DISH) \
-    persist.potato.version=$(POTATO_VERNUM) \
-    persist.potato.date=$(shell date -u +%Y%m%d)
+    ro.potato.dish=$(POTATO_DISH) \
+    ro.potato.version=$(POTATO_VERNUM)
 
 # LatinIME gesture typing
 ifneq ($(filter tenderloin,$(TARGET_PRODUCT)),)
