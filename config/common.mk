@@ -94,7 +94,6 @@ endif
 endif
 
 # Lawnchair
-PRODUCT_PACKAGES += Lawnchair
 PRODUCT_COPY_FILES += \
     vendor/potato/prebuilt/common/etc/permissions/privapp-permissions-lawnchair.xml:system/etc/permissions/privapp-permissions-lawnchair.xml \
     vendor/potato/prebuilt/common/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml:system/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml
@@ -107,36 +106,24 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/potato/prebuilt/common/bin/clean_cache.sh:system/bin/clean_cache.sh
 
-# Overlays
-PRODUCT_PACKAGE_OVERLAYS += vendor/potato/overlay/common
-
 # Weather client
 PRODUCT_COPY_FILES += \
     vendor/potato/etc/permissions/org.pixelexperience.weather.client.xml:system/etc/permissions/org.pixelexperience.weather.client.xml \
     vendor/potato/etc/default-permissions/org.pixelexperience.weather.client.xml:system/etc/default-permissions/org.pixelexperience.weather.client.xml
-
-# Packages
-include vendor/potato/config/packages.mk
 
 # Set custom volume steps
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.media_vol_steps=30 \
     ro.config.bt_sco_vol_steps=30
 
+# Turbo
+PRODUCT_COPY_FILES += \
+    vendor/potato/prebuilt/common/etc/permissions/privapp-permissions-turbo.xml:system/etc/permissions/privapp-permissions-turbo.xml \
+    vendor/potato/prebuilt/common/etc/sysconfig/turbo.xml:system/etc/sysconfig/turbo.xml
+
 # Disable Rescue Party
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.disable_rescue=true
-
-# Charger
-PRODUCT_PACKAGES += \
-    charger_res_images
-
-# Few Packages from Pixel
-PRODUCT_PACKAGES += \
-    SoundPickerPrebuilt \
-    SettingsIntelligenceGooglePrebuilt \
-    MarkupGoogle \
-    MatchmakerPrebuilt
 
 # Markup libs
 PRODUCT_COPY_FILES += \
@@ -147,3 +134,20 @@ PRODUCT_COPY_FILES += \
 ifneq ($(TARGET_BUILD_VARIANT),user)
     SELINUX_IGNORE_NEVERALLOWS := true
 endif
+
+# Fonts
+PRODUCT_COPY_FILES += \
+   vendor/potato/prebuilt/common/fonts/GoogleSans-Regular.ttf:system/fonts/GoogleSans-Regular.ttf \
+   vendor/potato/prebuilt/common/fonts/GoogleSans-Medium.ttf:system/fonts/GoogleSans-Medium.ttf \
+   vendor/potato/prebuilt/common/fonts/GoogleSans-MediumItalic.ttf:system/fonts/GoogleSans-MediumItalic.ttf \
+   vendor/potato/prebuilt/common/fonts/GoogleSans-Italic.ttf:system/fonts/GoogleSans-Italic.ttf \
+   vendor/potato/prebuilt/common/fonts/GoogleSans-Bold.ttf:system/fonts/GoogleSans-Bold.ttf \
+   vendor/potato/prebuilt/common/fonts/GoogleSans-BoldItalic.ttf:system/fonts/GoogleSans-BoldItalic.ttf
+
+ADDITIONAL_FONTS_FILE := vendor/potato/prebuilt/common/fonts/google-sans.xml
+
+# Overlays
+PRODUCT_PACKAGE_OVERLAYS += vendor/potato/overlay/common
+
+# Packages
+include vendor/potato/config/packages.mk
