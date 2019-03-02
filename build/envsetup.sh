@@ -12,6 +12,7 @@ Additional PotatoROM functions:
 - mka:             Builds using SCHED_BATCH on all processors.
 - mkap:            Builds the module(s) using mka and pushes them to the device.
 - cmka:            Cleans and builds using mka.
+- publishOTA:      Pushes OTA data to server API
 - repodiff:        Diff 2 different branches or tags within the same repo
 - repolastsync:    Prints date and time of last repo sync.
 - reposync:        Parallel repo sync using ionice and SCHED_BATCH.
@@ -595,6 +596,52 @@ function cmka() {
         mka clean
         mka
     fi
+}
+
+function deleteOTA() {
+    if [[ -z "$OTA_API_USER" ]]; then
+        echo "Please specify OTA_API_USER\!"; exit 1
+    fi
+    if [[ -z "$OTA_API_SECRET" ]]; then
+        echo "Please set OTA_API_SECRET\!"; exit 1
+    fi
+    if [[ -z "$1" ]]; then
+        echo "Please provide md5sum!";
+    echo "Usage: deleteOTA id";
+    echo -e "\tid - md5sum of the build you'd like to delete\n\tfrom the OTA server";
+    fi
+    data="{\"hash\":\"$1\"}";
+
+    curl --header "Content-Type: application/json" \
+        --user $OTA_API_USER:$OTA_API_SECRET \
+        --request POST \
+        --data "$data" \
+        https://api.potatoproject.co/deleteUpdate 2> /dev/null | \
+        python -c "import sys, json; print json.load(sys.stdin)['response']";
+}
+
+function pushOTA() {
+    if [[ -z "$OTA_API_USER" ]]; then
+        echo "Please specify OTA_API_USER\!"; exit 1
+    fi
+    if [[ -z "$OTA_API_SECRET" ]]; then
+        echo "Please set OTA_API_SECRET\!"; exit 1
+    fi
+    file=$(ls -t ${OUT}/potato_${POTATO_BUILD}-9* | sed -n 2p);
+    url="https://sourceforge.net/projects/posp/files/$POTATO_BUILD/weeklies/${file##*/}";
+    datetime=$(grep ro\.build\.date\.utc $OUT/system/build.prop | cut -d= -f2);
+    id=$(md5sum $file | awk '{ print $1 }');
+    romtype=$(echo $BUILD_TYPE | tr '[:upper:]' '[:lower:]');
+    size=$(stat -c%s $file);
+    version=$(grep ro\.potato\.version $OUT/system/build.prop | cut -d= -f2);
+    data="{\"datetime\":\"$datetime\", \"devicename\":\"$POTATO_BUILD\",\"filename\":\"${file##*/}\",\"id\":\"$id\",\"romtype\":\"$romtype\",\"size\":\"$size\",\"url\":\"$url\",\"version\":\"$version\"}";
+
+    curl --header "Content-Type: application/json" \
+        --user $OTA_API_USER:$OTA_API_SECRET \
+        --request POST \
+        --data "$data" \
+        https://api.potatoproject.co/pushUpdate 2> /dev/null | \
+        python -c "import sys, json; print json.load(sys.stdin)['response']";
 }
 
 function repolastsync() {
