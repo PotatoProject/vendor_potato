@@ -1,5 +1,7 @@
+# POSP Common packages
 PRODUCT_PACKAGES += \
-    Lean
+    Lawnchair \
+    PotatoCenter
 
 # Include librsjni explicitly to workaround GMS issue
 PRODUCT_PACKAGES += \
@@ -29,6 +31,15 @@ PRODUCT_PACKAGES += \
     YellowTheme \
     MintGreenTheme
 
+# Charger
+PRODUCT_PACKAGES += \
+    charger_res_images
+
+# Cutout control overlays
+PRODUCT_PACKAGES += \
+    HideCutout \
+    StatusBarStock
+
 # Dark/BlackUI Packages
 PRODUCT_PACKAGES += \
     GBoardDarkTheme \
@@ -39,35 +50,25 @@ PRODUCT_PACKAGES += \
     SystemBlackTheme \
     SysuiQsBlackTheme
 
-# QS Accent Packages
-PRODUCT_PACKAGES += \
-    QsAccentBlack \
-    QsAccentWhite
-
 # Lawnchair Default Configuration
 PRODUCT_PACKAGES += \
     LawnConf
 
-# Cutout control overlays
-PRODUCT_PACKAGES += \
-    HideCutout \
-    StatusBarStock
-
-PRODUCT_COPY_FILES += \
-   vendor/potato/prebuilt/common/fonts/GoogleSans-Regular.ttf:system/fonts/GoogleSans-Regular.ttf \
-   vendor/potato/prebuilt/common/fonts/GoogleSans-Medium.ttf:system/fonts/GoogleSans-Medium.ttf \
-   vendor/potato/prebuilt/common/fonts/GoogleSans-MediumItalic.ttf:system/fonts/GoogleSans-MediumItalic.ttf \
-   vendor/potato/prebuilt/common/fonts/GoogleSans-Italic.ttf:system/fonts/GoogleSans-Italic.ttf \
-   vendor/potato/prebuilt/common/fonts/GoogleSans-Bold.ttf:system/fonts/GoogleSans-Bold.ttf \
-   vendor/potato/prebuilt/common/fonts/GoogleSans-BoldItalic.ttf:system/fonts/GoogleSans-BoldItalic.ttf
-
-ADDITIONAL_FONTS_FILE := vendor/potato/prebuilt/common/fonts/google-sans.xml
-
 # Turbo
 PRODUCT_PACKAGES += \
-    Turbo \
-    vendor/potato/prebuilt/common/etc/permissions/privapp-permissions-turbo.xml:system/etc/permissions/privapp-permissions-turbo.xml \
-    vendor/potato/prebuilt/common/etc/sysconfig/turbo.xml:system/etc/sysconfig/turbo.xml
+    Turbo
+
+# Pixel packages
+PRODUCT_PACKAGES += \
+    SoundPickerPrebuilt \
+    SettingsIntelligenceGooglePrebuilt \
+    MarkupGoogle \
+    MatchmakerPrebuilt
+
+# QS Accent Packages
+PRODUCT_PACKAGES += \
+    QsAccentBlack \
+    QsAccentWhite
 
 # Weather
 PRODUCT_PACKAGES += \
