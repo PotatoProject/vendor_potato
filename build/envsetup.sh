@@ -780,6 +780,17 @@ function repopick() {
     $T/vendor/potato/build/tools/repopick.py $@
 }
 
+function applyota() {
+    local otadir="vendor/ota/${POTATO_BUILD}/$(echo ${BUILD_TYPE} | awk '{print tolower($0)}')";
+    mkdir -p $otadir;
+    cp $OUT/update.json $otadir/update.json;
+    cp $OUT/changes $otadir/changes;
+    cd $otadir;
+    git add -A;
+    git commit -m "ota: ${POTATO_BUILD}: weekly-$(date +%Y%m%d)";
+    croot;
+}
+
 function fixup_common_out_dir() {
     common_out_dir=$(get_build_var OUT_DIR)/target/common
     target_device=$(get_build_var TARGET_DEVICE)
