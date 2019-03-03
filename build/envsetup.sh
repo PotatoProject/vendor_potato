@@ -12,7 +12,8 @@ Additional PotatoROM functions:
 - mka:             Builds using SCHED_BATCH on all processors.
 - mkap:            Builds the module(s) using mka and pushes them to the device.
 - cmka:            Cleans and builds using mka.
-- publishOTA:      Pushes OTA data to server API
+- deleteOTA:       Deletes an OTA entry from server API.
+- pushOTA:         Pushes OTA data to server API.
 - repodiff:        Diff 2 different branches or tags within the same repo
 - repolastsync:    Prints date and time of last repo sync.
 - reposync:        Parallel repo sync using ionice and SCHED_BATCH.
@@ -600,15 +601,15 @@ function cmka() {
 
 function deleteOTA() {
     if [[ -z "$OTA_API_USER" ]]; then
-        echo "Please specify OTA_API_USER\!"; exit 1
+        echo "Please specify OTA_API_USER!"; return 1
     fi
     if [[ -z "$OTA_API_SECRET" ]]; then
-        echo "Please set OTA_API_SECRET\!"; exit 1
+        echo "Please set OTA_API_SECRET!"; return 1
     fi
     if [[ -z "$1" ]]; then
         echo "Please provide md5sum!";
-    echo "Usage: deleteOTA id";
-    echo -e "\tid - md5sum of the build you'd like to delete\n\tfrom the OTA server";
+        echo "Usage: deleteOTA id";
+        echo -e "\tid - md5sum of the build you'd like to delete\n\tfrom the OTA server";
     fi
     data="{\"hash\":\"$1\"}";
 
@@ -622,10 +623,10 @@ function deleteOTA() {
 
 function pushOTA() {
     if [[ -z "$OTA_API_USER" ]]; then
-        echo "Please specify OTA_API_USER\!"; exit 1
+        echo "Please specify OTA_API_USER!"; return 1
     fi
     if [[ -z "$OTA_API_SECRET" ]]; then
-        echo "Please set OTA_API_SECRET\!"; exit 1
+        echo "Please set OTA_API_SECRET!"; return 1
     fi
     file=$(ls -t ${OUT}/potato_${POTATO_BUILD}-9* | sed -n 2p);
     url="https://sourceforge.net/projects/posp/files/$POTATO_BUILD/weeklies/${file##*/}";
