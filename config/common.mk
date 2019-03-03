@@ -78,7 +78,8 @@ endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.potato.dish=$(POTATO_DISH) \
-    ro.potato.version=$(POTATO_VERNUM)
+    ro.potato.version=$(POTATO_VERNUM) \
+    ro.build.project=potato
 
 # LatinIME gesture typing
 ifneq ($(filter tenderloin,$(TARGET_PRODUCT)),)
