@@ -622,14 +622,33 @@ function deleteOTA() {
 }
 
 function pushOTA() {
+    OPTIND=1;
     if [[ -z "$OTA_API_USER" ]]; then
         echo "Please specify OTA_API_USER!"; return 1
     fi
     if [[ -z "$OTA_API_SECRET" ]]; then
         echo "Please set OTA_API_SECRET!"; return 1
     fi
+
+    CUSTOM_URL="false";
+
+    while getopts "u" OPTION; do
+      case $OPTION in
+        u)
+                CUSTOM_URL="true"
+                ;;
+      esac
+    done
+
     file=$(ls -t ${OUT}/potato_${POTATO_BUILD}-9* | sed -n 2p);
-    url="https://sourceforge.net/projects/posp/files/$POTATO_BUILD/weeklies/${file##*/}";
+    URL="https://sourceforge.net/projects/posp/files/$POTATO_BUILD/weeklies/${file##*/}";
+
+    if [[ "${CUSTOM_URL}" == true ]]; then
+      printf 'Enter url: ';
+      read -r URL;
+    fi
+
+    url=$URL;
     datetime=$(grep ro\.build\.date\.utc $OUT/system/build.prop | cut -d= -f2);
     id=$(md5sum $file | awk '{ print $1 }');
     romtype=$(echo $BUILD_TYPE | tr '[:upper:]' '[:lower:]');
