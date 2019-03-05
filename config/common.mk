@@ -63,6 +63,7 @@ ifeq ($(filter $(CURRENT_DEVICE), $(LIST)), $(CURRENT_DEVICE))
         POTATO_VERSION := $(POTATO_VERSION).$(POTATO_DISH)-v$(POTATO_VERNUM)
         ifeq ($(filter-out EXPERIMENTAL EXPERIMENTS TESTING TEST, $(BUILD_STATE)),)
             POTATO_VERSION :=$(POTATO_VERSION).MASHED
+            PRODUCT_PROPERTY_OVERRIDES += ro.potato.type=mashed
         else
             ifeq ($(BUILD_TYPE), WEEKLY)
               POTATO_VERSION :=$(POTATO_VERSION).WEEKLY
