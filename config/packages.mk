@@ -3,7 +3,7 @@ PRODUCT_PACKAGES += \
     Lawnchair
 
 # PotatoCenter
-ifeq ($(BUILD_TYPE), WEEKLY)
+ifeq ($(filter-out OFFICIAL WEEKLY MASHED, $(BUILD_TYPE)),)
 PRODUCT_PACKAGES += \
     PotatoCenter
 endif
