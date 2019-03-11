@@ -90,10 +90,8 @@ else
     POTATO_VERSION := $(POTATO_VERSION).CHIPS-v$(POTATO_VERNUM).$(BUILD_TYPE)
 endif
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.potato.dish=$(POTATO_DISH) \
-    ro.potato.version=$(POTATO_VERNUM) \
-    ro.build.project=potato
+export POTATO_VERNUM
+export POTATO_DISH
 
 # LatinIME gesture typing
 ifneq ($(filter tenderloin,$(TARGET_PRODUCT)),)
