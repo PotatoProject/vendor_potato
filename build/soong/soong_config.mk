@@ -1,6 +1,5 @@
-_contents := $(_contents)    "Potato":{$(newline)
+$(call add_json_map, Potato)
 
-# See build/core/soong_config.mk for the add_json_* functions you can use here.
 $(call add_json_bool, Device_support_hwfde, $(filter true,$(TARGET_HW_DISK_ENCRYPTION)))
 $(call add_json_bool, Device_support_hwfde_perf, $(filter true,$(TARGET_HW_DISK_ENCRYPTION_PERF)))
 $(call add_json_bool, Device_support_legacy_hwfde, $(filter true,$(TARGET_LEGACY_HW_DISK_ENCRYPTION)))
@@ -13,7 +12,4 @@ $(call add_json_str, Target_shim_libs, $(TARGET_LD_SHIM_LIBS))
 $(call add_json_bool, Uses_generic_camera_parameter_library, $(if $(TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY),false,true))
 $(call add_json_bool, Uses_qcom_bsp_legacy, $(filter true,$(TARGET_USES_QCOM_BSP_LEGACY)))
 
-# This causes the build system to strip out the last comma in our nested struct, to keep the JSON valid.
-_contents := $(_contents)__SV_END
-
-_contents := $(_contents)    },$(newline)
+$(call end_json_map)
