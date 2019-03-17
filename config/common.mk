@@ -65,6 +65,8 @@ endif
 CURRENT_DEVICE := $(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
 LIST := $(shell cat vendor/potato/potato.devices)
 
+POTATO_TYPE := unknown
+
 ifeq ($(filter $(CURRENT_DEVICE), $(LIST)), $(CURRENT_DEVICE))
     ifeq ($(filter-out OFFICIAL WEEKLY MASHED, $(BUILD_TYPE)),)
         POTATO_VERSION := $(POTATO_VERSION).$(POTATO_DISH)-v$(POTATO_VERNUM)
@@ -73,11 +75,11 @@ ifeq ($(filter $(CURRENT_DEVICE), $(LIST)), $(CURRENT_DEVICE))
         endif
         ifeq ($(filter-out EXPERIMENTAL EXPERIMENTS TESTING TEST, $(BUILD_STATE)),)
             POTATO_VERSION :=$(POTATO_VERSION).MASHED
-            PRODUCT_PROPERTY_OVERRIDES += ro.potato.type=mashed
+            POTATO_TYPE := mashed
         else
             ifeq ($(BUILD_TYPE), WEEKLY)
               POTATO_VERSION :=$(POTATO_VERSION).WEEKLY
-              PRODUCT_PROPERTY_OVERRIDES += ro.potato.type=weekly
+              POTATO_TYPE := weekly
             endif
         endif
     else
@@ -92,6 +94,7 @@ endif
 
 export POTATO_VERNUM
 export POTATO_DISH
+export POTATO_TYPE
 
 # LatinIME gesture typing
 ifneq ($(filter tenderloin,$(TARGET_PRODUCT)),)
