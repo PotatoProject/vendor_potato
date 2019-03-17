@@ -651,7 +651,7 @@ function pushOTA() {
     url=$URL;
     datetime=$(grep ro\.build\.date\.utc $OUT/system/build.prop | cut -d= -f2);
     id=$(md5sum $file | awk '{ print $1 }');
-    romtype=$(echo $BUILD_TYPE | tr '[:upper:]' '[:lower:]');
+    romtype=$(grep ro\.potato\.type $OUT/system/build.prop | cut -d= -f2);
     size=$(stat -c%s $file);
     version=$(grep ro\.potato\.version $OUT/system/build.prop | cut -d= -f2);
     data="{\"datetime\":\"$datetime\", \"devicename\":\"$POTATO_BUILD\",\"filename\":\"${file##*/}\",\"id\":\"$id\",\"romtype\":\"$romtype\",\"size\":\"$size\",\"url\":\"$url\",\"version\":\"$version\"}";
