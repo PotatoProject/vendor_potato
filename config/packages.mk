@@ -77,6 +77,11 @@ PRODUCT_PACKAGES += \
     SettingsIconTint \
     SettingsIconTintDark
 
+# Oreo QS Panel Required Packages
+PRODUCT_PACKAGES += \
+	OreoQSAndroidOverlay \
+	OreoQSSystemUIOverlay
+
 # Lawnchair Default Configuration
 ifeq ($(LAWNCHAIR_OPTOUT),)
 PRODUCT_PACKAGES += \
