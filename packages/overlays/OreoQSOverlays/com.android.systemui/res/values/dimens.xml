@@ -1,0 +1,18 @@
+<resources>
+    <!-- Side padding on the lockscreen on the side of notifications -->
+    <dimen name="notification_side_paddings">0dp</dimen>
+
+    <!-- The corner radius for qs panel elements (such as notifications and panel bg) -->
+    <dimen name="qs_panel_corner_radius">0dp</dimen>
+
+    <!-- padding between the heads up and the statusbar -->
+    <dimen name="heads_up_status_bar_padding">0dp</dimen>
+
+    <dimen name="qs_tile_margin_horizontal">2dp</dimen>
+    <dimen name="qs_tile_margin_vertical">6dp</dimen>
+    <dimen name="qs_tile_margin_top_bottom">6dp</dimen>
+    <dimen name="qs_tile_margin_top">6dp</dimen>
+
+    <!-- How far the quick-quick settings panel extends below the status bar -->
+    <dimen name="qs_quick_header_panel_height">0dp</dimen>
+</resources>
