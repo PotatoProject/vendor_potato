@@ -99,6 +99,11 @@ PRODUCT_PACKAGES += \
     QsAccentBlack \
     QsAccentWhite
 
+# Oreo QS Panel Required Packages
+PRODUCT_PACKAGES += \
+    OreoQSAndroid \
+    OreoQSSystemUI
+
 # Weather
 PRODUCT_PACKAGES += \
     WeatherClient
