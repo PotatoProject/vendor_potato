@@ -5,7 +5,6 @@
         <item name="android:colorPrimaryDark">@*android:color/black</item>
         <item name="android:colorSecondary">@*android:color/black</item>
         <item name="android:colorAccent">@*android:color/qs_accent</item>
-        <item name="android:colorControlNormal">?android:attr/textColorPrimary</item>
         <item name="android:colorBackgroundFloating">@*android:color/black</item>
     </style>
 </resources>

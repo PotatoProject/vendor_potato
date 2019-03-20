@@ -69,6 +69,10 @@ PRODUCT_PACKAGES += \
     GMSOreoTiles \
     WellbeingOreoTiles
 
+# Settings Icon Tint
+PRODUCT_PACKAGES += \
+    SettingsIconTint
+
 # Lawnchair Default Configuration
 ifeq ($(LAWNCHAIR_OPTOUT),)
 PRODUCT_PACKAGES += \
