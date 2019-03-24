@@ -47,6 +47,9 @@ PRODUCT_COPY_FILES += \
 # Common overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/potato/overlay/common
 
+# Don't compile SystemUITests
+EXCLUDE_SYSTEMUI_TESTS := true
+
 # Disable vendor restrictions
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
