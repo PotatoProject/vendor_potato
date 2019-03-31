@@ -1,6 +1,7 @@
 # Changelog
 
-v2.2 (2019.03.31)
+
+### v2.2 (2019.03.31)
 - Support sagit [dpatrongomez]
 - Support tissot [Keian (TF2Wake)]
 - Support vince [4PERTURE]
@@ -11,7 +12,8 @@ v2.2 (2019.03.31)
 - Minor theme fixes
 - ???
 
-v2.2 (2019.03.21)
+
+### v2.2 (2019.03.21)
 - Oreo/OOS like persistent QS footer
 - Oreo styled settings
 - Settings icon tinting
@@ -23,7 +25,8 @@ v2.2 (2019.03.21)
 - Added more translations to Fries
 - OTA app layout and behavior fixes
 
-v2.2 (2019.03.10)
+
+### v2.2 (2019.03.10)
 - Merge latest security patch
 - android-9.0.0_r34
 - Network activity indicators in QS
