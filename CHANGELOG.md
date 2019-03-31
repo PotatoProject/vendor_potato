@@ -8,6 +8,9 @@
 - Support X00T [BabluS]
 - Fix settings icon tinting for all
 - Fix QS footer multiuser icon visbility
+- Unbreak ambient when heads up is disabled
+- Add in statusbar tuner
+- Reorder and cleanup Fries
 - Upstream changes
 - Minor theme fixes
 - ???
