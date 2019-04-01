@@ -660,7 +660,7 @@ function pushOTA() {
         --user $OTA_API_USER:$OTA_API_SECRET \
         --request POST \
         --data "$data" \
-        https://api.potatoproject.co/pushUpdate 2> /dev/null | \
+        https://api.strangebits.co.in/pushUpdate 2> /dev/null | \
         python -c "import sys, json; print json.load(sys.stdin)['response']";
 }
 
