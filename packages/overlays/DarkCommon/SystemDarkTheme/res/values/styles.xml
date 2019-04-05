@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <style name="Theme.DeviceDefault.QuickSettings" parent="@*android:style/Theme.DeviceDefault">
+        <item name="android:colorPrimary">@*android:color/primary_device_default_dark</item>
+        <item name="android:colorPrimaryDark">@*android:color/primary_dark_device_default_settings</item>
+        <item name="android:colorSecondary">@*android:color/secondary_device_default_settings</item>
+        <item name="android:colorAccent">@*android:color/accent_device_default_dark</item>
+        <item name="android:colorControlNormal">?android:attr/textColorPrimary</item>
+        <item name="android:colorBackgroundFloating">@*android:color/material_grey_900</item>
+        <item name="android:alertDialogTheme">@*android:style/Theme.DeviceDefault.Light.Dialog.Alert</item>
+
+        <!-- Text styles -->
+        <item name="android:textAppearanceButton">@*android:style/TextAppearance.DeviceDefault.Widget.Button</item>
+
+        <!-- Button styles -->
+        <item name="android:buttonCornerRadius">@*android:dimen/config_buttonCornerRadius</item>
+        <item name="android:buttonBarButtonStyle">@*android:style/Widget.DeviceDefault.Button.ButtonBar.AlertDialog</item>
+
+        <!-- Progress bar attributes -->
+        <item name="*android:colorProgressBackgroundNormal">@*android:color/config_progress_background_tint</item>
+        <item name="*android:progressBarCornerRadius">@*android:dimen/config_progressBarCornerRadius</item>
+
+        <!-- Toolbar attributes -->
+        <item name="android:toolbarStyle">@*android:style/Widget.DeviceDefault.Toolbar</item>
+
+        <!-- volume background -->
+        <item name="android:panelColorBackground">@*android:color/primary_material_light</item>
+    </style>
     <style name="Theme.DeviceDefault.Settings" parent="@*android:style/Theme.Material">
         <item name="android:actionBarTheme">@*android:style/ThemeOverlay.DeviceDefault.ActionBar.Accent</item>
         <item name="android:colorPrimary">@*android:color/primary_device_default_dark</item>
@@ -12,6 +38,23 @@
         <item name="android:textColorPrimaryInverse">@*android:color/background_material_dark</item>
         <item name="android:windowLightStatusBar">false</item>
         <item name="android:windowLightNavigationBar">false</item>
+        <!-- Color palette -->
+        <item name="android:colorError">@*android:color/error_color_device_default_light</item>
+
+        <!-- Dialog attributes -->
+        <item name="android:dialogCornerRadius">@*android:dimen/config_dialogCornerRadius</item>
+        <item name="android:alertDialogTheme">@*android:style/Theme.DeviceDefault.Light.Dialog.Alert</item>
+
+        <!-- Button styles -->
+        <item name="android:buttonCornerRadius">@*android:dimen/config_buttonCornerRadius</item>
+        <item name="android:buttonBarButtonStyle">@*android:style/Widget.DeviceDefault.Button.ButtonBar.AlertDialog</item>
+
+        <!-- Progress bar attributes -->
+        <item name="*android:colorProgressBackgroundNormal">@*android:color/config_progress_background_tint</item>
+        <item name="*android:progressBarCornerRadius">@*android:dimen/config_progressBarCornerRadius</item>
+
+        <!-- Toolbar attributes -->
+        <item name="android:toolbarStyle">@*android:style/Widget.DeviceDefault.Toolbar</item>
     </style>
     <style name="Theme.Material.Settings.BaseDialog" parent="@*android:style/Theme.Material.BaseDialog">
         <item name="android:colorPrimary">@*android:color/primary_device_default_dark</item>
@@ -58,6 +101,27 @@
         <item name="android:colorSecondary">@*android:color/secondary_device_default_settings_light</item>
         <item name="android:colorAccent">@*android:color/accent_device_default_light</item>
         <item name="android:colorControlNormal">@*android:color/accent_device_default_dark</item>
+        <!-- Dialog attributes -->
+        <item name="android:dialogCornerRadius">@*android:dimen/config_dialogCornerRadius</item>
+        <item name="android:alertDialogTheme">@*android:style/Theme.DeviceDefault.Light.Dialog.Alert</item>
+
+        <!-- Button styles -->
+        <item name="android:buttonCornerRadius">@*android:dimen/config_buttonCornerRadius</item>
+        <item name="android:buttonBarButtonStyle">@*android:style/Widget.DeviceDefault.Button.ButtonBar.AlertDialog</item>
+
+        <item name="android:textAppearance">@*android:style/TextAppearance.DeviceDefault</item>
+        <item name="android:textAppearanceInverse">@*android:style/TextAppearance.DeviceDefault.Inverse</item>
+        <item name="android:textAppearanceButton">@*android:style/TextAppearance.DeviceDefault.Widget.Button</item>
+
+        <!-- Color palette -->
+        <item name="android:colorError">@*android:color/error_color_device_default_light</item>
+
+        <!-- Progress bar attributes -->
+        <item name="*android:colorProgressBackgroundNormal">@*android:color/config_progress_background_tint</item>
+        <item name="*android:progressBarCornerRadius">@*android:dimen/config_progressBarCornerRadius</item>
+
+        <!-- Toolbar attributes -->
+        <item name="android:toolbarStyle">@*android:style/Widget.DeviceDefault.Toolbar</item>
     </style>
     <style name="Theme.DeviceDefault.Light.Dialog.Alert" parent="@*android:style/Theme.Material.Dialog.Alert">
         <item name="android:windowTitleStyle">@*android:style/DialogWindowTitle.DeviceDefault</item>
@@ -74,6 +138,27 @@
         <item name="android:colorSecondary">@*android:color/secondary_device_default_settings_light</item>
         <item name="android:colorAccent">@*android:color/accent_device_default_light</item>
         <item name="android:colorControlNormal">@*android:color/accent_device_default_dark</item>
+
+        <!-- Color palette -->
+        <item name="android:colorError">@*android:color/error_color_device_default_light</item>
+
+        <!-- Dialog attributes -->
+        <item name="android:dialogCornerRadius">@*android:dimen/config_dialogCornerRadius</item>
+        <item name="android:alertDialogTheme">@*android:style/Theme.DeviceDefault.Light.Dialog.Alert</item>
+
+        <!-- Text styles -->
+        <item name="android:textAppearanceButton">@*android:style/TextAppearance.DeviceDefault.Widget.Button</item>
+
+        <!-- Button styles -->
+        <item name="android:buttonCornerRadius">@*android:dimen/config_buttonCornerRadius</item>
+        <item name="android:buttonBarButtonStyle">@*android:style/Widget.DeviceDefault.Button.ButtonBar.AlertDialog</item>
+
+        <!-- Progress bar attributes -->
+        <item name="*android:colorProgressBackgroundNormal">@*android:color/config_progress_background_tint</item>
+        <item name="*android:progressBarCornerRadius">@*android:dimen/config_progressBarCornerRadius</item>
+
+        <!-- Toolbar attributes -->
+        <item name="android:toolbarStyle">@*android:style/Widget.DeviceDefault.Toolbar</item>
     </style>
     <style name="Theme.DeviceDefault.Light.DarkActionBar" parent="@*android:style/Theme.Material.Light.DarkActionBar">
         <item name="android:windowTitleStyle">@*android:style/DialogWindowTitle.DeviceDefault</item>
@@ -90,6 +175,26 @@
         <item name="android:colorSecondary">@*android:color/secondary_device_default_settings_light</item>
         <item name="android:colorAccent">@*android:color/accent_device_default_light</item>
         <item name="android:colorControlNormal">@*android:color/accent_device_default_dark</item>
+        <!-- Color palette -->
+        <item name="android:colorError">@*android:color/error_color_device_default_light</item>
+
+        <!-- Dialog attributes -->
+        <item name="android:dialogCornerRadius">@*android:dimen/config_dialogCornerRadius</item>
+        <item name="android:alertDialogTheme">@*android:style/Theme.DeviceDefault.Light.Dialog.Alert</item>
+
+        <!-- Text styles -->
+        <item name="android:textAppearanceButton">@*android:style/TextAppearance.DeviceDefault.Widget.Button</item>
+
+        <!-- Button styles -->
+        <item name="android:buttonCornerRadius">@*android:dimen/config_buttonCornerRadius</item>
+        <item name="android:buttonBarButtonStyle">@*android:style/Widget.DeviceDefault.Button.ButtonBar.AlertDialog</item>
+
+        <!-- Progress bar attributes -->
+        <item name="*android:colorProgressBackgroundNormal">@*android:color/config_progress_background_tint</item>
+        <item name="*android:progressBarCornerRadius">@*android:dimen/config_progressBarCornerRadius</item>
+
+        <!-- Toolbar attributes -->
+        <item name="android:toolbarStyle">@*android:style/Widget.DeviceDefault.Toolbar</item>
     </style>
     <style name="Theme.DeviceDefault.Light.Dialog.MinWidth" parent="@*android:style/Theme.Material.Dialog.MinWidth">
         <item name="android:colorPrimary">@*android:color/primary_dark_device_default_settings</item>
@@ -102,6 +207,29 @@
         <item name="android:textColorTertiary">#b3f5f5f5</item>
         <item name="android:textColorHint">#ff999999</item>
         <item name="android:textColorAlertDialogListItem">#ffffffff</item>
+        <item name="android:windowTitleStyle">@*android:style/DialogWindowTitle.DeviceDefault</item>
+        <item name="android:windowAnimationStyle">@*android:style/Animation.DeviceDefault.Dialog</item>
+
+        <!-- Color palette -->
+        <item name="android:colorError">@*android:color/error_color_device_default_light</item>
+
+        <!-- Dialog attributes -->
+        <item name="android:dialogCornerRadius">@*android:dimen/config_dialogCornerRadius</item>
+        <item name="android:alertDialogTheme">@*android:style/Theme.DeviceDefault.Light.Dialog.Alert</item>
+
+        <!-- Text styles -->
+        <item name="android:textAppearanceButton">@*android:style/TextAppearance.DeviceDefault.Widget.Button</item>
+
+        <!-- Button styles -->
+        <item name="android:buttonCornerRadius">@*android:dimen/config_buttonCornerRadius</item>
+        <item name="android:buttonBarButtonStyle">@*android:style/Widget.DeviceDefault.Button.ButtonBar.AlertDialog</item>
+
+        <!-- Progress bar attributes -->
+        <item name="*android:colorProgressBackgroundNormal">@*android:color/config_progress_background_tint</item>
+        <item name="*android:progressBarCornerRadius">@*android:dimen/config_progressBarCornerRadius</item>
+
+        <!-- Toolbar attributes -->
+        <item name="android:toolbarStyle">@*android:style/Widget.DeviceDefault.Toolbar</item>
     </style>
     <style name="Theme.DeviceDefault.Light.Dialog.NoActionBar" parent="@*android:style/Theme.Material.Dialog.NoActionBar">
         <item name="android:colorPrimary">@*android:color/primary_dark_device_default_settings</item>
@@ -114,6 +242,29 @@
         <item name="android:textColorTertiary">#b3f5f5f5</item>
         <item name="android:textColorHint">#ff999999</item>
         <item name="android:textColorAlertDialogListItem">#ffffffff</item>
+        <item name="android:windowTitleStyle">@*android:style/DialogWindowTitle.DeviceDefault</item>
+        <item name="android:windowAnimationStyle">@*android:style/Animation.DeviceDefault.Dialog</item>
+
+        <!-- Color palette -->
+        <item name="android:colorError">@*android:color/error_color_device_default_light</item>
+
+        <!-- Dialog attributes -->
+        <item name="android:dialogCornerRadius">@*android:dimen/config_dialogCornerRadius</item>
+        <item name="android:alertDialogTheme">@*android:style/Theme.DeviceDefault.Light.Dialog.Alert</item>
+
+        <!-- Text styles -->
+        <item name="android:textAppearanceButton">@*android:style/TextAppearance.DeviceDefault.Widget.Button</item>
+
+        <!-- Button styles -->
+        <item name="android:buttonCornerRadius">@*android:dimen/config_buttonCornerRadius</item>
+        <item name="android:buttonBarButtonStyle">@*android:style/Widget.DeviceDefault.Button.ButtonBar.AlertDialog</item>
+
+        <!-- Progress bar attributes -->
+        <item name="*android:colorProgressBackgroundNormal">@*android:color/config_progress_background_tint</item>
+        <item name="*android:progressBarCornerRadius">@*android:dimen/config_progressBarCornerRadius</item>
+
+        <!-- Toolbar attributes -->
+        <item name="android:toolbarStyle">@*android:style/Widget.DeviceDefault.Toolbar</item>
     </style>
     <style name="Theme.DeviceDefault.Light.Dialog.NoActionBar.MinWidth" parent="@*android:style/Theme.Material.Dialog.NoActionBar.MinWidth">
         <item name="android:colorPrimary">@*android:color/primary_dark_device_default_settings</item>
@@ -126,6 +277,29 @@
         <item name="android:textColorTertiary">#b3f5f5f5</item>
         <item name="android:textColorHint">#ff999999</item>
         <item name="android:textColorAlertDialogListItem">#ffffffff</item>
+        <item name="android:windowTitleStyle">@*android:style/DialogWindowTitle.DeviceDefault</item>
+        <item name="android:windowAnimationStyle">@*android:style/Animation.DeviceDefault.Dialog</item>
+
+        <!-- Color palette -->
+        <item name="android:colorError">@*android:color/error_color_device_default_light</item>
+
+        <!-- Dialog attributes -->
+        <item name="android:dialogCornerRadius">@*android:dimen/config_dialogCornerRadius</item>
+        <item name="android:alertDialogTheme">@*android:style/Theme.DeviceDefault.Light.Dialog.Alert</item>
+
+        <!-- Text styles -->
+        <item name="android:textAppearanceButton">@*android:style/TextAppearance.DeviceDefault.Widget.Button</item>
+
+        <!-- Button styles -->
+        <item name="android:buttonCornerRadius">@*android:dimen/config_buttonCornerRadius</item>
+        <item name="android:buttonBarButtonStyle">@*android:style/Widget.DeviceDefault.Button.ButtonBar.AlertDialog</item>
+
+        <!-- Progress bar attributes -->
+        <item name="*android:colorProgressBackgroundNormal">@*android:color/config_progress_background_tint</item>
+        <item name="*android:progressBarCornerRadius">@*android:dimen/config_progressBarCornerRadius</item>
+
+        <!-- Toolbar attributes -->
+        <item name="android:toolbarStyle">@*android:style/Widget.DeviceDefault.Toolbar</item>
     </style>
     <style name="Theme.DeviceDefault.Light.Dialog.FixedSize" parent="@*android:style/Theme.Material" >
         <item name="*android:windowFixedWidthMajor">@*android:dimen/dialog_fixed_width_major</item>
@@ -142,6 +316,8 @@
         <item name="android:textColorTertiary">#b3f5f5f5</item>
         <item name="android:textColorHint">#ff999999</item>
         <item name="android:textColorAlertDialogListItem">#ffffffff</item>
+        <!-- Color palette -->
+        <item name="android:colorError">@*android:color/error_color_device_default_light</item>
     </style>
     <style name="Theme.DeviceDefault.Light.Dialog.NoActionBar.FixedSize" parent="@*android:style/Theme.Material" >
         <item name="*android:windowFixedWidthMajor">@*android:dimen/dialog_fixed_width_major</item>
@@ -158,6 +334,8 @@
         <item name="android:textColorTertiary">#b3f5f5f5</item>
         <item name="android:textColorHint">#ff999999</item>
         <item name="android:textColorAlertDialogListItem">#ffffffff</item>
+        <!-- Color palette -->
+        <item name="android:colorError">@*android:color/error_color_device_default_light</item>
     </style>
     <style name="Theme.DeviceDefault.Light.DialogWhenLarge" parent="@*android:style/Theme.Material.DialogWhenLarge">
         <item name="android:colorPrimary">@*android:color/primary_dark_device_default_settings</item>
@@ -170,6 +348,29 @@
         <item name="android:textColorTertiary">#b3f5f5f5</item>
         <item name="android:textColorHint">#ff999999</item>
         <item name="android:textColorAlertDialogListItem">#ffffffff</item>
+        <item name="android:windowTitleStyle">@*android:style/DialogWindowTitle.DeviceDefault</item>
+        <item name="android:windowAnimationStyle">@*android:style/Animation.DeviceDefault.Dialog</item>
+
+        <!-- Color palette -->
+        <item name="android:colorError">@*android:color/error_color_device_default_light</item>
+
+        <!-- Dialog attributes -->
+        <item name="android:dialogCornerRadius">@*android:dimen/config_dialogCornerRadius</item>
+        <item name="android:alertDialogTheme">@*android:style/Theme.DeviceDefault.Light.Dialog.Alert</item>
+
+        <!-- Text styles -->
+        <item name="android:textAppearanceButton">@*android:style/TextAppearance.DeviceDefault.Widget.Button</item>
+
+        <!-- Button styles -->
+        <item name="android:buttonCornerRadius">@*android:dimen/config_buttonCornerRadius</item>
+        <item name="android:buttonBarButtonStyle">@*android:style/Widget.DeviceDefault.Button.ButtonBar.AlertDialog</item>
+
+        <!-- Progress bar attributes -->
+        <item name="*android:colorProgressBackgroundNormal">@*android:color/config_progress_background_tint</item>
+        <item name="*android:progressBarCornerRadius">@*android:dimen/config_progressBarCornerRadius</item>
+
+        <!-- Toolbar attributes -->
+        <item name="android:toolbarStyle">@*android:style/Widget.DeviceDefault.Toolbar</item>
     </style>
     <style name="Theme.DeviceDefault.Light.DialogWhenLarge.NoActionBar" parent="@*android:style/Theme.Material.DialogWhenLarge.NoActionBar">
         <item name="android:colorPrimary">@*android:color/primary_dark_device_default_settings</item>
@@ -182,6 +383,29 @@
         <item name="android:textColorTertiary">#b3f5f5f5</item>
         <item name="android:textColorHint">#ff999999</item>
         <item name="android:textColorAlertDialogListItem">#ffffffff</item>
+        <item name="android:windowTitleStyle">@*android:style/DialogWindowTitle.DeviceDefault</item>
+        <item name="android:windowAnimationStyle">@*android:style/Animation.DeviceDefault.Dialog</item>
+
+        <!-- Color palette -->
+        <item name="android:colorError">@*android:color/error_color_device_default_light</item>
+
+        <!-- Dialog attributes -->
+        <item name="android:dialogCornerRadius">@*android:dimen/config_dialogCornerRadius</item>
+        <item name="android:alertDialogTheme">@*android:style/Theme.DeviceDefault.Light.Dialog.Alert</item>
+
+        <!-- Text styles -->
+        <item name="android:textAppearanceButton">@*android:style/TextAppearance.DeviceDefault.Widget.Button</item>
+
+        <!-- Button styles -->
+        <item name="android:buttonCornerRadius">@*android:dimen/config_buttonCornerRadius</item>
+        <item name="android:buttonBarButtonStyle">@*android:style/Widget.DeviceDefault.Button.ButtonBar.AlertDialog</item>
+
+        <!-- Progress bar attributes -->
+        <item name="*android:colorProgressBackgroundNormal">@*android:color/config_progress_background_tint</item>
+        <item name="*android:progressBarCornerRadius">@*android:dimen/config_progressBarCornerRadius</item>
+
+        <!-- Toolbar attributes -->
+        <item name="android:toolbarStyle">@*android:style/Widget.DeviceDefault.Toolbar</item>
     </style>
     <style name="Theme.DeviceDefault.Light.Dialog.Presentation" parent="@*android:style/Theme.Material.Dialog.Presentation">
         <item name="android:colorPrimary">@*android:color/primary_dark_device_default_settings</item>
@@ -194,12 +418,44 @@
         <item name="android:textColorTertiary">#b3f5f5f5</item>
         <item name="android:textColorHint">#ff999999</item>
         <item name="android:textColorAlertDialogListItem">#ffffffff</item>
+        <item name="android:windowTitleStyle">@*android:style/DialogWindowTitle.DeviceDefault</item>
+        <item name="android:windowAnimationStyle">@*android:style/Animation.DeviceDefault.Dialog</item>
+
+        <!-- Color palette -->
+        <item name="android:colorError">@*android:color/error_color_device_default_light</item>
+
+        <!-- Dialog attributes -->
+        <item name="android:dialogCornerRadius">@*android:dimen/config_dialogCornerRadius</item>
+        <item name="android:alertDialogTheme">@*android:style/Theme.DeviceDefault.Light.Dialog.Alert</item>
+
+        <!-- Text styles -->
+        <item name="android:textAppearanceButton">@*android:style/TextAppearance.DeviceDefault.Widget.Button</item>
+
+        <!-- Button styles -->
+        <item name="android:buttonCornerRadius">@*android:dimen/config_buttonCornerRadius</item>
+        <item name="android:buttonBarButtonStyle">@*android:style/Widget.DeviceDefault.Button.ButtonBar.AlertDialog</item>
+
+        <!-- Progress bar attributes -->
+        <item name="*android:colorProgressBackgroundNormal">@*android:color/config_progress_background_tint</item>
+        <item name="*android:progressBarCornerRadius">@*android:dimen/config_progressBarCornerRadius</item>
+
+        <!-- Toolbar attributes -->
+        <item name="android:toolbarStyle">@*android:style/Widget.DeviceDefault.Toolbar</item>
     </style>
     <style name="Theme.DeviceDefault.QuickSettings.Dialog" parent="@*android:style/Theme.DeviceDefault.Dialog">
         <item name="android:colorPrimary">@*android:color/primary_device_default_dark</item>
         <item name="android:colorPrimaryDark">@*android:color/primary_dark_device_default_settings</item>
         <item name="android:colorSecondary">@*android:color/secondary_device_default_settings</item>
         <item name="android:colorAccent">@*android:color/accent_device_default_dark</item>
+        <item name="android:colorError">@*android:color/error_color_device_default_light</item>
+        <item name="android:alertDialogTheme">@*android:style/Theme.DeviceDefault.Light.Dialog.Alert</item>
+
+        <!-- Progress bar attributes -->
+        <item name="*android:colorProgressBackgroundNormal">@*android:color/config_progress_background_tint</item>
+        <item name="*android:progressBarCornerRadius">@*android:dimen/config_progressBarCornerRadius</item>
+
+        <!-- Toolbar attributes -->
+        <item name="android:toolbarStyle">@*android:style/Widget.DeviceDefault.Toolbar</item>
     </style>
     <style name="Theme.DeviceDefault.Resolver" parent="@*android:style/Theme.Material">
         <item name="android:backgroundTint">@*android:color/background_material_dark</item>
@@ -214,6 +470,25 @@
         <item name="android:colorPrimary">@*android:color/primary_device_default_dark</item>
         <item name="android:colorPrimaryDark">@*android:color/primary_dark_device_default_settings</item>
         <item name="android:colorAccent">@*android:color/accent_device_default_dark</item>
+        <item name="android:textColorPrimary">#FFC7C7C7</item>
+
+        <!-- Dialog attributes -->
+        <item name="android:dialogCornerRadius">@*android:dimen/config_dialogCornerRadius</item>
+        <item name="android:alertDialogTheme">@*android:style/Theme.DeviceDefault.Light.Dialog.Alert</item>
+
+        <!-- Button styles -->
+        <item name="android:buttonCornerRadius">@*android:dimen/config_buttonCornerRadius</item>
+        <item name="android:buttonBarButtonStyle">@*android:style/Widget.DeviceDefault.Button.ButtonBar.AlertDialog</item>
+
+        <!-- Color palette -->
+        <item name="android:colorError">@*android:color/error_color_device_default_light</item>
+
+        <!-- Progress bar attributes -->
+        <item name="*android:colorProgressBackgroundNormal">@*android:color/config_progress_background_tint</item>
+        <item name="*android:progressBarCornerRadius">@*android:dimen/config_progressBarCornerRadius</item>
+
+        <!-- Toolbar attributes -->
+        <item name="android:toolbarStyle">@*android:style/Widget.DeviceDefault.Toolbar</item>
     </style>
     <style name="Theme.DeviceDefault.Light.Panel" parent="@*android:style/Theme.Material.Panel" >
         <item name="android:colorPrimary">@*android:color/primary_device_default_dark</item>
@@ -225,6 +500,26 @@
         <item name="android:textColorPrimary">#ffffffff</item>
         <item name="android:textColorSecondary">#6d6d6d</item>
         <item name="android:textColorTertiary">#6d6d6d</item>
+        <!-- Color palette -->
+        <item name="android:colorError">@*android:color/error_color_device_default_light</item>
+
+        <!-- Dialog attributes -->
+        <item name="android:dialogCornerRadius">@*android:dimen/config_dialogCornerRadius</item>
+        <item name="android:alertDialogTheme">@*android:style/Theme.DeviceDefault.Light.Dialog.Alert</item>
+
+        <!-- Text styles -->
+        <item name="android:textAppearanceButton">@*android:style/TextAppearance.DeviceDefault.Widget.Button</item>
+
+        <!-- Button styles -->
+        <item name="android:buttonCornerRadius">@*android:dimen/config_buttonCornerRadius</item>
+        <item name="android:buttonBarButtonStyle">@*android:style/Widget.DeviceDefault.Button.ButtonBar.AlertDialog</item>
+
+        <!-- Progress bar attributes -->
+        <item name="*android:colorProgressBackgroundNormal">@*android:color/config_progress_background_tint</item>
+        <item name="*android:progressBarCornerRadius">@*android:dimen/config_progressBarCornerRadius</item>
+
+        <!-- Toolbar attributes -->
+        <item name="android:toolbarStyle">@*android:style/Widget.DeviceDefault.Toolbar</item>
     </style>
     <style name="Theme.DeviceDefault.Light.NoActionBar" parent="@*android:style/Theme.Material.NoActionBar">
         <item name="android:colorPrimary">@*android:color/primary_device_default_dark</item>
@@ -233,5 +528,27 @@
         <item name="android:colorSecondary">@*android:color/secondary_device_default_settings</item>
         <item name="android:colorControlNormal">@*android:color/accent_device_default_dark</item>
         <item name="android:textColorPrimaryInverse">@*android:color/background_material_dark</item>
+        <item name="android:navigationBarColor">@*android:color/primary_device_default_dark</item>
+
+        <!-- Color palette -->
+        <item name="android:colorError">@*android:color/error_color_device_default_light</item>
+
+        <!-- Dialog attributes -->
+        <item name="android:dialogCornerRadius">@*android:dimen/config_dialogCornerRadius</item>
+        <item name="android:alertDialogTheme">@*android:style/Theme.DeviceDefault.Light.Dialog.Alert</item>
+
+        <!-- Text styles -->
+        <item name="android:textAppearanceButton">@*android:style/TextAppearance.DeviceDefault.Widget.Button</item>
+
+        <!-- Button styles -->
+        <item name="android:buttonCornerRadius">@*android:dimen/config_buttonCornerRadius</item>
+        <item name="android:buttonBarButtonStyle">@*android:style/Widget.DeviceDefault.Button.ButtonBar.AlertDialog</item>
+
+        <!-- Progress bar attributes -->
+        <item name="*android:colorProgressBackgroundNormal">@*android:color/config_progress_background_tint</item>
+        <item name="*android:progressBarCornerRadius">@*android:dimen/config_progressBarCornerRadius</item>
+
+        <!-- Toolbar attributes -->
+        <item name="android:toolbarStyle">@*android:style/Widget.DeviceDefault.Toolbar</item>
     </style>
 </resources>
