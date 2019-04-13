@@ -93,6 +93,11 @@ endif
 export POTATO_VERNUM
 export POTATO_DISH
 
+# Clang
+ifeq ($(TARGET_USE_LATEST_CLANG),)
+    TARGET_KERNEL_CLANG_VERSION := 9.0.2
+endif
+
 # LatinIME gesture typing
 ifneq ($(filter tenderloin,$(TARGET_PRODUCT)),)
 ifneq ($(filter shamu,$(TARGET_PRODUCT)),)
