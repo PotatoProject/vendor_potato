@@ -2,10 +2,6 @@
 <resources>
 
     <!-- Device default colors -->
-    <color name="primary_device_default_dark">#ff1e1f22</color>
-    <color name="primary_device_default_settings">#ff1e1f22</color>
-    <color name="primary_dark_device_default_settings">#ff1e1f22</color>
-    <color name="secondary_device_default_settings">#ff1e1f22</color>
     <color name="background_material_dark">#ff1e1f22</color>
     <color name="material_grey_900">#ff1e1f22</color>
     <color name="material_grey_850">#ff1e1f22</color>
