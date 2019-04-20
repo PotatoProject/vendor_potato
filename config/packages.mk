@@ -62,7 +62,9 @@ PRODUCT_PACKAGES += \
     SysuiQsDarkTheme \
     SettingsBlackTheme \
     SystemBlackTheme \
-    SysuiQsBlackTheme
+    SysuiQsBlackTheme \
+    SettingsIntelligenceDark \
+    SettingsIntelligenceBlack
 
 # Oreo Settings Tiles Required Packages
 PRODUCT_PACKAGES += \
