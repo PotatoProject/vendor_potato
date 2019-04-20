@@ -42,7 +42,8 @@ PRODUCT_PACKAGES += \
     PinkRed \
     KindaIndigo \
     ArmyGreen \
-    Grey
+    Grey \
+    Flatato
 
 # Charger
 PRODUCT_PACKAGES += \
