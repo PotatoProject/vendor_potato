@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="description" content="Gerrit Code Review">
+<meta name="referrer" content="never">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<script>window.CLOSURE_NO_DEPS = true;</script>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="preload" href="/fonts/RobotoMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="/fonts/RobotoMono-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+<link rel="preload" href="/fonts/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="/fonts/Roboto-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+<link rel="preload" href="/fonts/Roboto-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="/fonts/Roboto-Medium.woff" as="font" type="font/woff" crossorigin="anonymous">
+<link rel="stylesheet" href="/styles/fonts.css">
+<link rel="stylesheet" href="/styles/main.css">
+<script src="/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+<link rel="preload" href="/elements/gr-app.js" as="script" crossorigin="anonymous">
+<link rel="import" href="/elements/gr-app.html">
+<body unresolved>
+<gr-app id="app"></gr-app>
