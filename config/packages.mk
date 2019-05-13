@@ -39,6 +39,14 @@ PRODUCT_PACKAGES += \
     Grey \
     Flatato
 
+# Shapes
+PRODUCT_PACKAGES += \
+    ShapeCircle \
+    ShapeSquare \
+    ShapeRoundedRect \
+    ShapeSquircle \
+    ShapeTeardrop
+
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images
