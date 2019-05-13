@@ -44,6 +44,13 @@ PRODUCT_PACKAGES += \
     ArmyGreen \
     Grey
 
+# Shapes
+PRODUCT_PACKAGES += \
+	ShapeSquare \
+	ShapeRoundedRect \
+	ShapeSquircle \
+	ShapeTeardrop
+
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images
