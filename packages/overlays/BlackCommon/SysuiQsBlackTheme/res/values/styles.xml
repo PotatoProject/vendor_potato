@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <style name="global_actions_base" parent="android:Theme.DeviceDefault">
+        <item name="android:colorPrimary">#1c1c1e</item>
+        <item name="android:colorPrimaryDark">@*android:color/primary_dark_device_default_settings</item>
+        <item name="android:colorSecondary">@*android:color/secondary_device_default_settings</item>
+        <item name="android:colorAccent">@*android:color/accent_device_default_dark</item>
+        <item name="android:colorControlNormal">?android:attr/textColorPrimary</item>
+        <item name="android:colorBackgroundFloating">@*android:color/material_grey_900</item>
+        <item name="android:panelColorBackground">#1c1c1e</item>
+    </style>
     <style name="qs_base" parent="android:Theme.DeviceDefault">
         <item name="android:colorPrimary">@*android:color/black</item>
         <item name="android:colorPrimaryDark">@*android:color/black</item>
@@ -7,5 +16,23 @@
         <item name="android:colorAccent">@*android:color/qs_accent</item>
         <item name="android:colorControlNormal">?android:attr/textColorPrimary</item>
         <item name="android:colorBackgroundFloating">@*android:color/black</item>
+        <item name="android:alertDialogTheme">@*android:style/Theme.DeviceDefault.Light.Dialog.Alert</item>
+
+        <!-- Text styles -->
+        <item name="android:textAppearanceButton">@*android:style/TextAppearance.DeviceDefault.Widget.Button</item>
+
+        <!-- Button styles -->
+        <item name="android:buttonCornerRadius">@*android:dimen/config_buttonCornerRadius</item>
+        <item name="android:buttonBarButtonStyle">@*android:style/Widget.DeviceDefault.Button.ButtonBar.AlertDialog</item>
+
+        <!-- Progress bar attributes -->
+        <item name="*android:colorProgressBackgroundNormal">@*android:color/config_progress_background_tint</item>
+        <item name="*android:progressBarCornerRadius">@*android:dimen/config_progressBarCornerRadius</item>
+
+        <!-- Toolbar attributes -->
+        <item name="android:toolbarStyle">@*android:style/Widget.DeviceDefault.Toolbar</item>
+
+        <!-- volume background -->
+        <item name="android:panelColorBackground">@*android:color/primary_material_light</item>
     </style>
 </resources>
