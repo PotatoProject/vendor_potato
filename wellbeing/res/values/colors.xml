@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_floating_material_light">@*android:color/primary_device_default_dark</color>
+    <color name="google_blue600">@*android:color/accent_device_default_light</color>
+    <color name="google_blue800">@*android:color/accent_device_default_light</color>
+</resources>
+
