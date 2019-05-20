@@ -33,5 +33,5 @@
             ch.deletescape.lawnchair.colors.WallpaperTertiaryColorResolver
     -->
     <string name="config_default_color_resolver" translatable="false">ch.deletescape.lawnchair.colors.SystemAccentResolver</string>
-
+    <string name="config_default_icon_pack" tra slatable="false">com.potatoproject.icons</string>
 </resources>
