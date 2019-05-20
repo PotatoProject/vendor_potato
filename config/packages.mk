@@ -10,6 +10,10 @@ PRODUCT_PACKAGES += \
     PotatoCenter
 endif
 
+#PotatoIcons
+PRODUCT_PACKAGES += \
+    PotatoIcons
+
 # Include librsjni explicitly to workaround GMS issue
 PRODUCT_PACKAGES += \
     librsjni
