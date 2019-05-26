@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ada0db9_a051a2cc",
+        "filename": "config/packages.mk",
+        "patchSetId": 8
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2019-05-26T03:15:47Z",
+      "side": 1,
+      "message": "Use 4 spaces instead",
+      "range": {
+        "startLine": 82,
+        "startChar": 0,
+        "endLine": 84,
+        "endChar": 0
+      },
+      "revId": "a1715dab7a5a86d3edd435585793fe75348b5d01",
+      "serverId": "8720d348-3d66-43e6-b480-1d69039ac554",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "14c9dfbc_2211c92d",
+        "filename": "packages/overlays/OreoQSOverlays/android/res/values-land/config.xml",
+        "patchSetId": 8
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2019-05-26T03:15:47Z",
+      "side": 1,
+      "message": "QS",
+      "range": {
+        "startLine": 18,
+        "startChar": 30,
+        "endLine": 18,
+        "endChar": 33
+      },
+      "revId": "a1715dab7a5a86d3edd435585793fe75348b5d01",
+      "serverId": "8720d348-3d66-43e6-b480-1d69039ac554",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8379a323_69262255",
+        "filename": "packages/overlays/OreoQSOverlays/android/res/values-land/config.xml",
+        "patchSetId": 8
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2019-05-26T03:15:47Z",
+      "side": 1,
+      "message": "Can split into 2 lines",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 98
+      },
+      "revId": "a1715dab7a5a86d3edd435585793fe75348b5d01",
+      "serverId": "8720d348-3d66-43e6-b480-1d69039ac554",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "215e89b1_0db91a04",
+        "filename": "packages/overlays/OreoQSOverlays/android/res/values/config.xml",
+        "patchSetId": 8
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2019-05-26T03:15:47Z",
+      "side": 1,
+      "message": "Same as above",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 98
+      },
+      "revId": "a1715dab7a5a86d3edd435585793fe75348b5d01",
+      "serverId": "8720d348-3d66-43e6-b480-1d69039ac554",
+      "unresolved": true
+    }
+  ]
+}
