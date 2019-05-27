@@ -89,10 +89,17 @@ PRODUCT_PACKAGES += \
 
 # Pixel packages
 PRODUCT_PACKAGES += \
-    SoundPickerPrebuilt \
     SettingsIntelligenceGooglePrebuilt \
     MarkupGoogle \
     MatchmakerPrebuilt
+
+ifeq ($(SOUNDPICKER_10),)
+PRODUCT_PACKAGES += \
+    SoundPickerPrebuilt
+else
+PRODUCT_PACKAGES += \
+    SoundPicker10Prebuilt
+endif
 
 # QS Accent Packages
 PRODUCT_PACKAGES += \
