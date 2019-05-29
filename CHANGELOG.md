@@ -1,6 +1,35 @@
 # Changelog
 
 
+### v2.3 (2019.05.28)
+- Support santoni (Zainudin (ErrorNetwork28))
+- May security patch
+- android-9.0.0_r37
+- Introduced RGB accenter
+- Dark theme revamped
+- Add new Flatato base theme
+- Settings Search bar fixed on Dark/black theme
+- Oreo QS Panel
+- QS colors fixes
+- Update Lawnchair
+- Back to SoundPicker 1.0 (for older devices)
+- Fix notifications if less notification sound is enabled
+- Animate volume panel
+- Google sound search tile
+- Added Aggressive battery
+- Q style Battery icon
+- Toggle to disable Album art cover on Lockscreen
+- Added Lockscreen Album art filters
+- Toggle to hide Lockscreen items (clock & date)
+- Added clock styles (accent issue will be addressed in next update)
+- POSP logo on statusbar
+- Swipe to screenshot improvements
+- Lockscreen weather improvements
+- Toggle to disable any sim slot
+- Added Uptime with deepsleep info
+- Moved IMEI info in SIM status
+- Improved Ambient ticker layout
+
 ### v2.2 (2019.03.31)
 - Support sagit [dpatrongomez]
 - Support tissot [Keian (TF2Wake)]
