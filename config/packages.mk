@@ -4,12 +4,6 @@ PRODUCT_PACKAGES += \
     Lawnchair
 endif
 
-# PotatoCenter
-ifeq ($(filter-out OFFICIAL WEEKLY MASHED, $(BUILD_TYPE)),)
-PRODUCT_PACKAGES += \
-    PotatoCenter
-endif
-
 # Include librsjni explicitly to workaround GMS issue
 PRODUCT_PACKAGES += \
     librsjni
