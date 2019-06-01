@@ -1,7 +1,8 @@
 # PotatoCenter
 ifeq ($(filter-out OFFICIAL WEEKLY MASHED, $(BUILD_TYPE)),)
-PRODUCT_PACKAGES += \
-    PotatoCenter
+    PRODUCT_PACKAGES += \
+        PotatoCenter
+    PRODUCT_DEFAULT_DEV_CERTIFICATE := $(KEYS_LOCATION)
 endif
 
 ifndef BUILD_TYPE
