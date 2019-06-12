@@ -1,5 +1,26 @@
 # Changelog
 
+### v2.3 (2019.06.10)
+- June security patch
+- Update some APNs
+- Pixel home button animations improvement
+- Detailed view of QS tiles layout fixes
+- Option to restrict Wifi/Data of any app
+- Lockscreen clocks: Now clock tracks accent
+- Q clock: Align owner info with clock
+- Q clock: Animate time when it changes
+- Advanced location tile
+- Aggressive battery fixes
+- Oreo panel: Brought back oreo layout
+- Oreo panel: Notifications size improvements
+- Oreo panel: Added QS colors
+- Oreo panel: Fix delayed animations
+- Oreo panel: Show network traffic
+- Enhanced call blocking function
+- Fix data usage detail's text view on Dark/Black theme
+- Seekbar to Media notifications
+- Migrated to signed builds
+- To fix any app FC after dirty flash, use the posp-sign-migrate flashable zip
 
 ### v2.3 (2019.05.28)
 - Support santoni (Zainudin (ErrorNetwork28))
