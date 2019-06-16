@@ -108,3 +108,8 @@ PRODUCT_PACKAGES += \
 # Weather
 PRODUCT_PACKAGES += \
     WeatherClient
+
+# CustomDoze
+PRODUCT_PACKAGES += \
+    CustomDoze
+
