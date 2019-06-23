@@ -69,10 +69,8 @@ endif
 
 ifeq ($(KERNEL_TOOLCHAIN),)
 KERNEL_TOOLCHAIN_PATH := $(KERNEL_TOOLCHAIN_PREFIX)
-else
-ifneq ($(KERNEL_TOOLCHAIN_PREFIX),)
+else ifneq ($(KERNEL_TOOLCHAIN_PREFIX),)
 KERNEL_TOOLCHAIN_PATH := $(KERNEL_TOOLCHAIN)/$(KERNEL_TOOLCHAIN_PREFIX)
-endif
 endif
 
 # We need to add GCC toolchain to the path no matter what
