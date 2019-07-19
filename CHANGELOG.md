@@ -1,5 +1,21 @@
 # Changelog
 
+## v2.3 (2019.07.19)
+- July security patch
+- Merge android-9.0.0_r45
+- OTA app redo: new design and data architecture
+- New system icons thanks to rshbfn!
+- New wallpaper
+- System-wide adaptive icons (Android Q like)
+- Remove screenshot delay
+- Long press screenshot option in power menu for partial SS
+- Bring back SystemUI demo mode
+- Fixed theming of notification self dot
+- Reduced the padding between media controls & seekbar
+- Seekbar positioning fixes
+- Ambient music ticker: fixed text scrolling glitches
+- Chiron[Mi Mix 2] builds will be system-as-root
+
 ### v2.3 (2019.06.10)
 - June security patch
 - Update some APNs
