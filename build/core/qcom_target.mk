@@ -18,8 +18,7 @@ $(if $(USE_DEVICE_SPECIFIC_$(1)), \
 $(call project-set-path,qcom-$(2),$(strip $(path)))
 endef
 
-ifeq ($(BOARD_USES_QCOM_HARDWARE),true)
-BOARD_USES_QTI_HARDWARE := true
+ifeq ($(PRODUCT_USES_QCOM_HARDWARE),true)
 
 $(call set-device-specific-path,AUDIO,audio,hardware/qcom/audio-caf/$(QCOM_HARDWARE_VARIANT))
 $(call set-device-specific-path,DISPLAY,display,hardware/qcom/display-caf/$(QCOM_HARDWARE_VARIANT))
@@ -41,8 +40,8 @@ PRODUCT_CFI_INCLUDE_PATHS += \
 else
 
 $(call project-set-path,qcom-audio,hardware/qcom/audio/default)
-$(call project-set-path,qcom-display,hardware/qcom/display/$(TARGET_BOARD_PLATFORM))
-$(call project-set-path,qcom-media,hardware/qcom/media/$(TARGET_BOARD_PLATFORM))
+$(call project-set-path,qcom-display,hardware/qcom/display/$(PRODUCT_BOARD_PLATFORM))
+$(call project-set-path,qcom-media,hardware/qcom/media/$(PRODUCT_BOARD_PLATFORM))
 
 $(call project-set-path,qcom-camera,hardware/qcom/camera)
 $(call project-set-path,qcom-data-ipa-cfg-mgr,hardware/qcom/data/ipacfg-mgr)
