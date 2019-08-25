@@ -1,8 +1,8 @@
 # PotatoCenter
-ifeq ($(filter-out OFFICIAL WEEKLY MASHED, $(BUILD_TYPE)),)
-    PRODUCT_PACKAGES += \
-        PotatoCenter
-endif
+#ifeq ($(filter-out OFFICIAL WEEKLY MASHED, $(BUILD_TYPE)),)
+#    PRODUCT_PACKAGES += \
+#        PotatoCenter
+#endif
 
 ifneq ($(SIGNING_KEYS),)
     PRODUCT_DEFAULT_DEV_CERTIFICATE := $(SIGNING_KEYS)/releasekey
