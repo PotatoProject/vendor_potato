@@ -1,7 +1,7 @@
 add_json_str_omitempty = $(if $(strip $(2)),$(call add_json_str, $(1), $(2)))
 add_json_val_default = $(call add_json_val, $(1), $(if $(strip $(2)), $(2), $(3)))
 
-_contents := $(_contents)    "Potato":{$(newline)
+_json_contents := $(_json_contents)    "Potato":{$(newline)
 
 $(call add_json_val_default, Bootloader_message_offset, $(BOOTLOADER_MESSAGE_OFFSET), 0)
 $(call add_json_bool, Has_legacy_camera_hal1, $(filter true,$(TARGET_HAS_LEGACY_CAMERA_HAL1)))
@@ -19,6 +19,6 @@ $(call add_json_bool, Uses_generic_camera_parameter_library, $(if $(TARGET_SPECI
 $(call add_json_bool, Uses_qcom_bsp_legacy, $(filter true,$(TARGET_USES_QCOM_BSP_LEGACY)))
 
 # This causes the build system to strip out the last comma in our nested struct, to keep the JSON valid.
-_contents := $(_contents)__SV_END
+_json_contents := $(_json_contents)__SV_END
 
-_contents := $(_contents)    },$(newline)
+_json_contents := $(_json_contents)    },$(newline)
