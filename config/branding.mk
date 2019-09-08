@@ -16,7 +16,7 @@ ifndef BUILD_STATE
     BUILD_STATE := UNKNOWN
 endif
 
-POTATO_DISH := Baked
+POTATO_DISH := croquette
 POTATO_VERNUM := 3.0.0-alpha+1
 ifeq ($(USE_TIME_IN_NAME), true)
     ifeq ($(BUILD_TYPE), COMMUNITY)
@@ -41,10 +41,7 @@ ifeq ($(filter $(CURRENT_DEVICE), $(LIST)), $(CURRENT_DEVICE))
             POTATO_VERSION :=$(POTATO_VERSION).MASHED
             PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.potato.type=mashed
         else
-            ifeq ($(BUILD_TYPE), WEEKLY)
-              POTATO_VERSION :=$(POTATO_VERSION).WEEKLY
-              PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.potato.type=weekly
-            endif
+            PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.potato.type=$(POTATO_DISH)
         endif
     else
         POTATO_VERSION := $(POTATO_VERSION).CHIPS-v$(POTATO_VERNUM).$(BUILD_TYPE)
