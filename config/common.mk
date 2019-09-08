@@ -82,9 +82,9 @@ PRODUCT_COPY_FILES += \
     vendor/potato/prebuilt/common/bin/clean_cache.sh:system/bin/clean_cache.sh
 
 # Weather client
-PRODUCT_COPY_FILES += \
-    vendor/potato/etc/permissions/org.pixelexperience.weather.client.xml:system/etc/permissions/org.pixelexperience.weather.client.xml \
-    vendor/potato/etc/default-permissions/org.pixelexperience.weather.client.xml:system/etc/default-permissions/org.pixelexperience.weather.client.xml
+#PRODUCT_COPY_FILES += \
+#    vendor/potato/etc/permissions/org.pixelexperience.weather.client.xml:system/etc/permissions/org.pixelexperience.weather.client.xml \
+#    vendor/potato/etc/default-permissions/org.pixelexperience.weather.client.xml:system/etc/default-permissions/org.pixelexperience.weather.client.xml
 
 # Set custom volume steps
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -92,9 +92,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.bt_sco_vol_steps=30
 
 # Turbo
-PRODUCT_COPY_FILES += \
-    vendor/potato/prebuilt/common/etc/permissions/privapp-permissions-turbo.xml:system/etc/permissions/privapp-permissions-turbo.xml \
-    vendor/potato/prebuilt/common/etc/sysconfig/turbo.xml:system/etc/sysconfig/turbo.xml
+#PRODUCT_COPY_FILES += \
+#    vendor/potato/prebuilt/common/etc/permissions/privapp-permissions-turbo.xml:system/etc/permissions/privapp-permissions-turbo.xml \
+#    vendor/potato/prebuilt/common/etc/sysconfig/turbo.xml:system/etc/sysconfig/turbo.xml
 
 # Power whitelist
 PRODUCT_COPY_FILES += \
