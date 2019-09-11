@@ -589,7 +589,12 @@ function write_header() {
     if [ -f $1 ]; then
         rm $1
     fi
-    local COMMENT_PREFIX="$2"
+
+    local COMMENT_PREFIX="#"
+
+    if [ ! -z "$2" ]; then
+        COMMENT_PREFIX="$2"
+    fi
 
     YEAR=$(date +"%Y")
 
