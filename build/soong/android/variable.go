@@ -2,6 +2,8 @@ package android
 type Product_variables struct {
 	Has_legacy_camera_hal1 struct {
 		Cflags []string
+		Overrides []string
+		Shared_libs []string
 	}
 	Needs_text_relocations struct {
 		Cppflags []string
