@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="user_icon_1">#ff5e97f6</color>
+    <color name="user_icon_1">@android:color/accessibility_focus_highlight</color>
     <color name="user_icon_2">#ff5c6bc0</color>
     <color name="user_icon_3">#ff26a69a</color>
     <color name="user_icon_4">#ffec407a</color>
