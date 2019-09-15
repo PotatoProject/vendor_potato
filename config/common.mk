@@ -27,22 +27,22 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/potato/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
     vendor/potato/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/potato/prebuilt/common/bin/50-base.sh:system/addon.d/50-base.sh \
+    vendor/potato/prebuilt/common/bin/50-base.sh:$(TARGET_COPY_OUT_SYSTEM)/addon.d/50-base.sh \
 
 ifneq ($(strip $(AB_OTA_PARTITIONS) $(AB_OTA_POSTINSTALL_CONFIG)),)
 PRODUCT_COPY_FILES += \
-    vendor/potato/prebuilt/common/bin/backuptool_ab.sh:system/bin/backuptool_ab.sh \
-    vendor/potato/prebuilt/common/bin/backuptool_ab.functions:system/bin/backuptool_ab.functions \
-    vendor/potato/prebuilt/common/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
+    vendor/potato/prebuilt/common/bin/backuptool_ab.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_ab.sh \
+    vendor/potato/prebuilt/common/bin/backuptool_ab.functions:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_ab.functions \
+    vendor/potato/prebuilt/common/bin/backuptool_postinstall.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_postinstall.sh
 endif
 
 # Bootanimation
 ifeq ($(TARGET_BOOTANIM_LOW_RES), true)
 PRODUCT_COPY_FILES += \
-    vendor/potato-prebuilts/bootanimation/bootanimation-half.zip:system/media/bootanimation.zip
+    vendor/potato-prebuilts/bootanimation/bootanimation-half.zip:$(TARGET_COPY_OUT_SYSTEM)/media/bootanimation.zip
 else
 PRODUCT_COPY_FILES += \
-    vendor/potato-prebuilts/bootanimation/bootanimation.zip:system/media/bootanimation.zip
+    vendor/potato-prebuilts/bootanimation/bootanimation.zip:$(TARGET_COPY_OUT_SYSTEM)/media/bootanimation.zip
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -93,12 +93,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Turbo
 PRODUCT_COPY_FILES += \
-    vendor/potato/prebuilt/common/etc/permissions/privapp-permissions-turbo.xml:system/etc/permissions/privapp-permissions-turbo.xml \
-    vendor/potato/prebuilt/common/etc/sysconfig/turbo.xml:system/etc/sysconfig/turbo.xml
+    vendor/potato/prebuilt/common/etc/permissions/privapp-permissions-turbo.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-turbo.xml \
+    vendor/potato/prebuilt/common/etc/sysconfig/turbo.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/turbo.xml
 
 # Power whitelist
 PRODUCT_COPY_FILES += \
-    vendor/potato/config/permissions/custom-power-whitelist.xml:system/etc/sysconfig/custom-power-whitelist.xml
+    vendor/potato/config/permissions/custom-power-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/custom-power-whitelist.xml
 
 # Clang
 ifeq ($(TARGET_USE_LATEST_CLANG),true)
@@ -125,8 +125,8 @@ endif
 
 # Markup libs
 PRODUCT_COPY_FILES += \
-    vendor/potato/prebuilt/common/lib/libsketchology_native.so:system/lib/libsketchology_native.so \
-    vendor/potato/prebuilt/common/lib64/libsketchology_native.so:system/lib64/libsketchology_native.so
+    vendor/potato/prebuilt/common/lib/libsketchology_native.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsketchology_native.so \
+    vendor/potato/prebuilt/common/lib64/libsketchology_native.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libsketchology_native.so
 
 # Overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/potato/overlay/common
