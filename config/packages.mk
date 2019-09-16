@@ -8,6 +8,16 @@ endif
 PRODUCT_PACKAGES += \
     librsjni
 
+# Themes
+PRODUCT_PACKAGES += \
+    SystemPitchBlackOverlay \
+    SystemDarkGrayOverlay \
+    SystemUIDarkGrayOverlay \
+    SystemStyleOverlay \
+    SystemUIStyleOverlay \
+    SystemNightOverlay \
+    SystemUINightOverlay
+
 # Fries
 PRODUCT_PACKAGES += \
     PotatoFries
