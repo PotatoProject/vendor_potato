@@ -86,8 +86,8 @@ PRODUCT_PACKAGES += \
 endif
 
 # Turbo
-PRODUCT_PACKAGES += \
-    Turbo
+#PRODUCT_PACKAGES += \
+#    Turbo
 
 # Pixel packages
 PRODUCT_PACKAGES += \
