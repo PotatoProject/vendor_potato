@@ -8,6 +8,10 @@ endif
 PRODUCT_PACKAGES += \
     librsjni
 
+# AOSP Theme Picker
+PRODUCT_PACKAGES += \
+    ThemePicker
+
 # Accent and Base packages
 #PRODUCT_PACKAGES += \
 #    AmberTheme \
