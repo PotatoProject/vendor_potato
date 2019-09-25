@@ -31,7 +31,7 @@ PRODUCT_CFI_INCLUDE_PATHS += \
     hardware/qcom/wlan-caf/qcwcn/wpa_supplicant_8_lib
 else
 
-$(call project-set-path,qcom-audio,hardware/qcom/audio/default)
+$(call project-set-path,qcom-audio,hardware/qcom/audio)
 $(call project-set-path,qcom-display,hardware/qcom/display/$(PRODUCT_BOARD_PLATFORM))
 $(call project-set-path,qcom-media,hardware/qcom/media/$(PRODUCT_BOARD_PLATFORM))
 
