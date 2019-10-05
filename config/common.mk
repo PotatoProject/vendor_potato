@@ -132,6 +132,15 @@ PRODUCT_COPY_FILES += \
    vendor/potato/prebuilt/common/fonts/GoogleSans-Bold.ttf:system/fonts/GoogleSans-Bold.ttf \
    vendor/potato/prebuilt/common/fonts/GoogleSans-BoldItalic.ttf:system/fonts/GoogleSans-BoldItalic.ttf
 
+# Flutter engine
+PRODUCT_COPY_FILES += \
+    vendor/potato/prebuilt/common/lib/libflutter.so:system/lib/libflutter.so
+
+ifeq ($(TARGET_SUPPORTS_64_BIT_APPS), true)
+PRODUCT_COPY_FILES += \
+    vendor/potato/prebuilt/common/lib64/libflutter.so:system/lib64/libflutter.so
+endif
+
 ADDITIONAL_FONTS_FILE := vendor/potato/prebuilt/common/fonts/google-sans.xml
 
 # Overlays
