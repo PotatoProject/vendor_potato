@@ -1,0 +1,14 @@
+LOCAL_PATH:=$(call my-dir)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := PotatoCenter
+LOCAL_SRC_FILES := $(LOCAL_MODULE).apk
+ifdef TARGET_2ND_ARCH
+LOCAL_PREBUILT_JNI_LIBS := jni/arm64/libapp.so
+else
+LOCAL_PREBUILT_JNI_LIBS := jni/arm/libapp.so
+endif
+LOCAL_MODULE_CLASS := APPS
+LOCAL_PRIVILEGED_MODULE := true
+LOCAL_CERTIFICATE := PRESIGNED
+include $(BUILD_PREBUILT)
