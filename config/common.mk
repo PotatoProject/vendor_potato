@@ -53,6 +53,10 @@ EXCLUDE_SYSTEMUI_TESTS := true
 # Disable vendor restrictions
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
+# Enable Android Beam on all targets
+PRODUCT_COPY_FILES += \
+    vendor/potato/config/permissions/android.software.nfc.beam.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.software.nfc.beam.xml
+
 # exFAT
 WITH_EXFAT ?= true
 ifeq ($(WITH_EXFAT),true)
