@@ -17,7 +17,8 @@ PRODUCT_PACKAGES += \
 
 # ThemePicker
 PRODUCT_PACKAGES += \
-    ThemePicker
+    ThemePicker \
+    PotatoThemesStub
 
 # Charger
 PRODUCT_PACKAGES += \
