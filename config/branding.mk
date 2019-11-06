@@ -53,6 +53,7 @@ else
     POTATO_VERSION := $(POTATO_VERSION).CHIPS-v$(POTATO_VERNUM).$(BUILD_TYPE)
 endif
 
-export POTATO_VERNUM
-export POTATO_DISH
-
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.potato.dish=$(POTATO_DISH) \
+    ro.potato.version=$(POTATO_VERNUM) \
+    ro.build.project=potato
