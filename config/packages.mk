@@ -8,37 +8,6 @@ endif
 PRODUCT_PACKAGES += \
     librsjni
 
-# Accent and Base packages
-#PRODUCT_PACKAGES += \
-#    AmberTheme \
-#    BlueTheme \
-#    CyanTheme \
-#    DeepOrangeTheme \
-#    DeepPurpleTheme \
-#    GreenTheme \
-#    IndigoTheme \
-#    LightBlueTheme \
-#    LightGreenTheme \
-#    LimeTheme \
-#    OrangeTheme \
-#    PinkTheme \
-#    PixelBaseTheme \
-#    PixelTheme \
-#    PurpleTheme \
-#    RedTheme \
-#    StockBaseTheme \
-#    StockFixedBaseTheme \
-#    StockTheme \
-#    YellowTheme \
-#    MintGreenTheme \
-#    FadedPink \
-#    DeepRed \
-#    PinkRed \
-#    KindaIndigo \
-#    ArmyGreen \
-#    Grey \
-#    Flatato
-
 # Shapes
 #PRODUCT_PACKAGES += \
 #    ShapeCircle \
@@ -103,10 +72,9 @@ PRODUCT_PACKAGES += \
     SoundPicker10Prebuilt
 endif
 
-# QS Accent Packages
-#PRODUCT_PACKAGES += \
-#    QsAccentBlack \
-#    QsAccentWhite
+# QS Color Overlay
+PRODUCT_PACKAGES += \
+    QsColor
 
 # Oreo QS Panel Required Packages
 #PRODUCT_PACKAGES += \
