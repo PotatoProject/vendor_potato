@@ -116,3 +116,8 @@ endif
 # Weather
 PRODUCT_PACKAGES += \
     WeatherClient
+
+# OmniJaws
+PRODUCT_PACKAGES += \
+    OmniJaws
+
