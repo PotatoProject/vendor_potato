@@ -72,8 +72,12 @@ PRODUCT_RESTRICT_VENDOR_FILES := false
 
 # POSP Common
 PRODUCT_COPY_FILES += \
-    vendor/potato/prebuilt/common/etc/permissions/privapp-permissions-potato.xml:system/etc/permissions/privapp-permissions-potato.xml
+    vendor/potato/prebuilt/common/etc/permissions/privapp-permissions-potato.xml:system/etc/permissions/privapp-permissions-potato.xml \
+    vendor/potato/prebuilt/common/etc/permissions/co.potatoproject.posp.xml:system/etc/permissions/co.potatoproject.posp.xml
 
+# Fries
+PRODUCT_COPY_FILES += \
+    vendor/potato/prebuilt/common/etc/sysconfig/potatofries-hiddenapi-package-whitelist.xml:system/etc/sysconfig/potatofries-hiddenapi-package-whitelist.xml
 # Fix Google dialer
 PRODUCT_COPY_FILES += \
     vendor/potato/prebuilt/common/etc/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml
