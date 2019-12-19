@@ -8,6 +8,10 @@ endif
 PRODUCT_PACKAGES += \
     librsjni
 
+# Fries
+PRODUCT_PACKAGES += \
+    PotatoFries
+
 # Shapes
 #PRODUCT_PACKAGES += \
 #    ShapeCircle \
