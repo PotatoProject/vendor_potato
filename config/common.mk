@@ -72,7 +72,8 @@ PRODUCT_RESTRICT_VENDOR_FILES := false
 
 # POSP Common
 PRODUCT_COPY_FILES += \
-    vendor/potato/prebuilt/common/etc/permissions/privapp-permissions-potato.xml:system/etc/permissions/privapp-permissions-potato.xml
+    vendor/potato/prebuilt/common/etc/permissions/privapp-permissions-potato.xml:system/etc/permissions/privapp-permissions-potato.xml \
+    vendor/potato/prebuilt/common/etc/permissions/com.potato.posp.xml:system/etc/permissions/com.potato.posp.xml
 
 # Fix Google dialer
 PRODUCT_COPY_FILES += \
