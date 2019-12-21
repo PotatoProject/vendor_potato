@@ -294,7 +294,12 @@ function gerritpush()
     if [[ ! -z "${PROJECT_PREFIX}" ]]; then
       PROJECT_PREFIX=$(echo "${PROJECT_PREFIX}_");
     fi
-    local PROJECT=${PROJECT_PREFIX}$(echo $(pwd -P | sed -e "s#$ANDROID_BUILD_TOP\/##; s#-caf.*##; s#\/default##") | sed 's/\//_/g');
+    if (pwd -P | grep -qc "manifests");
+    then
+        local PROJECT="manifest";
+    else
+        local PROJECT=${PROJECT_PREFIX}$(echo $(pwd -P | sed -e "s#$ANDROID_BUILD_TOP\/##; s#-caf.*##; s#\/default##") | sed 's/\//_/g');
+    fi
     if (echo $PROJECT | grep -qv "^device") || [[ "${PROJECT_EXCLUSIONS[@]}" =~ "$PROJECT" ]]
     then
       local PFX="PotatoProject/";
