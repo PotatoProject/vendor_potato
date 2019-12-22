@@ -600,68 +600,72 @@ function cmka() {
 }
 
 function deleteOTA() {
-    if [[ -z "$OTA_API_USER" ]]; then
-        echo "Please specify OTA_API_USER!"; return 1
-    fi
-    if [[ -z "$OTA_API_SECRET" ]]; then
-        echo "Please set OTA_API_SECRET!"; return 1
+    if [[ -z "$OTA_API_USER_TOKEN" ]]; then
+        echo "Please specify OTA_API_USER_TOKEN!"; return 1
     fi
     if [[ -z "$1" ]]; then
-        echo "Please provide md5sum!";
+        echo "Please provide build id!";
         echo "Usage: deleteOTA id";
-        echo -e "\tid - md5sum of the build you'd like to delete\n\tfrom the OTA server";
+        echo -e "\tid - the id of the build you'd like to delete\n\tfrom the OTA server";
     fi
-    data="{\"hash\":\"$1\"}";
 
-    curl --header "Content-Type: application/json" \
-        --user $OTA_API_USER:$OTA_API_SECRET \
-        --request POST \
-        --data "$data" \
-        https://api.potatoproject.co/deleteUpdate 2> /dev/null | \
-        python -c "import sys, json; print json.load(sys.stdin)['response']";
+    curl --header "Authorization: Token $OTA_API_USER_TOKEN" \
+        --header "Content-Type: application/json" \
+        --request DELETE \
+        https://api.potatoproject.co/api/ota/builds/$1/;
 }
 
 function pushOTA() {
     OPTIND=1;
-    if [[ -z "$OTA_API_USER" ]]; then
-        echo "Please specify OTA_API_USER!"; return 1
-    fi
-    if [[ -z "$OTA_API_SECRET" ]]; then
-        echo "Please set OTA_API_SECRET!"; return 1
+    if [[ -z "$OTA_API_USER_TOKEN" ]]; then
+        echo "Please specify OTA_API_USER_TOKEN!"; return 1
     fi
 
     CUSTOM_URL="false";
 
-    while getopts "u" OPTION; do
+    while getopts "t" OPTION; do
       case $OPTION in
-        u)
-                CUSTOM_URL="true"
-                ;;
+        t)
+            TEST_BUILD="true"
+            ;;
       esac
     done
 
-    file=$(ls -t ${OUT}/potato_${POTATO_BUILD}-9* | sed -n 2p);
-    URL="https://sourceforge.net/projects/posp/files/$POTATO_BUILD/weeklies/${file##*/}";
+    build_date=$(grep ro\.build\.date\.utc $OUT/system/build.prop | cut -d= -f2);
+    device=$(grep ro\.potato\.device $OUT/system/build.prop | cut -d= -f2);
+    file=$(ls -t ${OUT}/potato_$device-10* | sed -n 2p);
+    md5=$(md5sum $file | awk '{ print $1 }');
+    build_type=$(echo $BUILD_TYPE | tr '[:upper:]' '[:lower:]');
+    size=$(stat -c%s $file);
+    version=$(grep ro\.potato\.vernum $OUT/system/build.prop | cut -d= -f2);
+    if [ -z $version ]; then
+        version=$(grep ro\.potato\.vernum $OUT/vendor/build.prop | cut -d= -f2)
+    fi
+    dish=$(grep ro\.potato\.dish $OUT/system/build.prop | cut -d= -f2);
+    if [ -z $dish ]; then
+        dish=$(grep ro\.potato\.dish $OUT/vendor/build.prop | cut -d= -f2)
+    fi
+    echo $dish
+    notes=""
 
-    if [[ "${CUSTOM_URL}" == true ]]; then
-      printf 'Enter url: ';
-      read -r URL;
+    if [[ "${USE_NOTES}" == true ]]; then
+        if [[ ! (-z "$NOTES") ]]; then
+            notes=$NOTES
+        fi
     fi
 
-    url=$URL;
-    datetime=$(grep ro\.build\.date\.utc $OUT/system/build.prop | cut -d= -f2);
-    id=$(md5sum $file | awk '{ print $1 }');
-    romtype=$(echo $BUILD_TYPE | tr '[:upper:]' '[:lower:]');
-    size=$(stat -c%s $file);
-    version=$(grep ro\.potato\.version $OUT/system/build.prop | cut -d= -f2);
-    data="{\"datetime\":\"$datetime\", \"devicename\":\"$POTATO_BUILD\",\"filename\":\"${file##*/}\",\"id\":\"$id\",\"romtype\":\"$romtype\",\"size\":\"$size\",\"url\":\"$url\",\"version\":\"$version\"}";
+    url="https://sourceforge.net/projects/posp/files/$device/$dish/${file##*/}";
+    if [[ "${TEST_BUILD}" == true ]]; then
+        url="https://sourceforge.net/projects/posp/files/$device/mashed/${file##*/}";
+    fi
 
-    curl --header "Content-Type: application/json" \
-        --user $OTA_API_USER:$OTA_API_SECRET \
+    data="{\"build_date\":\"$build_date\", \"device\":\"$device\",\"filename\":\"${file##*/}\",\"md5\":\"$md5\",\"build_type\":\"$build_type\",\"size\":\"$size\",\"url\":\"$url\",\"version\":\"$version\",\"dish\":\"$dish\",\"notes\":\"$notes\"}";
+
+    curl --header "Authorization: Token $OTA_API_USER_TOKEN" \
+        --header "Content-Type: application/json" \
         --request POST \
         --data "$data" \
-        https://api.potatoproject.co/pushUpdate 2> /dev/null | \
-        python -c "import sys, json; print json.load(sys.stdin)['response']";
+        https://api.potatoproject.co/api/ota/builds/;
 }
 
 function repolastsync() {
