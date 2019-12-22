@@ -12,8 +12,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.clientidbase=$(PRODUCT_GMS_CLIENTID_BASE)
 endif
 
-LAWNCHAIR_OPTOUT := true
-
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/potato/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
