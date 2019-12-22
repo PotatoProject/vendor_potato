@@ -85,7 +85,6 @@ function setup_vendor() {
 
     export PRODUCTMK="$POTATO_ROOT"/"$OUTDIR"/"$VNDNAME"-vendor.mk
     export ANDROIDMK="$POTATO_ROOT"/"$OUTDIR"/Android.mk
-    export ANDROIDBP="$POTATO_ROOT"/"$OUTDIR"/Android.bp
     export BOARDMK="$POTATO_ROOT"/"$OUTDIR"/BoardConfigVendor.mk
 
     if [ "$4" == "true" ] || [ "$4" == "1" ]; then
@@ -205,6 +204,25 @@ function prefix_match_file() {
     local PREFIX="$1"
     local FILE="$2"
     if [[ "$FILE" =~ ^"$PREFIX" ]]; then
+        return 0
+    else
+        return 1
+    fi
+}
+
+#
+# suffix_match_file:
+#
+# $1: the suffix to match on
+# $2: the file to match the suffix for
+#
+# Internal function which returns true if a filename contains the
+# specified suffix.
+#
+function suffix_match_file() {
+    local SUFFIX="$1"
+    local FILE="$2"
+    if [[ "$FILE" = *"$SUFFIX" ]]; then
         return 0
     else
         return 1
@@ -408,55 +426,6 @@ function write_packages() {
         printf 'include $(BUILD_PREBUILT)\n\n'
     done
 }
-#
-# write_framework:
-#
-# $1: "true" if this package is part of the vendor/ path
-# $2: Name of the array holding the target list
-#
-# Internal function which setup framework files using blueprints
-# for all modules in the list. This is called by write_product_packages
-# after the modules are categorized.
-#
-function write_framework() {
-
-    local VENDOR_PKG="$1"
-
-    # Yes, this is a horrible hack - we create a new array using indirection
-    local ARR_NAME="$2[@]"
-    local FILELIST=("${!ARR_NAME}")
-
-    local FILE=
-    local BASENAME=
-    local PKGNAME=
-    local SRC=
-
-    for P in "${FILELIST[@]}"; do
-        FILE=$(target_file "$P")
-
-        BASENAME=$(basename "$FILE")
-        PKGNAME=${BASENAME%.*}
-
-        # Add to final package list
-        PACKAGE_LIST+=("$PKGNAME")
-
-        SRC="proprietary"
-        if [ "$VENDOR_PKG" = "true" ]; then
-            SRC+="/vendor"
-        fi
-
-        printf 'soong_namespace {\n'
-        printf '}\n\n'
-        printf 'dex_import {\n'
-        printf '    name: "%s",\n' "$PKGNAME"
-        printf '    owner: "%s",\n' "$VENDOR"
-        printf '    jars: ["%s/framework/%s"],\n' "$SRC" "$FILE"
-        if [ "$VENDOR_PKG" = "true" ]; then
-            printf '    vendor: true,\n'
-        fi
-        printf '}\n\n'
-    done
-}
 
 #
 # write_product_packages:
@@ -507,7 +476,6 @@ function write_product_packages() {
     fi
     if [ "${#V_LIB64[@]}" -gt "0" ]; then
         write_packages "SHARED_LIBRARIES" "vendor" "64" "V_LIB64" >> "$ANDROIDMK"
-        write_packages "SHARED_LIBRARIES" "vendor" "64" "V_LIB64" >> "$ANDROIDMK"
     fi
 
     local T_P_LIB32=( $(prefix_match "product/lib/") )
@@ -542,7 +510,6 @@ function write_product_packages() {
     local V_PRIV_APPS=( $(prefix_match "vendor/priv-app/") )
     if [ "${#V_PRIV_APPS[@]}" -gt "0" ]; then
         write_packages "APPS" "vendor" "priv-app" "V_PRIV_APPS" >> "$ANDROIDMK"
-        write_packages "APPS" "vendor" "priv-app" "V_PRIV_APPS" >> "$ANDROIDMK"
     fi
     local P_APPS=( $(prefix_match "product/app/") )
     if [ "${#P_APPS[@]}" -gt "0" ]; then
@@ -551,17 +518,15 @@ function write_product_packages() {
     local P_PRIV_APPS=( $(prefix_match "product/priv-app/") )
     if [ "${#P_PRIV_APPS[@]}" -gt "0" ]; then
         write_packages "APPS" "product" "priv-app" "P_PRIV_APPS" >> "$ANDROIDMK"
-
     fi
 
     # Framework
     local FRAMEWORK=( $(prefix_match "framework/") )
     if [ "${#FRAMEWORK[@]}" -gt "0" ]; then
-        write_framework "" "FRAMEWORK" >> "$ANDROIDBP"
+        write_packages "JAVA_LIBRARIES" "" "" "FRAMEWORK" >> "$ANDROIDMK"
     fi
     local V_FRAMEWORK=( $(prefix_match "vendor/framework/") )
     if [ "${#V_FRAMEWORK[@]}" -gt "0" ]; then
-        write_framework "vendor" "V_FRAMEWORK" >> "$ANDROIDBP"
         write_packages "JAVA_LIBRARIES" "vendor" "" "V_FRAMEWORK" >> "$ANDROIDMK"
     fi
     local P_FRAMEWORK=( $(prefix_match "product/framework/") )
@@ -591,7 +556,6 @@ function write_product_packages() {
     local V_BIN=( $(prefix_match "vendor/bin/") )
     if [ "${#V_BIN[@]}" -gt "0" ]; then
         write_packages "EXECUTABLES" "vendor" "" "V_BIN" >> "$ANDROIDMK"
-        write_packages "EXECUTABLES" "vendor" "" "V_BIN" >> "$ANDROIDMK"
     fi
     local P_BIN=( $(prefix_match "product/bin/") )
     if [ "${#P_BIN[@]}" -gt "0" ]; then
@@ -618,18 +582,12 @@ function write_product_packages() {
         fi
         printf '    %s%s\n' "${PACKAGE_LIST[$i-1]}" "$LINEEND" >> "$PRODUCTMK"
     done
-
-    # Soong namespace
-    printf '\n%s\n' "PRODUCT_SOONG_NAMESPACES += \\" >> "$PRODUCTMK"
-    printf '    %s\n' "${OUTDIR}"  >> "$PRODUCTMK"
-
 }
 
 #
 # write_header:
 #
 # $1: file which will be written to
-# $2: line comment prefix
 #
 # writes out the copyright header with the current year.
 # note that this is not an append operation, and should
@@ -640,12 +598,6 @@ function write_header() {
         rm $1
     fi
 
-    local COMMENT_PREFIX="#"
-
-    if [ ! -z "$2" ]; then
-        COMMENT_PREFIX="$2"
-    fi
-
     YEAR=$(date +"%Y")
 
     [ "$COMMON" -eq 1 ] && local DEVICE="$DEVICE_COMMON"
@@ -653,38 +605,38 @@ function write_header() {
     NUM_REGEX='^[0-9]+$'
     if [[ $INITIAL_COPYRIGHT_YEAR =~ $NUM_REGEX ]] && [ $INITIAL_COPYRIGHT_YEAR -le $YEAR ]; then
         if [ $INITIAL_COPYRIGHT_YEAR -lt 2016 ]; then
-            printf "$COMMENT_PREFIX Copyright (C) $INITIAL_COPYRIGHT_YEAR-2016 The CyanogenMod Project\n" > $1
+            printf "# Copyright (C) $INITIAL_COPYRIGHT_YEAR-2016 The CyanogenMod Project\n" > $1
         elif [ $INITIAL_COPYRIGHT_YEAR -eq 2016 ]; then
-            printf "$COMMENT_PREFIX Copyright (C) 2016 The CyanogenMod Project\n" > $1
+            printf "# Copyright (C) 2016 The CyanogenMod Project\n" > $1
         fi
         if [ $YEAR -eq 2017 ]; then
-            printf "$COMMENT_PREFIX Copyright (C) 2017 The LineageOS Project\n" >> $1
+            printf "# Copyright (C) 2017 The Potato Open Sauce Project\n" >> $1
         elif [ $INITIAL_COPYRIGHT_YEAR -eq $YEAR ]; then
-            printf "$COMMENT_PREFIX Copyright (C) $YEAR The Potato Open Sauce Project\n" >> $1
+            printf "# Copyright (C) $YEAR The Potato Open Sauce Project\n" >> $1
         elif [ $INITIAL_COPYRIGHT_YEAR -le 2017 ]; then
-            printf "$COMMENT_PREFIX Copyright (C) 2017-$YEAR The Potato Open Sauce Project\n" >> $1
+            printf "# Copyright (C) 2017-$YEAR The Potato Open Sauce Project\n" >> $1
         else
-            printf "$COMMENT_PREFIX Copyright (C) $INITIAL_COPYRIGHT_YEAR-$YEAR The Potato Open Sauce Project\n" >> $1
+            printf "# Copyright (C) $INITIAL_COPYRIGHT_YEAR-$YEAR The Potato Open Sauce Project\n" >> $1
         fi
     else
-        printf "$COMMENT_PREFIX Copyright (C) $YEAR The Potato Open Sauce Project\n" > $1
+        printf "# Copyright (C) $YEAR The Potato Open Sauce Project\n" > $1
     fi
 
     cat << EOF >> $1
-$COMMENT_PREFIX
-$COMMENT_PREFIX Licensed under the Apache License, Version 2.0 (the "License");
-$COMMENT_PREFIX you may not use this file except in compliance with the License.
-$COMMENT_PREFIX You may obtain a copy of the License at
-$COMMENT_PREFIX
-$COMMENT_PREFIX http://www.apache.org/licenses/LICENSE-2.0
-$COMMENT_PREFIX
-$COMMENT_PREFIX Unless required by applicable law or agreed to in writing, software
-$COMMENT_PREFIX distributed under the License is distributed on an "AS IS" BASIS,
-$COMMENT_PREFIX WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-$COMMENT_PREFIX See the License for the specific language governing permissions and
-$COMMENT_PREFIX limitations under the License.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 
-$COMMENT_PREFIX This file is generated by device/$VENDOR/$DEVICE/setup-makefiles.sh
+# This file is generated by device/$VENDOR/$DEVICE/setup-makefiles.sh
 
 EOF
 }
@@ -700,8 +652,7 @@ EOF
 # Android.mk
 #
 function write_headers() {
-    write_header "$ANDROIDMK" "#"
-    write_header "$ANDROIDBP" "//"
+    write_header "$ANDROIDMK"
 
     GUARD="$2"
     if [ -z "$GUARD" ]; then
@@ -953,13 +904,17 @@ function oat2dex() {
         if get_file "$OAT" "$TMPDIR" "$SRC"; then
             if get_file "$VDEX" "$TMPDIR" "$SRC"; then
                 "$VDEXEXTRACTOR" -o "$TMPDIR/" -i "$TMPDIR/$(basename "$VDEX")" > /dev/null
-                # Check if we have to deal with CompactDex
-                if [ -f "$TMPDIR/$(basename "${OEM_TARGET%.*}")_classes.cdex" ]; then
-                    "$CDEXCONVERTER" "$TMPDIR/$(basename "${OEM_TARGET%.*}")_classes.cdex" &> /dev/null
-                    mv "$TMPDIR/$(basename "${OEM_TARGET%.*}")_classes.cdex.new" "$TMPDIR/classes.dex"
-                else
-                    mv "$TMPDIR/$(basename "${OEM_TARGET%.*}")_classes.dex" "$TMPDIR/classes.dex"
-                fi
+                CLASSES=$(ls "$TMPDIR/$(basename "${OEM_TARGET%.*}")_classes"*)
+                for CLASS in $CLASSES; do
+                    NEWCLASS=$(echo "$CLASS" | sed 's/.*_//;s/cdex/dex/')
+                    # Check if we have to deal with CompactDex
+                    if [[ "$CLASS" == *.cdex ]]; then
+                        "$CDEXCONVERTER" "$CLASS" &>/dev/null
+                        mv "$CLASS.new" "$TMPDIR/$NEWCLASS"
+                    else
+                        mv "$CLASS" "$TMPDIR/$NEWCLASS"
+                    fi
+                done
             else
                 java -jar "$BAKSMALIJAR" deodex -o "$TMPDIR/dexout" -b "$BOOTOAT" -d "$TMPDIR" "$TMPDIR/$(basename "$OAT")"
                 java -jar "$SMALIJAR" assemble "$TMPDIR/dexout" -o "$TMPDIR/classes.dex"
@@ -974,13 +929,17 @@ function oat2dex() {
             # fallback to boot.oat if vdex is not available
             if get_file "$JARVDEX" "$TMPDIR" "$SRC"; then
                 "$VDEXEXTRACTOR" -o "$TMPDIR/" -i "$TMPDIR/$(basename "$JARVDEX")" > /dev/null
-                # Check if we have to deal with CompactDex
-                if [ -f "$TMPDIR/$(basename "${JARVDEX%.*}")_classes.cdex" ]; then
-                    "$CDEXCONVERTER" "$TMPDIR/$(basename "${JARVDEX%.*}")_classes.cdex" &> /dev/null
-                    mv "$TMPDIR/$(basename "${JARVDEX%.*}")_classes.cdex.new" "$TMPDIR/classes.dex"
-                else
-                    mv "$TMPDIR/$(basename "${JARVDEX%.*}")_classes.dex" "$TMPDIR/classes.dex"
-                fi
+                CLASSES=$(ls "$TMPDIR/$(basename "${JARVDEX%.*}")_classes"*)
+                for CLASS in $CLASSES; do
+                    NEWCLASS=$(echo "$CLASS" | sed 's/.*_//;s/cdex/dex/')
+                    # Check if we have to deal with CompactDex
+                    if [[ "$CLASS" == *.cdex ]]; then
+                        "$CDEXCONVERTER" "$CLASS" &>/dev/null
+                        mv "$CLASS.new" "$TMPDIR/$NEWCLASS"
+                    else
+                        mv "$CLASS" "$TMPDIR/$NEWCLASS"
+                    fi
+                done
             else
                 java -jar "$BAKSMALIJAR" deodex -o "$TMPDIR/dexout" -b "$BOOTOAT" -d "$TMPDIR" "$JAROAT/$OEM_TARGET"
                 java -jar "$SMALIJAR" assemble "$TMPDIR/dexout" -o "$TMPDIR/classes.dex"
@@ -1296,8 +1255,8 @@ function extract() {
         if [[ "$FULLY_DEODEXED" -ne "1" && "${VENDOR_REPO_FILE}" =~ .(apk|jar)$ ]]; then
             oat2dex "${VENDOR_REPO_FILE}" "${SRC_FILE}" "$SRC"
             if [ -f "$TMPDIR/classes.dex" ]; then
-                zip -gjq "${VENDOR_REPO_FILE}" "$TMPDIR/classes.dex"
-                rm "$TMPDIR/classes.dex"
+                zip -gjq "${VENDOR_REPO_FILE}" "$TMPDIR/classes"*
+                rm "$TMPDIR/classes"*
                 printf '    (updated %s from odex files)\n' "${SRC_FILE}"
             fi
         elif [[ "${VENDOR_REPO_FILE}" =~ .xml$ ]]; then
@@ -1379,4 +1338,95 @@ function extract_firmware() {
         cp "$SRC/$FILE" "$OUTPUT_DIR/$FILE"
         chmod 644 "$OUTPUT_DIR/$FILE"
     done
+}
+
+function extract_img_data() {
+    local image_file="$1"
+    local out_dir="$2"
+    local logFile="$TMPDIR/debugfs.log"
+
+    if [ ! -d "$out_dir" ]; then
+        mkdir -p "$out_dir"
+    fi
+
+    if [[ "$HOST_OS" == "Darwin" ]]; then
+        debugfs -R "rdump / \"$out_dir\"" "$image_file" &> "$logFile" || {
+            echo "[-] Failed to extract data from '$image_file'"
+            abort 1
+        }
+    else
+        debugfs -R 'ls -p' "$image_file" 2>/dev/null | cut -d '/' -f6 | while read -r entry
+        do
+            debugfs -R "rdump \"$entry\" \"$out_dir\"" "$image_file" >> "$logFile" 2>&1 || {
+                echo "[-] Failed to extract data from '$image_file'"
+                abort 1
+            }
+        done
+    fi
+
+    local symlink_err="rdump: Attempt to read block from filesystem resulted in short read while reading symlink"
+    if grep -Fq "$symlink_err" "$logFile"; then
+        echo "[-] Symlinks have not been properly processed from $image_file"
+        echo "[!] If you don't have a compatible debugfs version, modify 'execute-all.sh' to disable 'USE_DEBUGFS' flag"
+        abort 1
+    fi
+}
+
+declare -ra VENDOR_SKIP_FILES=(
+  "bin/toybox_vendor"
+  "bin/toolbox"
+  "bin/grep"
+  "build.prop"
+  "compatibility_matrix.xml"
+  "default.prop"
+  "etc/NOTICE.xml.gz"
+  "etc/vintf/compatibility_matrix.xml"
+  "etc/vintf/manifest.xml"
+  "etc/wifi/wpa_supplicant.conf"
+  "manifest.xml"
+  "overlay/DisplayCutoutEmulationCorner/DisplayCutoutEmulationCornerOverlay.apk"
+  "overlay/DisplayCutoutEmulationDouble/DisplayCutoutEmulationDoubleOverlay.apk"
+  "overlay/DisplayCutoutEmulationTall/DisplayCutoutEmulationTallOverlay.apk"
+  "overlay/DisplayCutoutNoCutout/NoCutoutOverlay.apk"
+  "overlay/framework-res__auto_generated_rro.apk"
+  "overlay/SysuiDarkTheme/SysuiDarkThemeOverlay.apk"
+)
+
+function array_contains() {
+    local element
+    for element in "${@:2}"; do [[ "$element" == "$1" ]] && return 0; done
+    return 1
+}
+
+function generate_prop_list_from_image() {
+    local image_file="$1"
+    local image_dir="$TMPDIR/image-temp"
+    local output_list="$2"
+    local output_list_tmp="$TMPDIR/_proprietary-blobs.txt"
+    local -n skipped_vendor_files="$3"
+
+    extract_img_data "$image_file" "$image_dir"
+
+    find "$image_dir" -not -type d | sed "s#^$image_dir/##" | while read -r FILE
+    do
+        # Skip VENDOR_SKIP_FILES since it will be re-generated at build time
+        if array_contains "$FILE" "${VENDOR_SKIP_FILES[@]}"; then
+            continue
+        fi
+        # Skip device defined skipped files since they will be re-generated at build time
+        if array_contains "$FILE" "${skipped_vendor_files[@]}"; then
+            continue
+        fi
+        if suffix_match_file ".apk" "$FILE" ; then
+            echo "-vendor/$FILE" >> "$output_list_tmp"
+        else
+            echo "vendor/$FILE" >> "$output_list_tmp"
+        fi
+    done
+
+    # Sort merged file with all lists
+    sort -u "$output_list_tmp" > "$output_list"
+
+    # Clean-up
+    rm -f "$output_list_tmp"
 }
