@@ -36,7 +36,7 @@ POTATO_VERSION := $(TARGET_PRODUCT)-$(PLATFORM_VERSION)-$(shell date -u +%Y%m%d)
 
 POTATO_BRANDING_VERSION := $(BUILD_TYPE)
 
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+PRODUCT_PROPERTY_OVERRIDES += \
   ro.potato.version=$(POTATO_VERSION) \
   ro.potato.buildtype=$(BUILD_TYPE) \
   ro.potato.vernum=$(POTATO_VERNUM) \
