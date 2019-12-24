@@ -20,6 +20,7 @@ Additional PotatoROM functions:
 - repopick:        Utility to fetch changes from Gerrit.
 - installboot:     Installs a boot.img to the connected device.
 - installrecovery: Installs a recovery.img to the connected device.
+- extractjni:      Extracts all jni for given project
 EOF
 }
 
@@ -456,6 +457,19 @@ function installrecovery()
     else
         echo "The connected device does not appear to be $POTATO_BUILD, run away!"
     fi
+}
+
+function extractjni() {
+    for apk in $(find $1 -name "*.apk");
+    do
+        arch=$(basename $(dirname $apk));
+        if [ $arch = "arm" ]; then
+            arch="armeabi-v7a";
+        elif [ $arch = "arm64" ]; then
+            arch="arm64-v8a";
+        fi
+        unzip -jo $apk "lib/$arch/*" -d $(dirname $apk);
+    done;
 }
 
 function makerecipe() {
