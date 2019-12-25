@@ -1,8 +1,8 @@
-POTATO_VERNUM = 3.0.0-beta+3
+POTATO_VERNUM = 3.1.0+4
 POTATO_DISH = croquette
 
 ifndef BUILD_TYPE
-    BUILD_TYPE := COMMUNITY
+    BUILD_TYPE := Community
 endif
 
 ifneq ($(SIGNING_KEYS),)
@@ -15,10 +15,10 @@ LIST := $(shell cat vendor/potato/potato.devices)
 ifeq ($(filter $(CURRENT_DEVICE), $(LIST)), $(CURRENT_DEVICE))
     ifeq ($(filter-out OFFICIAL MASHED, $(BUILD_TYPE)),)
         ifeq ($(BUILD_TYPE), OFFICIAL)
-          BUILD_TYPE := OFFICIAL
+          BUILD_TYPE := Official
         endif
         ifeq ($(BUILD_TYPE), MASHED)
-          BUILD_TYPE := MASHED
+          BUILD_TYPE := Mashed
         endif
     endif
 else
