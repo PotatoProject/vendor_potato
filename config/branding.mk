@@ -20,16 +20,13 @@ ifeq ($(filter $(CURRENT_DEVICE), $(LIST)), $(CURRENT_DEVICE))
         ifeq ($(BUILD_TYPE), MASHED)
           BUILD_TYPE := Mashed
         endif
+        PRODUCT_PACKAGES += \
+            PotatoCenter
     endif
 else
     ifeq ($(filter-out OFFICIAL MASHED, $(BUILD_TYPE)),)
       $(error "Invalid BUILD_TYPE!")
     endif
-endif
-
-ifeq ($(filter-out OFFICIAL MASHED, $(BUILD_TYPE)),)
-    PRODUCT_PACKAGES += \
-        PotatoCenter
 endif
 
 POTATO_VERSION := $(TARGET_PRODUCT)-$(PLATFORM_VERSION)-$(shell date -u +%Y%m%d)-$(POTATO_DISH).v$(POTATO_VERNUM).$(BUILD_TYPE)
