@@ -664,12 +664,11 @@ function pushOTA() {
     if [ -z $dish ]; then
         dish=$(grep ro\.potato\.dish $OUT/vendor/build.prop | cut -d= -f2)
     fi
-    echo $dish
     notes=""
 
     if [[ "${USE_NOTES}" == true ]]; then
         if [[ ! (-z "$NOTES") ]]; then
-            notes=$NOTES
+            notes=$(echo "$NOTES"| sed 's/$/\\\\n/g' |  tr -d '\n')
         fi
     fi
 
@@ -678,13 +677,24 @@ function pushOTA() {
         url="https://sourceforge.net/projects/posp/files/$device/mashed/${file##*/}";
     fi
 
-    data="{\"build_date\":\"$build_date\", \"device\":\"$device\",\"filename\":\"${file##*/}\",\"md5\":\"$md5\",\"build_type\":\"$build_type\",\"size\":\"$size\",\"url\":\"$url\",\"version\":\"$version\",\"dish\":\"$dish\",\"notes\":\"$notes\"}";
-
     curl --header "Authorization: Token $OTA_API_USER_TOKEN" \
         --header "Content-Type: application/json" \
         --request POST \
-        --data "$data" \
-        https://api.potatoproject.co/api/ota/builds/;
+        https://api.potatoproject.co/api/ota/builds/ \
+        --data-binary @- << EOF
+{
+  "build_date": "$build_date",
+  "device": "$device",
+  "filename": "${file##*/}",
+  "md5": "$md5",
+  "build_type": "$build_type",
+  "size": "$size",
+  "url": "$url",
+  "version": "$version",
+  "dish": "$dish",
+  "notes": "$notes"
+}
+EOF
 }
 
 function repolastsync() {
