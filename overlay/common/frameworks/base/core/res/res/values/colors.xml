@@ -9,6 +9,7 @@
     <color name="user_icon_7">#ffff9800</color>
     <color name="user_icon_8">#ffff7043</color>
     <color name="system_error">#ffea4335</color>
+    <color name="background_floating_material_dark">#ff151618</color>
 
     <!-- Multi-sim sim colors -->
     <color name="Teal_700">#ff5a9af8</color>
