@@ -1,4 +1,4 @@
-POTATO_VERNUM = 3.1.0+4
+POTATO_VERNUM = 3.1.1+5
 POTATO_DISH = croquette
 
 ifndef BUILD_TYPE
