@@ -149,6 +149,7 @@ ADDITIONAL_FONTS_FILE := vendor/potato/prebuilt/common/fonts/google-sans.xml
 
 # Overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/potato/overlay/common
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/potato/overlay/common
 
 # Packages
 include vendor/potato/config/packages.mk
