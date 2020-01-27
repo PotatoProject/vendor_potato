@@ -77,8 +77,13 @@ PRODUCT_COPY_FILES += \
     vendor/potato/prebuilt/common/etc/permissions/privapp-permissions-potato.xml:system/etc/permissions/privapp-permissions-potato.xml \
     vendor/potato/prebuilt/common/etc/permissions/co.potatoproject.posp.xml:system/etc/permissions/co.potatoproject.posp.xml
 
+# Center
+PRODUCT_COPY_FILES += \
+    vendor/potato/prebuilt/common/etc/permissions/privapp-permissions-center.xml:system/etc/permissions/privapp-permissions-center.xml
+
 # Fries
 PRODUCT_COPY_FILES += \
+    vendor/potato/prebuilt/common/etc/permissions/privapp-permissions-fries.xml:system/etc/permissions/privapp-permissions-fries.xml \
     vendor/potato/prebuilt/common/etc/sysconfig/potatofries-hiddenapi-package-whitelist.xml:system/etc/sysconfig/potatofries-hiddenapi-package-whitelist.xml
 
 # Fix Google dialer
