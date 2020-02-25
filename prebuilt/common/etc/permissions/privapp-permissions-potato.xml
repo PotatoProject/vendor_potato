@@ -20,6 +20,10 @@
         <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
     </privapp-permissions>
 
+    <privapp-permissions package="com.android.phone">
+        <permission name="android.permission.OVERRIDE_WIFI_CONFIG"/>
+    </privapp-permissions>
+
     <privapp-permissions package="com.android.camera2">
         <permission name="android.permission.BIND_WALLPAPER"/>
         <permission name="android.permission.PREVENT_POWER_KEY"/>
