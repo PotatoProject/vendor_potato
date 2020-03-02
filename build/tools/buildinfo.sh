@@ -11,5 +11,6 @@ echo "ro.potato.buildtype=$($GET_VERSION buildtype)"
 echo "ro.potato.dish=$($GET_VERSION dish)"
 echo "ro.potato.vernum=$($GET_VERSION vernum)"
 echo "ro.potato.version=$($GET_VERSION version)"
+echo "ro.build.datetime=`$DATE +%s`"
 
 echo "# end potato build properties"
