@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "25126368_74ebd535",
+        "filename": "build/tools/buildinfo.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2020-03-08T17:30:14Z",
+      "side": 1,
+      "message": "will the make variable $(BUILD_DATE_TIME) be available here?",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 0
+      },
+      "revId": "91729e59b8270552d23c02f930f6992665e606c7",
+      "serverId": "8720d348-3d66-43e6-b480-1d69039ac554",
+      "unresolved": true
+    }
+  ]
+}
