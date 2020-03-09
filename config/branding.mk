@@ -2,7 +2,6 @@ GET_VERSION := vendor/potato/build/tools/getversion.py
 POTATO_VERNUM := $(shell $(GET_VERSION) vernum)
 POTATO_DISH := $(shell $(GET_VERSION) dish)
 BUILD_TYPE := $(shell $(GET_VERSION) buildtype)
-BUILD_DATE_TIME := $(BUILD_TIME)$(BUILD_DATE)
 POTATO_BRANDING_VERSION := $(BUILD_TYPE)
 POTATO_VERSION := $(shell $(GET_VERSION) version)
 ifeq ($(filter-out Official Mashed, $(BUILD_TYPE)),)
