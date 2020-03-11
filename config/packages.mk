@@ -25,9 +25,9 @@ PRODUCT_PACKAGES += \
     charger_res_images
 
 # Cutout control overlays
-#PRODUCT_PACKAGES += \
-#    HideCutout \
-#    StatusBarStock
+PRODUCT_PACKAGES += \
+    HideCutout \
+    StatusBarStock
 
 # Dark/BlackUI Packages
 #PRODUCT_PACKAGES += \
