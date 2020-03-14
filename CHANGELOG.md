@@ -1,5 +1,77 @@
 # Changelog
 
+## v3.1.4 (2019.03.10)
+- Merge android-10.0.0_r32 - March security patch
+- Show current version & new version of apk during installation (needs aosp package installer only)
+- SystemUI crashes fixes
+- IMS related changes
+- Double tap to wake from AOD improvements
+- Padding fixes in statusbar
+- Fix powermenu not tracking accent in landscape
+- Power button for flashlight improvements
+- Fixed potential mess in strings when dirty flashing
+
+## v3.1.3 (2019.02.22)
+- Merge android-10.0.0_r29 - February security patch
+- Introduce smart clock
+- Brightness slider in bottom with auto brightness icon
+- Fixed AOD on DT2W
+- Burn-in protection
+- Micro-G support
+
+## v3.1.2 (2019.02.04)
+- Fix multiple device breaking issues of 3.1.1
+
+## v3.1.1 (2019.01.27)
+# (Release rolled back)
+- Merge android-10.0.0_r25 - January security patch
+- Removed build number from QS footer
+- NFC tile drawable improvement
+- Permission Hub
+- Require unlocking to use Airplane, wifi & cellular tile on lockscreen
+- Keyguard lock icon improvement
+- Volume button to skip tracks
+- POSP logo on StatusBar
+- Fix lock icon being stuck on AOD
+- Double tap on track tile to skip track on ambient
+- Caffeine tile
+- Double tap to sleep on lockscreen
+- Double tap StatusBar to sleep
+- Ability to disable/enable lockscreen media art
+- Ability to control blur of Media art on lockscreen
+- Ability to hide powermenu on secure lockscreen
+- Some padding adjustments for media seekbar in Notifications
+- Animate MultiUser Avatar on QS footer
+- Kill some ugly grey dialogs & match it with dark theme
+- StatusBar icon pack
+- SystemWide icon shape
+- Enable native ScreenRecording
+- Advanced Powermenu configuration
+- Tint powermenu with accents
+- Add ScreenRecord powermenu
+- Add partial screenshot on longpress screenshot powermenu
+- Added VoLTE (HD) icon
+- Ability to choose "4G" or "LTE" on StatusBar
+- Fixed margins of settings Searchbar & Conditions
+- Fix icon for ring volume in settings
+- Fixed some bad strings in settings
+- Protect sensitive info in About device
+- Removed some unnecessary dropdown in settings
+- Added MultiUser Avatar in Searchbar
+- Fix multiple issues with Fries, including Play Store updates
+- Fix Accenter for selinux enforcing
+
+## v3.1.0 (2019.12.27)
+- Fix issues with most devices, mark as stable
+- Introduce PotatoFries, the POSP customisation panel written in Flutter
+- QS Panel color customisation (custom and wallpaper with opacity)
+- Introduce dual-tone acccenter
+- Enable build signing for all official devices
+
+## v3.0.0-alpha (2019.09.15)
+- Initial Android 10 release
+- Alpha/bringup release for select supported devices
+
 ## v2.3 (2019.07.19)
 - July security patch
 - Merge android-9.0.0_r45
@@ -102,7 +174,7 @@
 - New accents
 - Add GoogleSans to actionbars
 - New default wallpaper - PotatoLand
-- Statusbar Bluetooth battery indicator 
+- Statusbar Bluetooth battery indicator
 - Statusbar NFC icon
 - Clean up volume panel code
 - Fixes to op-gestures on keyguard
