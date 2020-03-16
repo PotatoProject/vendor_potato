@@ -1,6 +1,6 @@
 # Changelog
 
-## v3.1.4 (2019.03.10)
+## v3.1.4 (2020.03.10)
 - Merge android-10.0.0_r32 - March security patch
 - Show current version & new version of apk during installation (needs aosp package installer only)
 - SystemUI crashes fixes
@@ -11,7 +11,7 @@
 - Power button for flashlight improvements
 - Fixed potential mess in strings when dirty flashing
 
-## v3.1.3 (2019.02.22)
+## v3.1.3 (2020.02.22)
 - Merge android-10.0.0_r29 - February security patch
 - Introduce smart clock
 - Brightness slider in bottom with auto brightness icon
@@ -19,10 +19,10 @@
 - Burn-in protection
 - Micro-G support
 
-## v3.1.2 (2019.02.04)
+## v3.1.2 (2020.02.04)
 - Fix multiple device breaking issues of 3.1.1
 
-## v3.1.1 (2019.01.27)
+## v3.1.1 (2020.01.27)
 # (Release rolled back)
 - Merge android-10.0.0_r25 - January security patch
 - Removed build number from QS footer
