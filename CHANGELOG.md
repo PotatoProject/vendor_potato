@@ -12,6 +12,7 @@
 - Fix lockscreen statusbar padding
 - Fix Fries' parser and all getInt calls
 - Add compatibility checking (using props) to Fries
+- Fix OTA version checking
 - UI & UX, and other misc fixes
 
 ## v3.1.4 (2020.03.10)
