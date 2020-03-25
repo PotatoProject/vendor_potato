@@ -1,5 +1,19 @@
 # Changelog
 
+## v3.1.5 (2020.03.25)
+- 3 mode notch switcher
+- Network traffic indicator
+- Old style mobile data style
+- QS tile row & column configuration
+- QS tile title visibility
+- WiFi, NFC & Mobile Data QS tile Action Panels (on long press)
+- AOD & Sync tile improvments
+- Statusbar privacy indicator toggle
+- Fix lockscreen statusbar padding
+- Fix Fries' parser and all getInt calls
+- Add compatibility checking (using props) to Fries
+- UI & UX, and other misc fixes
+
 ## v3.1.4 (2020.03.10)
 - Merge android-10.0.0_r32 - March security patch
 - Show current version & new version of apk during installation (needs aosp package installer only)
