@@ -1,5 +1,15 @@
 # Changelog
 
+## v3.1.6 (2020.03.31)
+- Fix default custom QS colors
+- Misc bug fixes
+- Screenrecord dialog redesigned like Android R's
+- Notification log in Settings
+- Dialer dark mode
+- QS panel tiles improvements
+- Fix data usage display on mobile data QS panel tile
+- D I S C O
+
 ## v3.1.5 (2020.03.25)
 - 3 mode notch switcher
 - Network traffic indicator
