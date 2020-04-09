@@ -24,8 +24,13 @@ PRODUCT_COPY_FILES += \
 endif
 
 # Bootanimation
+ifeq ($(TARGET_BOOTANIM_LOW_RES), true)
 PRODUCT_COPY_FILES += \
-    vendor/potato/prebuilt/common/media/bootanimation.zip:system/media/bootanimation.zip \
+    vendor/potato-prebuilts/bootanimation/bootanimation-perf.zip:system/media/bootanimation.zip
+else
+PRODUCT_COPY_FILES += \
+    vendor/potato-prebuilts/bootanimation/bootanimation.zip:system/media/bootanimation.zip
+endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true \
