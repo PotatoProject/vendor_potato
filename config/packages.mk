@@ -12,14 +12,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     PotatoFries
 
-# Shapes
-#PRODUCT_PACKAGES += \
-#    ShapeCircle \
-#    ShapeSquare \
-#    ShapeRoundedRect \
-#    ShapeSquircle \
-#    ShapeTeardrop
-
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images
@@ -29,28 +21,11 @@ PRODUCT_PACKAGES += \
     HideCutout \
     StatusBarStock
 
-# Dark/BlackUI Packages
-#PRODUCT_PACKAGES += \
-#    GBoardDarkTheme \
-#    SettingsDarkTheme \
-#    SystemDarkTheme \
-#    SysuiQsDarkTheme \
-#    SettingsBlackTheme \
-#    SystemBlackTheme \
-#    SysuiQsBlackTheme \
-#    SettingsIntelligenceDark \
-#    SettingsIntelligenceBlack
-
 # Oreo Settings Tiles Required Packages
 #PRODUCT_PACKAGES += \
 #    SettingsOreoTiles \
 #    GMSOreoTiles \
 #    WellbeingOreoTiles
-
-# Settings Icon Tint
-#PRODUCT_PACKAGES += \
-#    SettingsIconTint \
-#    SettingsIconTintDark
 
 # Lawnchair Default Configuration
 ifeq ($(LAWNCHAIR_OPTOUT),)
