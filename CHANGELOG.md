@@ -1,5 +1,18 @@
 # Changelog
 
+## v3.1.7 (2020.04.10)
+- Merge android-10.0.0_r33 - April security patch
+- StatusBar icon toggling (tuner)
+- StatusBar battery styles
+- StatusBar Clock controls
+- 3 Finger screenshot
+- Fries redesign
+- Fix Fries reloading on some settings
+- New bootanimation (Thanks @valvze!)
+- Face unlock for supported devices
+- Instant screenshot
+- ~~Return of the Disco~~ (He's hiding!)
+
 ## v3.1.6 (2020.03.31)
 - Fix default custom QS colors
 - Misc bug fixes
