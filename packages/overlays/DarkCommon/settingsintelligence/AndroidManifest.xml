@@ -1,8 +1,0 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.settings.intelligence.theme.dark"
-    android:versionCode="1"
-    android:versionName="1.0">
-    <overlay android:targetPackage="com.android.settings.intelligence" android:priority="1"/>
-
-    <application android:label="SettingsIntelligenceDark" android:hasCode="false"/>
-</manifest>

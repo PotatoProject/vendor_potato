@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <!-- Keyboard shortcuts colors -->
-    <color name="ksh_keyword_color">#fff</color>
-
-    <color name="detailed_data_usage_color">@android:color/white</color>
-
-</resources>
