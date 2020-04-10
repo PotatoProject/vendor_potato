@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b84faef0_30a0c744",
+        "filename": "support/src/com/potato/support/preference/SystemSettingSwitchPreference.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2020-04-10T16:44:25Z",
+      "side": 1,
+      "message": "extraneous comment",
+      "range": {
+        "startLine": 73,
+        "startChar": 0,
+        "endLine": 73,
+        "endChar": 26
+      },
+      "revId": "b1f845f6d60e08a77237b053e8302986bfa761e2",
+      "serverId": "8720d348-3d66-43e6-b480-1d69039ac554",
+      "unresolved": true
+    }
+  ]
+}
