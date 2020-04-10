@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fd209207_d88b8c91",
+        "filename": "support/src/com/potato/support/preference/SystemSettingsStore.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2020-04-10T16:48:27Z",
+      "side": 1,
+      "message": "unrelated change, should be part of the previous change.",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 0
+      },
+      "revId": "e06f4a6c2a8f6785656bf297d07af363de282b1f",
+      "serverId": "8720d348-3d66-43e6-b480-1d69039ac554",
+      "unresolved": true
+    }
+  ]
+}
