@@ -16,10 +16,11 @@
 
 <resources>
 
-    <color name="search_bar_background">#FF303135</color>
+    <color name="homepage_card_dismissal_background">@*android:color/notification_material_background_color</color>
+    <color name="contextual_card_background">@*android:color/notification_material_background_color</color>
+    <color name="search_bar_background">@*android:color/notification_material_background_color</color>
 
     <!-- Dialog background color -->
-    <color name="dialog_background">#FF303135</color>
-
+    <color name="dialog_background">@*android:color/notification_material_background_color</color>
 </resources>
 
