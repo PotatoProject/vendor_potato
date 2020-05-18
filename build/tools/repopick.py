@@ -56,7 +56,7 @@ def is_subdir(a, b):
     return b == a[:len(b)]
 
 
-def fetch_query_via_ssh(remote_url, query):
+def fetch_query_via_ssh(remote_url, query, ssh_extra):
     """Given a remote_url and a query, return the list of changes that fit it
        This function is slightly messy - the ssh api does not return data in the same structure as the HTTP REST API
        We have to get the data, then transform it to match what we're expecting from the HTTP RESET API"""
@@ -70,8 +70,10 @@ def fetch_query_via_ssh(remote_url, query):
     else:
         raise Exception('Malformed URI: Expecting ssh://[user@]host[:port]')
 
-
-    out = subprocess.check_output(['ssh', '-x', '-p{0}'.format(port), userhost, 'gerrit', 'query', '--format=JSON --patch-sets --current-patch-set', query])
+    cmd = ['ssh', '-x', '-p{0}'.format(port), userhost]
+    cmd += ssh_extra.split('+')
+    cmd += ['gerrit', 'query', '--format=JSON --patch-sets --current-patch-set', query]
+    out = subprocess.check_output(cmd)
     if not hasattr(out, 'encode'):
         out = out.decode()
     reviews = []
@@ -136,10 +138,10 @@ def fetch_query_via_http(remote_url, query):
     return reviews
 
 
-def fetch_query(remote_url, query):
+def fetch_query(remote_url, query, ssh_extra):
     """Wrapper for fetch_query_via_proto functions"""
     if remote_url[0:3] == 'ssh':
-        return fetch_query_via_ssh(remote_url, query.replace('+', ' '))
+        return fetch_query_via_ssh(remote_url, query.replace('+', ' '), ssh_extra)
     elif remote_url[0:4] == 'http':
         return fetch_query_via_http(remote_url, query.replace(' ', '+'))
     else:
@@ -180,6 +182,7 @@ if __name__ == '__main__':
     parser.add_argument('-g', '--gerrit', default=default_gerrit, help='Gerrit Instance to use. Form proto://[user@]host[:port]')
     parser.add_argument('-e', '--exclude', nargs=1, help='exclude a list of commit numbers separated by a ,')
     parser.add_argument('-c', '--check-picked', type=int, default=10, help='pass the amount of commits to check for already picked changes')
+    parser.add_argument('-S', '--ssh-extra', help='Extra args to pass to SSH (+ separated)')
     args = parser.parse_args()
     if not args.start_branch and args.abandon_first:
         parser.error('if --abandon-first is set, you must also give the branch name with --start-branch')
@@ -263,6 +266,7 @@ if __name__ == '__main__':
     # get data on requested changes
     reviews = []
     change_numbers = []
+    ssh_extra = ''
 
     def cmp_reviews(review_a, review_b):
         if args.gerrit[0:3] == 'ssh':
@@ -278,17 +282,18 @@ if __name__ == '__main__':
                 return 1
             else:
                 return cmp(review_a['number'], review_b['number'])
-
+    if args.ssh_extra:
+        ssh_extra = args.ssh_extra
     if args.topic:
         for t in args.topic:
             # Store current topic to process for change_numbers
-            topic = fetch_query(args.gerrit, 'status:open+topic:{0}'.format(t))
+            topic = fetch_query(args.gerrit, 'status:open+topic:{0}'.format(t), ssh_extra)
             # Append topic to reviews, for later reference
             reviews += topic
             # Cycle through the current topic to get the change numbers
             change_numbers += sorted([str(r['number']) for r in topic], key=int)
     if args.query:
-        reviews = fetch_query(args.gerrit, args.query)
+        reviews = fetch_query(args.gerrit, args.query, ssh_extra)
         change_numbers = [str(r['number']) for r in sorted(reviews, key=cmp_to_key(cmp_reviews))]
     if args.change_number:
         change_url_re = re.compile('https?://.+?/([0-9]+(?:/[0-9]+)?)/?')
@@ -302,7 +307,7 @@ if __name__ == '__main__':
                     change_numbers.append(str(i))
             else:
                 change_numbers.append(c)
-        reviews = fetch_query(args.gerrit, ' OR '.join('change:{0}'.format(x.split('/')[0]) for x in change_numbers))
+        reviews = fetch_query(args.gerrit, ' OR '.join('change:{0}'.format(x.split('/')[0]) for x in change_numbers), ssh_extra)
 
     # make list of things to actually merge
     mergables = []
