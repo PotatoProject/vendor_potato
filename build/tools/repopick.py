@@ -2,6 +2,7 @@
 #
 # Copyright (C) 2013-15 The CyanogenMod Project
 #           (C) 2017    The LineageOS Project
+#           (C) 2020    The Potato Open Sauce Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -138,7 +139,7 @@ def fetch_query_via_http(remote_url, query):
 def fetch_query(remote_url, query):
     """Wrapper for fetch_query_via_proto functions"""
     if remote_url[0:3] == 'ssh':
-        return fetch_query_via_ssh(remote_url, query)
+        return fetch_query_via_ssh(remote_url, query.replace('+', ' '))
     elif remote_url[0:4] == 'http':
         return fetch_query_via_http(remote_url, query.replace(' ', '+'))
     else:
