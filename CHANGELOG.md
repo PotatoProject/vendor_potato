@@ -1,5 +1,24 @@
 # Changelog
 
+## v3.1.8 (2020.05.19)
+- Merge android-10.0.0_r36 - May security patch
+- Call recording
+- Auto call recording toggle
+- Fixed potential lags in some apps
+- StatusBar Date string customization
+- Disable Bluetooth power off when Airplane mode is toggled
+- Bluetooth QS tile panel
+- Per-app network restriction
+- QS Tile Disco - Colorful QS Tiles
+- Battery styles redone in Kotlin: Added text style separately
+- Sync battery icon in settings with Statusbar battery icon
+- Battery percentage or estimate time on qs panel header
+- Partial screenshot improvements
+- Ability to record internal/microphone audio in screenrecords
+- 3 new system themes!
+- AOSP Lockscreen clock styles
+- Major improvements to Fries
+
 ## v3.1.7 (2020.04.10)
 - Merge android-10.0.0_r33 - April security patch
 - StatusBar icon toggling (tuner)
