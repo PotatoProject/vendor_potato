@@ -46,6 +46,10 @@ endif
 PRODUCT_PACKAGES += \
     Turbo
 
+# Hide Navigation hint
+PRODUCT_PACKAGES += \
+    NavigationBarNoHint
+
 # Pixel packages
 PRODUCT_PACKAGES += \
     SettingsIntelligenceGooglePrebuilt \
