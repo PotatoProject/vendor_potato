@@ -68,8 +68,8 @@ endif
 ifeq ($(LAWNCHAIR_OPTOUT),)
 PRODUCT_PACKAGE_OVERLAYS += vendor/potato/overlay/lawnchair
 PRODUCT_COPY_FILES += \
-    vendor/potato/prebuilt/common/etc/permissions/privapp-permissions-lawnchair.xml:system/etc/permissions/privapp-permissions-lawnchair.xml \
-    vendor/potato/prebuilt/common/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml:system/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml
+    vendor/potato/prebuilt/common/etc/permissions/privapp-permissions-lawnchair.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-lawnchair.xml \
+    vendor/potato/prebuilt/common/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml
 endif
 
 # Disable vendor restrictions
@@ -77,21 +77,23 @@ PRODUCT_RESTRICT_VENDOR_FILES := false
 
 # POSP Common
 PRODUCT_COPY_FILES += \
-    vendor/potato/prebuilt/common/etc/permissions/privapp-permissions-potato.xml:system/etc/permissions/privapp-permissions-potato.xml \
-    vendor/potato/prebuilt/common/etc/permissions/co.potatoproject.posp.xml:system/etc/permissions/co.potatoproject.posp.xml
+    vendor/potato/prebuilt/common/etc/permissions/privapp-permissions-potato.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-potato.xml \
+    vendor/potato/prebuilt/common/etc/permissions/privapp-permissions-potato-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-potato-product.xml \
+    vendor/potato/prebuilt/common/etc/permissions/co.potatoproject.posp.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/co.potatoproject.posp.xml \
+    vendor/potato/prebuilt/common/etc/permissions/privapp-permissions-elgoog.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-elgoog.xml
 
 # Center
 PRODUCT_COPY_FILES += \
-    vendor/potato/prebuilt/common/etc/permissions/privapp-permissions-center.xml:system/etc/permissions/privapp-permissions-center.xml
+    vendor/potato/prebuilt/common/etc/permissions/privapp-permissions-center.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-center.xml
 
 # Fries
 PRODUCT_COPY_FILES += \
-    vendor/potato/prebuilt/common/etc/permissions/privapp-permissions-fries.xml:system/etc/permissions/privapp-permissions-fries.xml \
-    vendor/potato/prebuilt/common/etc/sysconfig/potatofries-hiddenapi-package-whitelist.xml:system/etc/sysconfig/potatofries-hiddenapi-package-whitelist.xml
+    vendor/potato/prebuilt/common/etc/permissions/privapp-permissions-fries.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-fries.xml \
+    vendor/potato/prebuilt/common/etc/sysconfig/potatofries-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/potatofries-hiddenapi-package-whitelist.xml
 
 # Fix Google dialer
 PRODUCT_COPY_FILES += \
-    vendor/potato/prebuilt/common/etc/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml
+    vendor/potato/prebuilt/common/etc/dialer_experience.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/dialer_experience.xml
 
 # Weather client
 #PRODUCT_COPY_FILES += \
