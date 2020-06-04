@@ -1,5 +1,14 @@
 # Changelog
 
+## v3.1.8 (2020.06.04)
+- Merge android-10.0.0_r39 - June security patch
+- Fix BT battery level on different icon packs
+- Updates to vold
+- Fixed up WiFi Display for multiple devices
+- Fixes for VirtualDisplay (VDS)
+- Enable call recording on a few more devices
+- Misc performance and stability improvements
+
 ## v3.1.8 (2020.05.19)
 - Merge android-10.0.0_r36 - May security patch
 - Call recording
