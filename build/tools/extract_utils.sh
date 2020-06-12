@@ -431,6 +431,8 @@ function write_framework() {
     local PKGNAME=
     local SRC=
 
+    printf 'soong_namespace {\n'
+    printf '}\n\n'
     for P in "${FILELIST[@]}"; do
         FILE=$(target_file "$P")
 
@@ -445,8 +447,6 @@ function write_framework() {
             SRC+="/vendor"
         fi
 
-        printf 'soong_namespace {\n'
-        printf '}\n\n'
         printf 'dex_import {\n'
         printf '    name: "%s",\n' "$PKGNAME"
         printf '    owner: "%s",\n' "$VENDOR"
