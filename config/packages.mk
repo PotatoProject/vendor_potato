@@ -72,3 +72,5 @@ PRODUCT_PACKAGES += \
 # Weather
 PRODUCT_PACKAGES += \
     WeatherClient
+
+-include packages/apps/Plugins/plugins.mk
