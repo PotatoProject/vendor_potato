@@ -1,6 +1,26 @@
 # Changelog
 
-## v3.1.8 (2020.06.04)
+## v3.2.0 (2020.06.18)
+- Added volume panel manager
+  - AospPanel
+  - CompactPanel
+  - OreoPanel
+  - TiledPanel
+- Left volume panel alignment fixes
+- Align owner info as per typeclock style
+- Option to change navigation pill size to stock, medium & long
+- Option to hide navigation pill
+- Option to swap navigation buttons when using 3 button layout
+- Remove white flash of screenshot in dark mode
+- Fix live caption button on left side when using stock volume panel
+- Option to hide/show Auto brightness icon in QS panel
+- Clock app UI improvements
+- Add Snap Camera
+- Dialer app dark mode & video call improvements
+- Option to unlink ring & notification volume
+- Several under the hood improvements
+
+## v3.1.9 (2020.06.04)
 - Merge android-10.0.0_r39 - June security patch
 - Fixed inactive WiFi icon in custom icon packs
 - Fix BT battery level on different icon packs
