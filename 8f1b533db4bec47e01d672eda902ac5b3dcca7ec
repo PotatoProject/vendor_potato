@@ -22,6 +22,30 @@
       "revId": "8f1b533db4bec47e01d672eda902ac5b3dcca7ec",
       "serverId": "8720d348-3d66-43e6-b480-1d69039ac554",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "07fedc60_6b433238",
+        "filename": "support/src/com/potato/support/preference/SystemSettingsStore.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000139
+      },
+      "writtenOn": "2020-06-18T08:01:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c80d373f_df9391d7",
+      "range": {
+        "startLine": 17,
+        "startChar": 0,
+        "endLine": 17,
+        "endChar": 37
+      },
+      "revId": "8f1b533db4bec47e01d672eda902ac5b3dcca7ec",
+      "serverId": "8720d348-3d66-43e6-b480-1d69039ac554",
+      "unresolved": false
     }
   ]
 }
