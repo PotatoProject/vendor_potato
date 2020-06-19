@@ -1,5 +1,9 @@
 # Changelog
 
+## v3.2.0-hotfix (2020.06.19)
+- Fix crashes on various volume panels
+- Revert wallpaper change for now (fixes issues on some devices)
+
 ## v3.2.0 (2020.06.18)
 - Added volume panel manager with 4 built in panels
   - AospPanel
