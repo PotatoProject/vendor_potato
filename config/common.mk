@@ -110,6 +110,10 @@ endif
 PRODUCT_PACKAGE_OVERLAYS += vendor/potato/overlay/common
 PRODUCT_ENFORCE_RRO_TARGETS += framework-res
 
+# Ramdisk
+PRODUCT_PACKAGES += \
+    init.potato.rc
+
 # Pixel sounds
 include vendor/potato/config/sounds.mk
 
