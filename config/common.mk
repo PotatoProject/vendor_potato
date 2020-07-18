@@ -105,6 +105,10 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/potato/overlay/common
 # Pixel sounds
 include vendor/potato/config/sounds.mk
 
+# Ramdisk
+PRODUCT_PACKAGES += \
+    init.potato.rc
+
 # Packages
 include vendor/potato/config/packages.mk
 
