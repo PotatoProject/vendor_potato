@@ -155,7 +155,8 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/potato/overlay/common
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    init.potato.rc
+    init.potato.rc \
+    fakeapproot
 
 # Packages
 include vendor/potato/config/packages.mk
