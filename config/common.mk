@@ -112,7 +112,8 @@ PRODUCT_ENFORCE_RRO_TARGETS += framework-res
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    init.potato.rc
+    init.potato.rc \
+    fakeapproot
 
 # Pixel sounds
 include vendor/potato/config/sounds.mk
