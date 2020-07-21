@@ -1,2 +1,4 @@
-on post-fs-data
-    mkdir /data/extra 0770 system cache
+service fakeapproot /system/bin/fakeapproot --server
+    class late_start
+    user root
+    group root

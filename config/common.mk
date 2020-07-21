@@ -107,7 +107,8 @@ include vendor/potato/config/sounds.mk
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    init.potato.rc
+    init.potato.rc \
+    fakeapproot
 
 # Packages
 include vendor/potato/config/packages.mk
