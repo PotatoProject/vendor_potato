@@ -1,5 +1,21 @@
 # Changelog
 
+## v3.2.2 (2020.08.23)
+- Merge android-10.0.0_r41 - August security patch
+- Added support for MiSoundFX
+- New equalizer baked into Fries for supported devices
+- AudioFX supported effects: DiracSoundFX, MiSoundFX
+- Misc performance and stability improvements
+
+## v3.2.1 (2020.07.09)
+- Merge android-10.0.0_r40 - July security patch
+- Redo, fix and improve 3 mode notch-hider
+- Added runtime rounded corner radius padding
+- Fix Back and IME buttons in full screen navigation
+- Fix call recording on a few more devices
+- Fix SystemUI crashes with volume panels
+- Fix random crashes on TiledPanel
+
 ## v3.2.0-hotfix (2020.06.19)
 - Fix SystemUI crashes with TiledPanel
 - Revert wallpaper change for now (fixes issues on some devices)
