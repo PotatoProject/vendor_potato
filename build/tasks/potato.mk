@@ -21,7 +21,6 @@ POTATO_TARGET_PACKAGE := $(PRODUCT_OUT)/$(POTATO_VERSION).zip
 .PHONY: potato
 potato: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(POTATO_TARGET_PACKAGE)
-	$(hide) $(MD5SUM) $(POTATO_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(POTATO_TARGET_PACKAGE).md5sum
 	@echo "Package Complete: $(POTATO_TARGET_PACKAGE)" >&2
 	echo "";
 	cat build/make/potato_ascii_logo;
