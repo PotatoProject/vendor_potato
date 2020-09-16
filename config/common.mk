@@ -64,14 +64,6 @@ PRODUCT_COPY_FILES += \
 endif
 endif
 
-# Lawnchair
-ifeq ($(LAWNCHAIR_OPTOUT),)
-PRODUCT_PACKAGE_OVERLAYS += vendor/potato/overlay/lawnchair
-PRODUCT_COPY_FILES += \
-    vendor/potato/prebuilt/common/etc/permissions/privapp-permissions-lawnchair.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-lawnchair.xml \
-    vendor/potato/prebuilt/common/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml
-endif
-
 # Disable vendor restrictions
 PRODUCT_RESTRICT_VENDOR_FILES := false
 

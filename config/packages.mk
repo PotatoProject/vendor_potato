@@ -1,9 +1,3 @@
-# Lawnchair
-ifeq ($(LAWNCHAIR_OPTOUT),)
-PRODUCT_PACKAGES += \
-    Lawnchair
-endif
-
 # Include librsjni explicitly to workaround GMS issue
 PRODUCT_PACKAGES += \
     librsjni
@@ -35,12 +29,6 @@ PRODUCT_PACKAGES += \
 #    SettingsOreoTiles \
 #    GMSOreoTiles \
 #    WellbeingOreoTiles
-
-# Lawnchair Default Configuration
-ifeq ($(LAWNCHAIR_OPTOUT),)
-PRODUCT_PACKAGES += \
-    LawnConf
-endif
 
 # Turbo
 PRODUCT_PACKAGES += \
