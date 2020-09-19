@@ -93,4 +93,11 @@ endif
 QCOM_SOONG_NAMESPACE ?= hardware/qcom-caf/$(QCOM_HARDWARE_VARIANT)
 PRODUCT_SOONG_NAMESPACES += $(QCOM_SOONG_NAMESPACE)
 
+# Required for QTI BT Stack
+ifeq ($(TARGET_USE_QTI_BT_STACK),true)
+PRODUCT_SOONG_NAMESPACES += \
+    vendor/qcom/opensource/commonsys/packages/apps/Bluetooth \
+    vendor/qcom/opensource/commonsys/system/bt/conf
+endif #TARGET_USE_QTI_BT_STACK
+
 include vendor/potato/build/core/qcom_target.mk
