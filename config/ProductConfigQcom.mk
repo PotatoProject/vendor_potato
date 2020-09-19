@@ -102,4 +102,11 @@ ifneq ($(filter $(QSSI_SUPPORTED_PLATFORMS),$(PRODUCT_BOARD_PLATFORM)),)
     PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/commonsys-intf/display
 endif
 
+# Required for QTI BT Stack
+ifeq ($(TARGET_USE_QTI_BT_STACK),true)
+PRODUCT_SOONG_NAMESPACES += \
+    vendor/qcom/opensource/commonsys/packages/apps/Bluetooth \
+    vendor/qcom/opensource/commonsys/system/bt/conf
+endif #TARGET_USE_QTI_BT_STACK
+
 include vendor/potato/build/core/qcom_target.mk
