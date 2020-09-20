@@ -51,6 +51,9 @@ type Product_variables struct {
 		Cflags []string
 		Whole_static_libs []string
 	}
+	Supports_extended_compress_format struct {
+		Cflags []string
+	}
 	Uses_generic_camera_parameter_library struct {
 		Srcs []string
 	}
@@ -76,6 +79,7 @@ type ProductVariables struct {
 	Needs_text_relocations  *bool `json:",omitempty"`
 	Qcom_um_soong_namespace  *string `json:",omitempty"`
 	Specific_camera_parameter_library  *string `json:",omitempty"`
+	Supports_extended_compress_format  *bool `json:",omitempty"`
 	Target_init_vendor_lib  *string `json:",omitempty"`
 	Target_process_sdk_version_override  *string `json:",omitempty"`
 	Target_shim_libs  *string `json:",omitempty"`
