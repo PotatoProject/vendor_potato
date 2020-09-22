@@ -15,6 +15,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     PotatoFries
 
+# ThemePicker
+PRODUCT_PACKAGES += \
+    ThemePicker
+
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images
