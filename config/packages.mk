@@ -29,8 +29,9 @@ PRODUCT_PACKAGES += \
     HideCutout \
     StatusBarStock
 
-# Hide Navigation hint
+# Navbar
 PRODUCT_PACKAGES += \
-    NavigationBarNoHint
+    GesturalNavigationOverlayLong \
+    GesturalNavigationOverlayMedium
 
 -include packages/apps/Plugins/plugins.mk
