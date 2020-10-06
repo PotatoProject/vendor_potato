@@ -32,6 +32,7 @@ PRODUCT_PACKAGES += \
 # Navbar
 PRODUCT_PACKAGES += \
     GesturalNavigationOverlayLong \
-    GesturalNavigationOverlayMedium
+    GesturalNavigationOverlayMedium \
+    GesturalNavigationOverlayHidden
 
 -include packages/apps/Plugins/plugins.mk
