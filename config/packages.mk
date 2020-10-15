@@ -29,9 +29,10 @@ PRODUCT_PACKAGES += \
     HideCutout \
     StatusBarStock
 
-# Hide Navigation hint
+# Navigation overlays
 PRODUCT_PACKAGES += \
-    NavigationBarNoHint
+    NavigationBarNoHint \
+    NavigationBarMode2ButtonOverlay
 
 # SystemUI plugins
 PRODUCT_PACKAGES += \
