@@ -15,4 +15,9 @@
     <!-- Doze: does this device support STATE_DOZE and STATE_DOZE_SUSPEND?  -->
     <bool name="doze_display_state_supported">true</bool>
 
+    <!-- SystemUI Plugins that can be loaded on user builds. -->
+    <string-array name="config_pluginWhitelist" translatable="false">
+        <item>com.android.systemui.plugin.globalactions.wallet</item>
+    </string-array>
+
 </resources>
