@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2dc4555f_8ee6cb40",
+        "filename": "config/common.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2020-11-13T16:33:33Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this be set on a per-device basis?",
+      "revId": "7743ebba9e61762c97a048bc1f7d1c5a2bde9830",
+      "serverId": "8720d348-3d66-43e6-b480-1d69039ac554",
+      "unresolved": true
+    }
+  ]
+}
