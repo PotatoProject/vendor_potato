@@ -33,6 +33,7 @@ SOONG_CONFIG_NAMESPACES += customGlobalVars
 SOONG_CONFIG_customGlobalVars += \
     additional_gralloc_10_usage_bits \
     bootloader_message_offset \
+    disable_postrender_cleanup \
     has_legacy_camera_hal1 \
     ignores_ftp_pptp_conntrack_failure \
     needs_netd_direct_connect_rule \
@@ -68,6 +69,7 @@ TARGET_SURFACEFLINGER_FOD_LIB ?= surfaceflinger_fod_lib
 # Soong variables
 SOONG_CONFIG_customGlobalVars_additional_gralloc_10_usage_bits := $(TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS)
 SOONG_CONFIG_customGlobalVars_bootloader_message_offset := $(BOOTLOADER_MESSAGE_OFFSET)
+SOONG_CONFIG_customGlobalVars_disable_postrender_cleanup := $(TARGET_DISABLE_POSTRENDER_CLEANUP)
 SOONG_CONFIG_customGlobalVars_has_legacy_camera_hal1 := $(TARGET_HAS_LEGACY_CAMERA_HAL1)
 SOONG_CONFIG_customGlobalVars_ignores_ftp_pptp_conntrack_failure := $(TARGET_IGNORES_FTP_PPTP_CONNTRACK_FAILURE)
 SOONG_CONFIG_customGlobalVars_needs_netd_direct_connect_rule := $(TARGET_NEEDS_NETD_DIRECT_CONNECT_RULE)
