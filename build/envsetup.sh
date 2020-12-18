@@ -261,7 +261,7 @@ function gerritpush()
 {
 
     GERRIT_URL=review.potatoproject.co;
-    DEFAULT_BRANCH=croquette-release;
+    DEFAULT_BRANCH=dumaloo-release;
     PROJECT_PREFIX=;
     ref=for;
 
@@ -506,7 +506,7 @@ function mka() {
 function mergeaosptag()
 {
   username=PotatoProject
-  default_branch=croquette-release
+  default_branch=dumaloo-release
 
   for var in "$@"
   do
