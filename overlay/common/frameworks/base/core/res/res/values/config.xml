@@ -22,7 +22,7 @@
     <bool name="config_smart_battery_available">true</bool>
 
     <!-- Enable the RingtonePickerActivity in 'com.android.providers.media'. -->
-    <bool name="config_defaultRingtonePickerEnabled">false</bool>
+    <bool name="config_defaultRingtonePickerEnabled">true</bool>
 
     <!-- Specify custom blanking delay of the display -->
     <integer name="config_screen_off_delay">0</integer>
