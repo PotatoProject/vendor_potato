@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6529efcd_654a32a5",
+        "filename": "build/tools/extract_utils.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 944,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2020-12-19T08:16:11Z",
+      "side": 1,
+      "message": "years after 2017 must be \"The Potato Open Sauce Project\"",
+      "range": {
+        "startLine": 940,
+        "startChar": 0,
+        "endLine": 944,
+        "endChar": 103
+      },
+      "revId": "c5c205c4771901dff9ca9ceaff1fd6e9fbcb7805",
+      "serverId": "8720d348-3d66-43e6-b480-1d69039ac554",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "496a03bf_8657a84d",
+        "filename": "build/tools/extract_utils.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 1002,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2020-12-19T08:16:11Z",
+      "side": 1,
+      "message": "years after 2017 must be \"The Potato Open Sauce Project\"",
+      "range": {
+        "startLine": 995,
+        "startChar": 0,
+        "endLine": 1002,
+        "endChar": 67
+      },
+      "revId": "c5c205c4771901dff9ca9ceaff1fd6e9fbcb7805",
+      "serverId": "8720d348-3d66-43e6-b480-1d69039ac554",
+      "unresolved": true
+    }
+  ]
+}
