@@ -129,20 +129,6 @@ PRODUCT_COPY_FILES += \
     vendor/potato/prebuilt/common/lib/libsketchology_native.so:system/lib/libsketchology_native.so \
     vendor/potato/prebuilt/common/lib64/libsketchology_native.so:system/lib64/libsketchology_native.so
 
-# GSans font
-include vendor/potato/config/fonts.mk
-
-# Fonts
-PRODUCT_COPY_FILES += \
-   vendor/potato/prebuilt/common/fonts/GoogleSans-Regular.ttf:system/fonts/GoogleSans-Regular.ttf \
-   vendor/potato/prebuilt/common/fonts/GoogleSans-Medium.ttf:system/fonts/GoogleSans-Medium.ttf \
-   vendor/potato/prebuilt/common/fonts/GoogleSans-MediumItalic.ttf:system/fonts/GoogleSans-MediumItalic.ttf \
-   vendor/potato/prebuilt/common/fonts/GoogleSans-Italic.ttf:system/fonts/GoogleSans-Italic.ttf \
-   vendor/potato/prebuilt/common/fonts/GoogleSans-Bold.ttf:system/fonts/GoogleSans-Bold.ttf \
-   vendor/potato/prebuilt/common/fonts/GoogleSans-BoldItalic.ttf:system/fonts/GoogleSans-BoldItalic.ttf
-
-ADDITIONAL_FONTS_FILE := vendor/potato/prebuilt/common/fonts/google-sans.xml
-
 # Overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/potato/overlay/common
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/potato/overlay/common
