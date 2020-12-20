@@ -18,7 +18,7 @@ def is_subdir(a, b):
 def get_build_type(target_product):
     build_type = os.environ['BUILD_TYPE'].strip() if 'BUILD_TYPE' in os.environ else ''
     current_device = target_product.split("_")[1]
-    if build_type == 'OFFICIAL' or build_type == 'MASHED':
+    if build_type == 'CRISPY' or build_type == 'MASHED' or build_type == 'SALAD':
         with open("vendor/potato/potato.devices", "r") as read_file:
             devices = read_file.read().splitlines()
             if current_device not in devices:
