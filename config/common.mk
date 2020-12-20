@@ -37,19 +37,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.opa.eligible_device=true \
     ro.setupwizard.rotation_locked=true
 
-# LatinIME gesture typing
-ifneq ($(filter tenderloin,$(TARGET_PRODUCT)),)
-ifneq ($(filter shamu,$(TARGET_PRODUCT)),)
-PRODUCT_COPY_FILES += \
-    vendor/potato/prebuilt/common/lib/libjni_latinime.so:system/lib/libjni_latinime.so \
-    vendor/potato/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
-else
-PRODUCT_COPY_FILES += \
-    vendor/potato/prebuilt/common/lib64/libjni_latinime.so:system/lib64/libjni_latinime.so \
-    vendor/potato/prebuilt/common/lib64/libjni_latinimegoogle.so:system/lib64/libjni_latinimegoogle.so
-endif
-endif
-
 # Disable vendor restrictions
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
