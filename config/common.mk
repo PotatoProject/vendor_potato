@@ -132,11 +132,6 @@ PRODUCT_COPY_FILES += \
 # GSans font
 include vendor/potato/config/fonts.mk
 
-# We modify several neverallows, so let the build proceed
-ifneq ($(TARGET_BUILD_VARIANT),user)
-    SELINUX_IGNORE_NEVERALLOWS := true
-endif
-
 # Fonts
 PRODUCT_COPY_FILES += \
    vendor/potato/prebuilt/common/fonts/GoogleSans-Regular.ttf:system/fonts/GoogleSans-Regular.ttf \
