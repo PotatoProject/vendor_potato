@@ -7,6 +7,8 @@ import os
 import subprocess
 
 
+CACHE_FILE="out/potato-vars"
+
 def is_subdir(a, b):
     a = os.path.realpath(a) + '/'
     b = os.path.realpath(b) + '/'
@@ -41,6 +43,33 @@ def ensure_path():
         sys.exit(1)
 
 
+def handle_query(query, data):
+    if query == 'write':
+        if os.path.exists(CACHE_FILE):
+            handle_query('invalidate', data)
+        data['buildtype'] = handle_query('buildtype', data)
+        data['version'] = handle_query('version', data)
+        with open(CACHE_FILE, 'w') as cf:
+            json.dump(data, cf)
+    elif query == 'invalidate':
+        if os.path.exists(CACHE_FILE):
+            os.remove(CACHE_FILE)
+    else:
+        if os.path.exists(CACHE_FILE):
+            with open(CACHE_FILE, 'r') as cf:
+                data = json.load(cf)
+        if query in data.keys():
+            return data[query]
+        else:
+            if query == 'buildtype':
+                return get_build_type(data['product'])
+            elif query == 'version':
+                return "{}-{}-{}-{}.v{}.{}".format(data['product'], data['platform'], data['date'], data['dish'], data['vernum'],
+                                                  get_build_type(data['product']))
+            else:
+                return ''
+
+
 def main():
     if len(sys.argv) < 2:
         sys.stderr.write('ERROR: You must provide a query!\n')
@@ -59,14 +88,9 @@ def main():
     data['product'] = target_product
     data['device'] = target_product.split("_")[1]
     data['date'] = date
-
-    if query == 'buildtype':
-        print(get_build_type(target_product))
-    elif query == 'version':
-        print("{}-{}-{}-{}.v{}.{}".format(data['product'], data['platform'], date, data['dish'], data['vernum'],
-                                          get_build_type(target_product)))
-    else:
-        print(data[query] if query in data.keys() else '')
+    output = handle_query(query, data)
+    if output is not None:
+        print(output)
 
 
 if __name__ == '__main__':
