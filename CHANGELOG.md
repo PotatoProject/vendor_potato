@@ -1,5 +1,35 @@
 # Changelog
 
+## v4.0.1 (2020.12.24)
+- RGB accenter 3.0
+- Custom volume panels
+- Headsup QS tile
+- NFC QS tile
+- Notch City
+- Show new & current apk version while installing
+- Add/remove QS tiles with one click
+- Custom clocks
+- Bluetooth battery level on StatusBar
+- Fixed Wifi QS tile icon in some icon packs
+- Delete option in Screenshot UI
+- Fixed lags when screen recording for few devices
+- Colors to assistant animation
+- Battery styles
+- Brightness slider tweaks
+- QS panel columns and rows
+- QS tile title
+- Doubletap/longpress power to toggle Flashlight
+- Option to enable lockscreen media art with blur control
+- Double tap to sleep on lockscreen
+- Skip tracks with volume buttons
+- Pulse ambient display on new music tracks
+- Less boring heads up
+- Enabled permission hub
+- Per app network isolation option
+- Dark theme support in dialer and messaging app
+- Google feed integration in launcher
+- Double tap to sleep on home screen
+
 ## v3.2.0-hotfix (2020.06.19)
 - Fix SystemUI crashes with TiledPanel
 - Revert wallpaper change for now (fixes issues on some devices)
