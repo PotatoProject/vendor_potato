@@ -18,7 +18,7 @@ PRODUCT_COPY_FILES += \
     vendor/potato/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
     vendor/potato/prebuilt/common/bin/50-base.sh:system/addon.d/50-base.sh \
 
-ifeq ($(AB_OTA_UPDATER),true)
+ifneq ($(strip $(AB_OTA_PARTITIONS) $(AB_OTA_POSTINSTALL_CONFIG)),)
 PRODUCT_COPY_FILES += \
     vendor/potato/prebuilt/common/bin/backuptool_ab.sh:system/bin/backuptool_ab.sh \
     vendor/potato/prebuilt/common/bin/backuptool_ab.functions:system/bin/backuptool_ab.functions \
