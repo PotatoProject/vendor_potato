@@ -2,6 +2,8 @@
 include vendor/potato/build/core/qcom_utils.mk
 
 # Platform names
+KONA := kona #SM8250
+LITO := lito #SM7250
 MSMNILE := msmnile #SM8150
 MSMSTEPPE := sm6150
 TRINKET := trinket #SM6125
@@ -14,7 +16,9 @@ UM_3_18_FAMILY := msm8937 msm8953 msm8996
 UM_4_4_FAMILY := msm8998 sdm660
 UM_4_9_FAMILY := sdm845
 UM_4_14_FAMILY := $(MSMNILE) $(MSMSTEPPE) $(TRINKET) $(ATOLL)
+UM_4_19_FAMILY := $(KONA) $(LITO)
 UM_PLATFORMS := $(UM_3_18_FAMILY) $(UM_4_4_FAMILY) $(UM_4_9_FAMILY) $(UM_4_14_FAMILY)
+QSSI_SUPPORTED_PLATFORMS := $(UM_4_9_FAMILY) $(UM_4_14_FAMILY) $(UM_4_19_FAMILY)
 
 BOARD_USES_ADRENO := true
 
@@ -92,5 +96,10 @@ endif
 
 QCOM_SOONG_NAMESPACE ?= hardware/qcom-caf/$(QCOM_HARDWARE_VARIANT)
 PRODUCT_SOONG_NAMESPACES += $(QCOM_SOONG_NAMESPACE)
+
+# Add display-commonsys-intf to PRODUCT_SOONG_NAMESPACES for QSSI supported platforms
+ifneq ($(filter $(QSSI_SUPPORTED_PLATFORMS),$(TARGET_BOARD_PLATFORM)),)
+    PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/commonsys-intf/display
+endif
 
 include vendor/potato/build/core/qcom_target.mk
