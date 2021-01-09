@@ -7,7 +7,14 @@ import os
 import subprocess
 
 
-CACHE_FILE="out/potato-vars"
+def get_out_dir():
+    out = os.environ['OUT_DIR_COMMON_BASE'].strip() if 'OUT_DIR_COMMON_BASE' in os.environ else None
+    out = os.environ['OUT_DIR'].strip() if 'OUT_DIR' in os.environ and out is None else None
+    if out is None:
+        out = 'out'
+    return out
+
+CACHE_FILE = get_out_dir() + '/potato-vars'
 
 def is_subdir(a, b):
     a = os.path.realpath(a) + '/'
