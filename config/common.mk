@@ -1,4 +1,6 @@
+ifeq ($(PRODUCT_USES_QCOM_HARDWARE),true)
 include vendor/potato/config/ProductConfigQcom.mk
+endif
 
 PRODUCT_SOONG_NAMESPACES += $(PATHMAP_SOONG_NAMESPACES)
 
