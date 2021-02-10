@@ -21,6 +21,7 @@ Additional PotatoROM functions:
 - installboot:     Installs a boot.img to the connected device.
 - installrecovery: Installs a recovery.img to the connected device.
 - extractjni:      Extracts all jni for given project
+- updatefries:     Function to fetch latest Fries APKs and push them to prebuilts
 EOF
 }
 
@@ -475,6 +476,18 @@ function extractjni() {
         fi
         unzip -jo $apk "lib/$arch/*" -d $(dirname $apk);
     done;
+}
+
+function updatefries() {
+    wget -nv https://github.com/PotatoProject/PotatoFries/releases/latest/download/android-arm.apk -O vendor/potato-prebuilts/packages/apps/PotatoFries/arm/PotatoFries.apk
+    wget -nv https://github.com/PotatoProject/PotatoFries/releases/latest/download/android-arm64.apk -O vendor/potato-prebuilts/packages/apps/PotatoFries/arm64/PotatoFries.apk
+    wget -nv https://github.com/PotatoProject/PotatoFries/releases/latest/download/android-x64.apk -O vendor/potato-prebuilts/packages/apps/PotatoFries/x86_64/PotatoFries.apk
+    extractjni vendor/potato-prebuilts/packages/apps/PotatoFries
+    cd vendor/potato-prebuilts
+    git add -A
+    git commit -m "prebuilts: Update Fries to v$(curl -sX GET https://raw.githubusercontent.com/PotatoProject/PotatoFries/dumaloo-release/pubspec.yaml | grep version | cut -d : -f 2 | xargs)"
+    git push potato HEAD:dumaloo-release
+    croot
 }
 
 function makerecipe() {
