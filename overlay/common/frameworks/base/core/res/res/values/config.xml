@@ -14,8 +14,8 @@
     <string name="config_headlineFontFamilyMedium">google-sans-medium</string>
 
     <!-- Set up those curves -->
-    <dimen name="config_dialogCornerRadius">12.0dip</dimen>
-    <dimen name="config_buttonCornerRadius">6.0dip</dimen>
+    <dimen name="config_dialogCornerRadius">8.0dip</dimen>
+    <dimen name="config_buttonCornerRadius">4.0dip</dimen>
     <dimen name="config_progressBarCornerRadius">1000.0dip</dimen>
 
     <!-- Flag indicating whether we should enable smart battery. -->
