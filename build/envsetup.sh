@@ -490,6 +490,24 @@ function updatefries() {
     croot
 }
 
+function updateversion() {
+    ./vendor/potato/build/tools/updateversion.py $1
+    cd vendor/potato;
+    git add -A
+    git commit -m "vendor-potato: version: Update build to $1"
+    gerritpush -d
+    echo "Waiting for Gerrit replication to git..."
+    local=$(git rev-list HEAD | head -1)
+    remote=""
+    while [[ "$local" != "$remote" ]]; do
+      sleep 5;
+      git fetch potato dumaloo-release 2> /dev/null;
+      local=$(git rev-list HEAD | head -1)
+      remote=$(git rev-list FETCH_HEAD | head -1)
+    done
+    echo "Found change\! Update version complete."
+}
+
 function makerecipe() {
     if [ -z "$1" ]
     then
