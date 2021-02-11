@@ -492,6 +492,10 @@ function updatefries() {
 
 function updateversion() {
     ./vendor/potato/build/tools/updateversion.py $1
+    error=$?
+    if [ ${error} -ne 0 ]; then
+        exit "${error}"
+    fi
     cd vendor/potato;
     git add -A
     git commit -m "vendor-potato: version: Update build to $1"
@@ -505,7 +509,7 @@ function updateversion() {
       local=$(git rev-list HEAD | head -1)
       remote=$(git rev-list FETCH_HEAD | head -1)
     done
-    echo "Found change\! Update version complete."
+    echo "Found change! Update version complete."
 }
 
 function makerecipe() {
