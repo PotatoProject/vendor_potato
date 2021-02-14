@@ -9,7 +9,7 @@ POTATO_VERSION := $(shell $(GET_VERSION) version)
 $(shell $(GET_VERSION) write)
 ifeq ($(filter-out Crispy Mashed Salad, $(BUILD_TYPE)),)
     PRODUCT_PACKAGES += \
-        PotatoCenter
+        Updater
 endif
 
 ifneq ($(SIGNING_KEYS),)
