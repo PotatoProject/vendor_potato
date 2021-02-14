@@ -33,4 +33,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     NavigationBarNoHint
 
+# Updater
+PRODUCT_PACKAGES += \
+    Updater
+
 -include packages/apps/Plugins/plugins.mk
