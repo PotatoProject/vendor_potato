@@ -90,3 +90,5 @@ SOONG_CONFIG_customQcomVars_qcom_display_headers_namespace := vendor/qcom/openso
 else
 SOONG_CONFIG_customQcomVars_qcom_display_headers_namespace := $(QCOM_SOONG_NAMESPACE)/display
 endif
+
+
