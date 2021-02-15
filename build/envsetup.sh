@@ -708,10 +708,7 @@ function pushOTA() {
         fi
     fi
 
-    url="https://sourceforge.net/projects/posp/files/$device/$dish/${file##*/}";
-    if [[ "${TEST_BUILD}" == true ]]; then
-        url="https://sourceforge.net/projects/posp/files/$device/mashed/${file##*/}";
-    fi
+    url="${clone_repo}/releases/download/$(echo $version | cut -d + -f 1)/${file##*/}";
 
     data="{\"build_date\":\"$build_date\", \"device\":\"$device\",\"filename\":\"${file##*/}\",\"md5\":\"$md5\",\"build_type\":\"$build_type\",\"size\":\"$size\",\"url\":\"$url\",\"version\":\"$version\",\"dish\":\"$dish\",\"notes\":\"$notes\"}";
 
