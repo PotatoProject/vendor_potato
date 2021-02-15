@@ -1,0 +1,29 @@
+{
+  "begonia": {
+    "repo": "https://github.com/PotatoDevices/device_redmi_begonia"
+  },
+  "beryllium": {
+    "repo": "https://github.com/PotatoDevices/device_xiaomi_beryllium"
+  },
+  "chiron": {
+    "repo": "https://github.com/PotatoDevices/device_xiaomi_chiron"
+  },
+  "sanders": {
+    "repo": "https://github.com/PotatoDevices/device_motorola_sanders"
+  },
+  "violet": {
+    "repo": "https://github.com/PotatoDevices/device_xiaomi_violet"
+  },
+  "raphael": {
+    "repo": "https://github.com/PotatoDevices/device_xiaomi_raphael"
+  },
+  "whyred": {
+    "repo": "https://github.com/PotatoDevices/device_xiaomi_whyred"
+  },
+  "onyx": {
+    "repo": "https://github.com/PotatoDevices/device_oneplus_onyx"
+  },
+  "cheeseburger": {
+    "repo": "https://github.com/PotatoDevices/device_oneplus_cheeseburger"
+  }
+}
