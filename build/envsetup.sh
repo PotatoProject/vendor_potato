@@ -708,7 +708,7 @@ function pushOTA() {
         fi
     fi
 
-    url="${clone_repo}/releases/download/$(echo $version | cut -d + -f 1)/${file##*/}";
+    url="${clone_repo}/releases/download/$(echo $version | cut -d + -f 1)$tag_sfx/${file##*/}";
 
     data="{\"build_date\":\"$build_date\", \"device\":\"$device\",\"filename\":\"${file##*/}\",\"md5\":\"$md5\",\"build_type\":\"$build_type\",\"size\":\"$size\",\"url\":\"$url\",\"version\":\"$version\",\"dish\":\"$dish\",\"notes\":\"$notes\"}";
 
