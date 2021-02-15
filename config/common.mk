@@ -4,6 +4,15 @@ endif
 
 PRODUCT_SOONG_NAMESPACES += $(PATHMAP_SOONG_NAMESPACES)
 
+# Required for QTI BT Stack
+ifeq ($(TARGET_USE_QTI_BT_STACK),true)
+PRODUCT_SOONG_NAMESPACES += \
+    vendor/qcom/opensource/commonsys/packages/apps/Bluetooth \
+    vendor/qcom/opensource/commonsys/system/bt/conf
+else
+PRODUCT_SOONG_NAMESPACES += packages/apps/Bluetooth
+endif
+
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.clientidbase=android-google
