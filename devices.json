@@ -5,8 +5,20 @@
   "beryllium": {
     "repo": "https://github.com/PotatoDevices/device_xiaomi_beryllium"
   },
+  "cheeseburger": {
+    "repo": "https://github.com/PotatoDevices/device_oneplus_cheeseburger"
+  },
   "chiron": {
     "repo": "https://github.com/PotatoDevices/device_xiaomi_chiron"
+  },
+  "lavender": {
+    "repo": "https://github.com/PotatoDevices/device_xiaomi_lavender"
+  },
+  "onyx": {
+    "repo": "https://github.com/PotatoDevices/device_oneplus_onyx"
+  },
+  "raphael": {
+    "repo": "https://github.com/PotatoDevices/device_xiaomi_raphael"
   },
   "sanders": {
     "repo": "https://github.com/PotatoDevices/device_motorola_sanders"
@@ -14,16 +26,7 @@
   "violet": {
     "repo": "https://github.com/PotatoDevices/device_xiaomi_violet"
   },
-  "raphael": {
-    "repo": "https://github.com/PotatoDevices/device_xiaomi_raphael"
-  },
   "whyred": {
     "repo": "https://github.com/PotatoDevices/device_xiaomi_whyred"
-  },
-  "onyx": {
-    "repo": "https://github.com/PotatoDevices/device_oneplus_onyx"
-  },
-  "cheeseburger": {
-    "repo": "https://github.com/PotatoDevices/device_oneplus_cheeseburger"
   }
 }
