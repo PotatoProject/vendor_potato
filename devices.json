@@ -14,6 +14,9 @@
   "lavender": {
     "repo": "https://github.com/PotatoDevices/device_xiaomi_lavender"
   },
+  "miatoll": {
+    "repo": "https://github.com/PotatoDevices/device_xiaomi_miatoll"
+  },
   "onyx": {
     "repo": "https://github.com/PotatoDevices/device_oneplus_onyx"
   },
