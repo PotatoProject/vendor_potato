@@ -1,5 +1,39 @@
 # Changelog
 
+## v4.0.3 (2020.02.21)
+- Use fixed row & column in landscape if media is playing
+- Fixed lock icon not changing after system icon pack
+- Hide lockscreen media art if media is not playing
+- PixelPropsUtils ( spoofed build fingerprint to redfine for some apps )
+- Implement SmartSpace from redfin
+- Advanced reboot option
+- Dash charging text for OnePlus devices
+- Reset battery stats
+- Fix crashes in Updater
+- Add back initial DiracSound and MiSound support
+
+## v4.0.2 (2020.02.14)
+- Builds will now compile weekly!
+- Merge android-11.0.0_r31
+- February security patch
+- New OTA app
+- LTE <-> 4G icon toggle
+- Roaming indicator toggle
+- VoLTE icon toggle
+- Epic improvements to Fries
+- 3 finger screenshot
+- Pill hide
+- Pill sizes
+- StatusBar Tuner
+- Lockscreen Tuner
+- Navbar Tuner
+- Improvements to DeskClock
+- Disable SafetyNet HW attestation
+- Smoother upload and download animations
+- Temporarily re-add backuptool
+- Add QTI BT for devices that support it
+- Switch to GitHub releases for releases
+
 ## v4.0.1 (2020.12.24)
 - RGB accenter 3.0
 - Custom volume panels
