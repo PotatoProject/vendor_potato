@@ -11,6 +11,9 @@
   "chiron": {
     "repo": "https://github.com/PotatoDevices/device_xiaomi_chiron"
   },
+  "davinci": {
+    "repo": "https://github.com/PotatoDevices/device_xiaomi_davinci"
+  },
   "dumpling": {
     "repo": "https://github.com/PotatoDevices/device_oneplus_dumpling"
   },
