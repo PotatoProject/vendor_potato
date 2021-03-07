@@ -11,6 +11,9 @@
   "chiron": {
     "repo": "https://github.com/PotatoDevices/device_xiaomi_chiron"
   },
+  "crownqltechn": {
+    "repo": "https://github.com/PotatoDevices/device_samsung_crownqltechn"
+  },
   "davinci": {
     "repo": "https://github.com/PotatoDevices/device_xiaomi_davinci"
   },
@@ -35,19 +38,16 @@
   "sanders": {
     "repo": "https://github.com/PotatoDevices/device_motorola_sanders"
   },
-  "violet": {
-    "repo": "https://github.com/PotatoDevices/device_xiaomi_violet"
-  },
-  "whyred": {
-    "repo": "https://github.com/PotatoDevices/device_xiaomi_whyred"
-  },
   "starqltechn": {
     "repo": "https://github.com/PotatoDevices/device_samsung_starqltechn"
   },
   "star2qltechn": {
     "repo": "https://github.com/PotatoDevices/device_samsung_star2qltechn"
   },
-  "crownqltechn": {
-    "repo": "https://github.com/PotatoDevices/device_samsung_crownqltechn"
+  "violet": {
+    "repo": "https://github.com/PotatoDevices/device_xiaomi_violet"
+  },
+  "whyred": {
+    "repo": "https://github.com/PotatoDevices/device_xiaomi_whyred"
   }
 }
