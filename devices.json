@@ -40,5 +40,14 @@
   },
   "whyred": {
     "repo": "https://github.com/PotatoDevices/device_xiaomi_whyred"
+  },
+  "starqltechn": {
+    "repo": "https://github.com/PotatoDevices/device_samsung_starqltechn"
+  },
+  "star2qltechn": {
+    "repo": "https://github.com/PotatoDevices/device_samsung_star2qltechn"
+  },
+  "crownqltechn": {
+    "repo": "https://github.com/PotatoDevices/device_samsung_crownqltechn"
   }
 }
