@@ -40,5 +40,8 @@
   },
   "whyred": {
     "repo": "https://github.com/PotatoDevices/device_xiaomi_whyred"
+  },
+  "DRG_sprout": {
+    "repo": "https://github.com/PotatoDevices/device_nokia_DRG_sprout"
   }
 }
