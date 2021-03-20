@@ -17,6 +17,9 @@
   "dumpling": {
     "repo": "https://github.com/PotatoDevices/device_oneplus_dumpling"
   },
+  "DRG_sprout": {
+    "repo": "https://github.com/PotatoDevices/device_nokia_DRG_sprout"
+  },
   "enchilada": {
     "repo": "https://github.com/PotatoDevices/device_oneplus_enchilada"
   },
