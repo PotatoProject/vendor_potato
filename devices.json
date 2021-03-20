@@ -14,6 +14,9 @@
   "davinci": {
     "repo": "https://github.com/PotatoDevices/device_xiaomi_davinci"
   },
+  "DRG_sprout": {
+    "repo": "https://github.com/PotatoDevices/device_nokia_DRG_sprout"
+  },
   "dumpling": {
     "repo": "https://github.com/PotatoDevices/device_oneplus_dumpling"
   },
