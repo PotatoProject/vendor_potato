@@ -468,13 +468,28 @@ function installrecovery()
 function extractjni() {
     for apk in $(find $1 -name "*.apk");
     do
-        arch=$(basename $(dirname $apk));
-        if [ $arch = "arm" ]; then
-            arch="armeabi-v7a";
-        elif [ $arch = "arm64" ]; then
-            arch="arm64-v8a";
+        if [ "$2" = "1" ]; then
+            libs=($(unzip -l $apk | tr -s ' ' | cut -d ' ' -f 5 | grep "^lib\/" | xargs))
+            for lib in "${libs[@]}";
+            do
+                arch=$(echo $lib | cut -d \/ -f 2)
+                if [ $arch = "armeabi-v7a" ]; then
+                    arch="arm";
+                elif [ $arch = "arm64-v8a" ]; then
+                    arch="arm64";
+                fi
+                mkdir -p $(dirname $apk)/$arch;
+                unzip -jo $apk "$lib" -d $(dirname $apk)/$arch;
+            done
+        else
+            arch=$(basename $(dirname $apk));
+            if [ $arch = "arm" ]; then
+                arch="armeabi-v7a";
+            elif [ $arch = "arm64" ]; then
+                arch="arm64-v8a";
+            fi
+            unzip -jo $apk "lib/$arch/*" -d $(dirname $apk);
         fi
-        unzip -jo $apk "lib/$arch/*" -d $(dirname $apk);
     done;
 }
 
