@@ -1,6 +1,6 @@
 # Changelog
 
-## v4.0.3 (2020.02.21)
+## v4.0.3 (2021.02.21)
 - Use fixed row & column in landscape if media is playing
 - Fixed lock icon not changing after system icon pack
 - Hide lockscreen media art if media is not playing
@@ -12,7 +12,7 @@
 - Fix crashes in Updater
 - Add back initial DiracSound and MiSound support
 
-## v4.0.2 (2020.02.14)
+## v4.0.2 (2021.02.14)
 - Builds will now compile weekly!
 - Merge android-11.0.0_r31
 - February security patch
