@@ -5,6 +5,9 @@
   "beryllium": {
     "repo": "https://github.com/PotatoDevices/device_xiaomi_beryllium"
   },
+  "cepheus": {
+    "repo": "https://github.com/PotatoDevices/device_xiaomi_cepheus"
+  },
   "cheeseburger": {
     "repo": "https://github.com/PotatoDevices/device_oneplus_cheeseburger"
   },
