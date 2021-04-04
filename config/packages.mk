@@ -34,6 +34,10 @@ PRODUCT_PACKAGES += \
     NavigationBarNoHint \
     NavigationBarMode2ButtonOverlay
 
+# QS Color Overlay
+PRODUCT_PACKAGES += \
+    QsColor
+
 # SystemUI plugins
 PRODUCT_PACKAGES += \
     QuickAccessWallet
