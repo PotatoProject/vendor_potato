@@ -1,6 +1,36 @@
 # Changelog
 
-## v4.0.3 (2020.02.21)
+## v4.1.1 (2021.03.31)
+- Switch to Lawnchair 11
+- Fix lockscreen wallpaper not being set if different from the Home one
+- Ask pin for shutdown/reboot on secure lockscreen
+- Fixes to Fries
+
+## v4.0.6 (2021.03.16)
+- Add network traffic indicator
+- Add Smart clock
+- Add AOD tile for supported devices
+- Add back cutout animation in Fries
+- Fixes to Fries
+
+## v4.0.5 (2021.03.08)
+- Merge android-11.0.0_r33 - March security patch
+- Add DataSwitchTile tile
+- Add Quick access Wallet
+- Add call recorder for supported devices
+- Improve "Conversation" app list
+- Various misc bug fixes
+
+## v4.0.4 (2021.03.01)
+- Fix AudioFX in Fries
+- Add back QS Tile Disco
+- Fixed AOD bug
+- Add Caffeine tile
+- Update drawables of Advanced reboot
+- Add multiuser avatar in search bar
+- Various misc bug fixes
+
+## v4.0.3 (2021.02.21)
 - Use fixed row & column in landscape if media is playing
 - Fixed lock icon not changing after system icon pack
 - Hide lockscreen media art if media is not playing
@@ -12,7 +42,7 @@
 - Fix crashes in Updater
 - Add back initial DiracSound and MiSound support
 
-## v4.0.2 (2020.02.14)
+## v4.0.2 (2021.02.14)
 - Builds will now compile weekly!
 - Merge android-11.0.0_r31
 - February security patch
