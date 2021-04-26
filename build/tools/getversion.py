@@ -6,8 +6,8 @@ import json
 import os
 import subprocess
 
+CACHE_FILE = "out/potato-vars"
 
-CACHE_FILE="out/potato-vars"
 
 def is_subdir(a, b):
     a = os.path.realpath(a) + '/'
