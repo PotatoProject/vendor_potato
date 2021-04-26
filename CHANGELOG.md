@@ -1,5 +1,23 @@
 # Changelog
 
+## v4.1.4 (2021.04.20)
+- Add dark mode to Contacts and overall improvements to Contacts app 
+- Fix SystemUI crash when using LiveWallpaper with Colored SystemUI
+- Fix crash on MediaOuptutReceiver
+- Fix background colouring for settings themed icons
+
+## v4.1.3 (2021.04.08)
+- April security patch
+- Add Portuguese (Brazil) translations to Fries (thanks to @augusto_peress!)
+- Add QS color and transparency 
+- Add SysUI color mode (wallpaper based theming)
+- Add pocket mode 
+- Add NavigationBarMode2ButtonOverlay
+- Full emulator build support 
+- Use seekbar to allow setting arbitrary animation durations
+- Improvements to backuptool
+- Fixes to Fries
+
 ## v4.1.1 (2021.03.31)
 - Switch to Lawnchair 11
 - Fix lockscreen wallpaper not being set if different from the Home one
