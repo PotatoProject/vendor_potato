@@ -41,6 +41,9 @@
   "onyx": {
     "repo": "https://github.com/PotatoDevices/device_oneplus_onyx"
   },
+  "phoenix": {
+    "repo": "https://github.com/PotatoDevices/device_xiaomi_phoenix"
+  },
   "raphael": {
     "repo": "https://github.com/PotatoDevices/device_xiaomi_raphael"
   },
