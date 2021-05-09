@@ -17,7 +17,7 @@ def is_subdir(a, b):
 
 def get_build_type(target_product):
     build_type = os.environ['BUILD_TYPE'].strip() if 'BUILD_TYPE' in os.environ else ''
-    current_device = target_product.split("_")[1]
+    current_device = target_product.split("_")[1:]
     if build_type == 'CRISPY' or build_type == 'MASHED' or build_type == 'SALAD':
         with open("vendor/potato/devices.json", "r") as read_file:
             devices = json.load(read_file).keys()
