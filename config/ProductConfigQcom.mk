@@ -69,6 +69,12 @@ endif
 # List of targets that use master side content protection
 MASTER_SIDE_CP_TARGET_LIST := msm8996 msm8998 sdm660 sdm845 $(UM_4_14_FAMILY)
 
+ALLOWED_SELINUX_VIOLATORS += \
+    $(B_FAMILY) \
+    $(B64_FAMILY) \
+    $(BR_FAMILY) \
+    $(UM_3_18_FAMILY)
+
 ifeq ($(call is-board-platform-in-list, $(B_FAMILY)),true)
 MSM_VIDC_TARGET_LIST := $(B_FAMILY)
 QCOM_HARDWARE_VARIANT := msm8974
