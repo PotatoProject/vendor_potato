@@ -1,5 +1,25 @@
 # Changelog
 
+## v4.1.6 (2021.05.31)
+- Switched to user build for releases
+- Improve performance in parts of framework
+- Adjust ripple animation for immediate feedback
+- Add machine learning back gesture provider
+- Add blinking stop dot and low quality screen rec options
+- Allow adjusting refresh rate for supported devices
+- Enable blur on lockscreen's quick setting
+- Switched to CAF Gallery and enabled edit button in screenshot diag
+- Fixes to backuptool on dynamic devices
+- Add ES translations to fries
+- Misc bug fixes
+
+## v4.1.5 (2021.05.11)
+- Merge tag android-11.0.0_r37 - May security patch
+- Update LC 11 to Alpha 4
+- Added option to tint qs tile with accent color
+- Added option to disable screenshot shutter sound
+- Misc bug fixes
+
 ## v4.1.4 (2021.04.20)
 - Add dark mode to Contacts and overall improvements to Contacts app
 - Fix SystemUI crash when using LiveWallpaper with Colored SystemUI
