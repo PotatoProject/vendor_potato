@@ -5,17 +5,8 @@
   "beryllium": {
     "repo": "https://github.com/PotatoDevices/device_xiaomi_beryllium"
   },
-  "cepheus": {
-    "repo": "https://github.com/PotatoDevices/device_xiaomi_cepheus"
-  },
   "cheeseburger": {
     "repo": "https://github.com/PotatoDevices/device_oneplus_cheeseburger"
-  },
-  "chiron": {
-    "repo": "https://github.com/PotatoDevices/device_xiaomi_chiron"
-  },
-  "crownqltechn": {
-    "repo": "https://github.com/PotatoDevices/device_samsung_crownqltechn"
   },
   "davinci": {
     "repo": "https://github.com/PotatoDevices/device_xiaomi_davinci"
@@ -34,9 +25,6 @@
   },
   "lavender": {
     "repo": "https://github.com/PotatoDevices/device_xiaomi_lavender"
-  },
-  "miatoll": {
-    "repo": "https://github.com/PotatoDevices/device_xiaomi_miatoll"
   },
   "onyx": {
     "repo": "https://github.com/PotatoDevices/device_oneplus_onyx"
