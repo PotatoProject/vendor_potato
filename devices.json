@@ -26,9 +26,6 @@
   "ginkgo": {
     "repo": "https://github.com/PotatoDevices/device_xiaomi_ginkgo"
   },
-  "lavender": {
-    "repo": "https://github.com/PotatoDevices/device_xiaomi_lavender"
-  },
   "onyx": {
     "repo": "https://github.com/PotatoDevices/device_oneplus_onyx"
   },
