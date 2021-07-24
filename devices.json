@@ -1,4 +1,7 @@
 {
+  "alioth": {
+    "repo": "https://github.com/PotatoDevices/device_redmi_alioth"
+  },
   "begonia": {
     "repo": "https://github.com/PotatoDevices/device_redmi_begonia"
   },
