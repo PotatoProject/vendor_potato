@@ -134,5 +134,10 @@ include vendor/potato/config/sounds.mk
 # Packages
 include vendor/potato/config/packages.mk
 
+# GMS
+ifeq ($(WITH_GMS), true)
+    $(call inherit-product, vendor/gapps/common/common-vendor.mk)
+endif
+
 # Branding
 include vendor/potato/config/branding.mk
