@@ -1,5 +1,12 @@
 # Changelog
 
+## v4.2.1 (2021.07.11)
+- Merge tag android-11.0.0_r39 - July security patch
+
+## v4.2.0 (2021.06.09)
+- Merge tag android-11.0.0_r38 - June security patch
+- Update to LC 11 Alpha 5
+
 ## v4.1.6 (2021.05.31)
 - Switched to user build for releases
 - Improve performance in parts of framework
