@@ -16,7 +16,12 @@
 # -----------------------------------------------------------------
 # Potato OTA update package
 
+ifeq ($(WITH_GMS), true)
+POTATO_TARGET_PACKAGE := $(PRODUCT_OUT)/$(POTATO_VERSION)-GMS.zip
+else
 POTATO_TARGET_PACKAGE := $(PRODUCT_OUT)/$(POTATO_VERSION).zip
+endif
+
 
 .PHONY: potato
 potato: $(INTERNAL_OTA_PACKAGE_TARGET)
