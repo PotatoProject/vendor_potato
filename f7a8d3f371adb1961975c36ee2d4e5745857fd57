@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c4bd86ed_57cc9e63",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2021-08-04T13:09:06Z",
+      "side": 1,
+      "message": "No changes to branding for GMS, for now. Devices must ship only 1 build may it be GMS or non-GMS.",
+      "revId": "f7a8d3f371adb1961975c36ee2d4e5745857fd57",
+      "serverId": "8720d348-3d66-43e6-b480-1d69039ac554"
+    }
+  ]
+}
