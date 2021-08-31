@@ -45,6 +45,9 @@
   "star2qltechn": {
     "repo": "https://github.com/PotatoDevices/device_samsung_star2qltechn"
   },
+  "sweet": {
+    "repo": "https://github.com/PotatoDevices/device_xiaomi_sweet"
+  },
   "violet": {
     "repo": "https://github.com/PotatoDevices/device_xiaomi_violet"
   },
