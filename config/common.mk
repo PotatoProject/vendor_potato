@@ -140,7 +140,7 @@ include vendor/potato/config/packages.mk
 
 # GMS
 ifeq ($(WITH_GMS), true)
-    $(call inherit-product, vendor/gapps/common/common-vendor.mk)
+    $(call inherit-product, vendor/google/gms/config.mk)
 endif
 
 # Branding
