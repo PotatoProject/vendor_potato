@@ -95,6 +95,7 @@ function setup_vendor() {
     fi
 
     export BINARIES_LOCATION="$POTATO_ROOT"/prebuilts/extract-tools/${HOST}-x86/bin
+    export JARS_LOCATION="$POTATO_ROOT"/prebuilts/extract-tools/common/smali
 
     for version in 0_8 0_9; do
         export PATCHELF_${version}="$BINARIES_LOCATION"/patchelf-"${version}"
@@ -1209,16 +1210,16 @@ function oat2dex() {
     local OAT=
 
     if [ -z "$BAKSMALIJAR" ] || [ -z "$SMALIJAR" ]; then
-        export BAKSMALIJAR="$POTATO_ROOT"/prebuilts/tools-lineage/common/smali/baksmali.jar
-        export SMALIJAR="$POTATO_ROOT"/prebuilts/tools-lineage/common/smali/smali.jar
+        export BAKSMALIJAR="$JARS_LOCATION"/baksmali.jar
+        export SMALIJAR="$JARS_LOCATION"/smali.jar
     fi
 
     if [ -z "$VDEXEXTRACTOR" ]; then
-        export VDEXEXTRACTOR="$POTATO_ROOT"/prebuilts/tools-lineage/${HOST}-x86/bin/vdexExtractor
+        export VDEXEXTRACTOR="$BINARIES_LOCATION"/vdexExtractor
     fi
 
     if [ -z "$CDEXCONVERTER" ]; then
-        export CDEXCONVERTER="$POTATO_ROOT"/prebuilts/tools-lineage/${HOST}-x86/bin/compact_dex_converter
+        export CDEXCONVERTER="$BINARIES_LOCATION"/compact_dex_converter
     fi
 
     # Extract existing boot.oats to the temp folder
