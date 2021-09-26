@@ -1,5 +1,16 @@
 # Changelog
 
+# v4.2.3 (2021.09.10)
+- Merge tag android-11.0.0_r43 - September security patch 
+- Disable swap navigation buttons by default
+- Enable IORap app launch prefetching
+- Update LC 11 to Alpha 6.1
+
+# v4.2.2 (2021.08.06)
+- Merge tag android-11.0.0_r40 - August security patch 
+- Add in-built recovery image for select devices
+- Updated prebuilt sounds from RQ1A.201205.011
+
 ## v4.2.1 (2021.07.11)
 - Merge tag android-11.0.0_r39 - July security patch
 
