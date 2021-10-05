@@ -15,6 +15,3 @@ endif
 ifneq ($(SIGNING_KEYS),)
     PRODUCT_DEFAULT_DEV_CERTIFICATE := $(SIGNING_KEYS)/releasekey
 endif
-
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.build.datetime=$(BUILD_DATE_TIME)
