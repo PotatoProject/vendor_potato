@@ -262,7 +262,7 @@ function gerritpush()
 {
 
     GERRIT_URL=review.potatoproject.co;
-    DEFAULT_BRANCH=dumaloo-release;
+    DEFAULT_BRANCH=frico-release;
     PROJECT_PREFIX=;
     ref=for;
 
@@ -500,8 +500,8 @@ function updatefries() {
     extractjni vendor/potato-prebuilts/packages/apps/PotatoFries
     cd vendor/potato-prebuilts
     git add -A
-    git commit -m "prebuilts: Update Fries to v$(curl -sX GET https://raw.githubusercontent.com/PotatoProject/PotatoFries/dumaloo-release/pubspec.yaml | grep version | cut -d : -f 2 | xargs)"
-    git push potato HEAD:dumaloo-release
+    git commit -m "prebuilts: Update Fries to v$(curl -sX GET https://raw.githubusercontent.com/PotatoProject/PotatoFries/frico-release/pubspec.yaml | grep version | cut -d : -f 2 | xargs)"
+    git push potato HEAD:frico-release
     croot
 }
 
@@ -520,7 +520,7 @@ function updateversion() {
     remote=""
     while [[ "$local" != "$remote" ]]; do
       sleep 5;
-      git fetch potato dumaloo-release 2> /dev/null;
+      git fetch potato frico-release 2> /dev/null;
       local=$(git rev-list HEAD | head -1)
       remote=$(git rev-list FETCH_HEAD | head -1)
     done
@@ -556,7 +556,7 @@ function mka() {
 function mergeaosptag()
 {
   username=PotatoProject
-  default_branch=dumaloo-release
+  default_branch=frico-release
 
   for var in "$@"
   do
