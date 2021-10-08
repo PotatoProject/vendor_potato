@@ -45,7 +45,7 @@ DEBUG = False
 default_manifest = ".repo/manifest.xml"
 
 custom_local_manifest = ".repo/local_manifests/potato_manifest.xml"
-custom_default_revision = "dumaloo-release"
+custom_default_revision = "frico-release"
 custom_dependencies = "potato.dependencies"
 org_manifest = "devices"  # leave empty if org is provided in manifest
 org_display = "PotatoDevices"  # needed for displaying
