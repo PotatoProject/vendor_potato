@@ -7,7 +7,7 @@ BUILD_TYPE := $(shell $(GET_VERSION) buildtype)
 POTATO_BRANDING_VERSION := $(BUILD_TYPE)
 POTATO_VERSION := $(shell $(GET_VERSION) version)
 $(shell $(GET_VERSION) write)
-ifeq ($(filter-out Crispy Mashed Salad, $(BUILD_TYPE)),)
+ifeq ($(filter-out Cheesy Mashed Salad, $(BUILD_TYPE)),)
     PRODUCT_PACKAGES += \
         Updater
 endif
