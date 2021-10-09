@@ -13,6 +13,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/potato/prebuilt/common/etc/selective-spn-conf.xml:system/etc/selective-spn-conf.xml
 
+# Disable settings provider model
+PRODUCT_PRODUCT_PROPERTIES += \
+   persist.sys.fflag.override.settings_provider_model=false
+
 # Phone related apps
 PRODUCT_PACKAGES += \
     messaging \
