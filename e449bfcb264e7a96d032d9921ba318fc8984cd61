@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2d2ab4a5_e4ffc08f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000165
+      },
+      "writtenOn": "2021-10-09T04:35:33Z",
+      "side": 1,
+      "message": "TODO: Fetch android_prebuilts_extract-tools from lineage-18.1",
+      "revId": "e449bfcb264e7a96d032d9921ba318fc8984cd61",
+      "serverId": "8720d348-3d66-43e6-b480-1d69039ac554"
+    }
+  ]
+}
