@@ -109,6 +109,10 @@ endif
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.disable_rescue=true
 
+# Enable one-handed mode
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.support_one_handed_mode=true
+
 # exFAT
 WITH_EXFAT ?= true
 ifeq ($(WITH_EXFAT),true)
