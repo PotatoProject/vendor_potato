@@ -12,8 +12,8 @@ PRODUCT_PACKAGES += \
     SystemUINightOverlay
 
 # Fries
-PRODUCT_PACKAGES += \
-    PotatoFries
+#PRODUCT_PACKAGES += \
+#    PotatoFries
 
 # ThemePicker
 PRODUCT_PACKAGES += \
