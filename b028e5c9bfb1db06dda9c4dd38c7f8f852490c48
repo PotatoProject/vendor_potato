@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0a31eb38_7a354f34",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000165
+      },
+      "writtenOn": "2021-10-17T06:49:02Z",
+      "side": 1,
+      "message": "TODO: Update Jenkins script to do similar behaviour as https://review.arrowos.net/c/ArrowOS/android_build/+/14793",
+      "revId": "b028e5c9bfb1db06dda9c4dd38c7f8f852490c48",
+      "serverId": "8720d348-3d66-43e6-b480-1d69039ac554"
+    }
+  ]
+}
