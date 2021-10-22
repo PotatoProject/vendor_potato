@@ -123,11 +123,6 @@ PRODUCT_PACKAGES += \
     mkfs.exfat
 endif
 
-# Markup libs
-PRODUCT_COPY_FILES += \
-    vendor/potato/prebuilt/common/lib/libsketchology_native.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsketchology_native.so \
-    vendor/potato/prebuilt/common/lib64/libsketchology_native.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libsketchology_native.so
-
 # Overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/potato/overlay/common
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/potato/overlay/common
