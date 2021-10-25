@@ -702,7 +702,7 @@ function pushOTA() {
 
     build_date=$(grep ro\.build\.date\.utc $OUT/system/build.prop | cut -d= -f2);
     device=$(grep ro\.potato\.device $OUT/system/build.prop | cut -d= -f2);
-    file=$(ls -t ${OUT}/potato_$device-11*);
+    file=$(ls -t ${OUT}/potato_$device-12*);
     md5=$(md5sum $file | awk '{ print $1 }');
     build_type=$(echo $BUILD_TYPE | tr '[:upper:]' '[:lower:]');
     size=$(stat -c%s $file);
