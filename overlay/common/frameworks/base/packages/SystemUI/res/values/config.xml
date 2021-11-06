@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Re-enable keyguard shortcuts -->
-    <bool name="config_keyguardShowCameraAffordance">true</bool>
-    <bool name="config_keyguardShowLeftAffordance">true</bool>
-
     <!-- Smart replies in notifications: Whether we disable the feature unless the app targets P -->
     <bool name="config_smart_replies_in_notifications_requires_targeting_p">false</bool>
 
