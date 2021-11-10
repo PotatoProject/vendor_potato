@@ -453,3 +453,20 @@ inputdispatcher_skip_event_key {
         },
     },
 }
+
+soong_config_module_type {
+    name: "libbinder_has_the_same_header",
+    module_type: "cc_defaults",
+    config_namespace: "customQcomVars",
+    bool_variables: ["libbinder_has_the_same_header"],
+    properties: ["cflags"],
+}
+
+libbinder_has_the_same_header {
+    name: "libbinder_has_the_same_header_defaults",
+    soong_config_variables: {
+        libbinder_has_the_same_header: {
+            cflags: ["-DLIBBINDER_HAS_THE_SAME_HEADER"],
+        },
+    },
+}

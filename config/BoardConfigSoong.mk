@@ -55,7 +55,8 @@ SOONG_CONFIG_customQcomVars += \
     supports_hw_fde_perf \
     uses_pre_uplink_features_netmgrd \
     uses_qcom_bsp_legacy \
-    uses_qti_camera_device
+    uses_qti_camera_device \
+    libbinder_has_the_same_header
 
 # Only create display_headers_namespace var if dealing with UM platforms to avoid breaking build for all other platforms
 ifneq ($(filter $(UM_PLATFORMS),$(PRODUCT_BOARD_PLATFORM)),)
@@ -99,3 +100,4 @@ SOONG_CONFIG_customQcomVars_qcom_display_headers_namespace := vendor/qcom/openso
 else
 SOONG_CONFIG_customQcomVars_qcom_display_headers_namespace := $(QCOM_SOONG_NAMESPACE)/display
 endif
+SOONG_CONFIG_customQcomVars_libbinder_has_the_same_header := $(TARGET_SAME_BINDER_HEADER_WITH_SYSTEM)
