@@ -28,10 +28,4 @@
         <permission name="android.permission.PROVIDE_RESOLVER_RANKER_SERVICE"/>
     </privapp-permissions>
 
-    <privapp-permissions package="co.potatoproject.center">
-        <permission name="android.permission.ACCESS_CACHE_FILESYSTEM"/>
-        <permission name="android.permission.REBOOT"/>
-        <permission name="android.permission.RECOVERY"/>
-    </privapp-permissions>
-
 </permissions>
