@@ -137,7 +137,9 @@ PRODUCT_SOONG_NAMESPACES += $(QCOM_SOONG_NAMESPACE)
 
 # Add display-commonsys-intf to PRODUCT_SOONG_NAMESPACES for QSSI supported platforms
 ifneq ($(filter $(QSSI_SUPPORTED_PLATFORMS),$(PRODUCT_BOARD_PLATFORM)),)
-    PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/commonsys-intf/display
+PRODUCT_SOONG_NAMESPACES += \
+    vendor/qcom/opensource/commonsys-intf/display \
+    vendor/qcom/opensource/display
 endif
 
 include vendor/potato/build/core/qcom_target.mk
