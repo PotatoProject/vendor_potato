@@ -4,7 +4,7 @@
     "gms": true
   },
   "begonia": {
-    "repo": "https://github.com/PotatoDevices/device_redmi_begonia"
+    "repo": "https://github.com/PotatoDevices/device_xiaomi_begonia"
   },
   "beryllium": {
     "repo": "https://github.com/PotatoDevices/device_xiaomi_beryllium"
