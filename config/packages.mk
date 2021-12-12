@@ -3,8 +3,8 @@ PRODUCT_PACKAGES += \
     librsjni
 
 # Fries
-#PRODUCT_PACKAGES += \
-#    PotatoFries
+PRODUCT_PACKAGES += \
+    PotatoFries
 
 # ThemePicker
 PRODUCT_PACKAGES += \
