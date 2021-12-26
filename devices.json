@@ -9,9 +9,6 @@
   "beryllium": {
     "repo": "https://github.com/PotatoDevices/device_xiaomi_beryllium"
   },
-  "cheeseburger": {
-    "repo": "https://github.com/PotatoDevices/device_oneplus_cheeseburger"
-  },
   "chiron": {
     "repo": "https://github.com/PotatoDevices/device_xiaomi_chiron"
   },
@@ -21,32 +18,11 @@
   "DRG_sprout": {
     "repo": "https://github.com/PotatoDevices/device_nokia_DRG_sprout"
   },
-  "dumpling": {
-    "repo": "https://github.com/PotatoDevices/device_oneplus_dumpling"
-  },
   "ginkgo": {
     "repo": "https://github.com/PotatoDevices/device_xiaomi_ginkgo"
   },
-  "onyx": {
-    "repo": "https://github.com/PotatoDevices/device_oneplus_onyx"
-  },
   "phoenix": {
     "repo": "https://github.com/PotatoDevices/device_xiaomi_phoenix"
-  },
-  "raphael": {
-    "repo": "https://github.com/PotatoDevices/device_xiaomi_raphael"
-  },
-  "sanders": {
-    "repo": "https://github.com/PotatoDevices/device_motorola_sanders"
-  },
-  "starqltechn": {
-    "repo": "https://github.com/PotatoDevices/device_samsung_starqltechn"
-  },
-  "star2qltechn": {
-    "repo": "https://github.com/PotatoDevices/device_samsung_star2qltechn"
-  },
-  "sweet": {
-    "repo": "https://github.com/PotatoDevices/device_xiaomi_sweet"
   },
   "violet": {
     "repo": "https://github.com/PotatoDevices/device_xiaomi_violet"
