@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5dbd1945_5f771fc2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000156
+      },
+      "writtenOn": "2021-12-28T10:58:37Z",
+      "side": 1,
+      "message": "Tested on davinci:\n- with added flag ro.boot.verifiedstate is orange\n- without ro.boot.verifiedstate is green",
+      "revId": "a5ea9655cc45951d6346e877b4ca2edf06943529",
+      "serverId": "8720d348-3d66-43e6-b480-1d69039ac554"
+    }
+  ]
+}
