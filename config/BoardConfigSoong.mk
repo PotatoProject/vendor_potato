@@ -39,6 +39,7 @@ SOONG_CONFIG_customGlobalVars += \
     needs_netd_direct_connect_rule \
     target_init_vendor_lib \
     target_ld_shim_libs \
+    target_opt_out_safetynet_spoof \
     target_process_sdk_version_override \
     target_surfaceflinger_fod_lib \
     uses_camera_parameter_lib \
@@ -81,6 +82,7 @@ SOONG_CONFIG_customGlobalVars_needs_netd_direct_connect_rule := $(TARGET_NEEDS_N
 SOONG_CONFIG_customGlobalVars_target_init_vendor_lib := $(TARGET_INIT_VENDOR_LIB)
 SOONG_CONFIG_customGlobalVars_target_inputdispatcher_skip_event_key := $(TARGET_INPUTDISPATCHER_SKIP_EVENT_KEY)
 SOONG_CONFIG_customGlobalVars_target_ld_shim_libs := $(subst $(space),:,$(TARGET_LD_SHIM_LIBS))
+SOONG_CONFIG_customGlobalVars_target_opt_out_safetynet_spoof := $(TARGET_OPT_OUT_SAFETYNET_SPOOF)
 SOONG_CONFIG_customGlobalVars_target_process_sdk_version_override := $(TARGET_PROCESS_SDK_VERSION_OVERRIDE)
 SOONG_CONFIG_customGlobalVars_target_surfaceflinger_fod_lib := $(TARGET_SURFACEFLINGER_FOD_LIB)
 SOONG_CONFIG_customGlobalVars_uses_camera_parameter_lib := $(TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY)

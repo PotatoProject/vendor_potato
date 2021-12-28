@@ -299,6 +299,24 @@ needs_netd_direct_connect_rule {
     },
 }
 
+// target_opt_out_safetynet_spoof
+soong_config_module_type {
+    name: "target_opt_out_safetynet_spoof_defaults",
+    module_type: "cc_defaults",
+    config_namespace: "customGlobalVars",
+    bool_variables: ["target_opt_out_safetynet_spoof"],
+    properties: ["cppflags"],
+}
+
+target_opt_out_safetynet_spoof_defaults {
+    name: "target_opt_out_safetynet_spoof",
+    soong_config_variables: {
+        target_opt_out_safetynet_spoof: {
+            cppflags: ["-DTARGET_OPT_OUT_SAFETYNET_SPOOF"],
+        },
+    },
+}
+
 // target_process_sdk_version_override
 soong_config_module_type {
     name: "target_process_sdk_version_overrides",
