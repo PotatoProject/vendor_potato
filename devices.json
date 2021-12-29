@@ -27,6 +27,9 @@
   "phoenix": {
     "repo": "https://github.com/PotatoDevices/device_xiaomi_phoenix"
   },
+  "r2p": {
+    "repo": "https://github.com/PotatoDevices/device_realme_r2p"
+  },
   "violet": {
     "repo": "https://github.com/PotatoDevices/device_xiaomi_violet"
   },
