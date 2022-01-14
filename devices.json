@@ -24,6 +24,9 @@
   "lavender": {
     "repo": "https://github.com/PotatoDevices/device_xiaomi_lavender"
   },
+  "onc": {
+    "repo": "https://github.com/PotatoDevices/device_xiaomi_onc"
+  },
   "phoenix": {
     "repo": "https://github.com/PotatoDevices/device_xiaomi_phoenix"
   },
