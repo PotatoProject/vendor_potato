@@ -1,5 +1,56 @@
 # Changelog
 
+## v5.1.0 (2022.01.17)
+- Merge android-12.0.0_r26 - January security release
+- Switch to zlib-ng
+- Added full emulator build support
+- Backport art optimizations from master
+- Disable debug tracing on prod builds
+- Fix an issue where model would appear as mainline/qssi on some devices
+- Fix an issue where installation would abort on some devices with error code 1
+- Fix Enterprise WiFi networks connection
+- Fix concurrency issue with BatteryUsageStats
+- Fix navbar button hit testing
+- Use AVCProfileMain for screen recorder
+- Fix ripple animation for side fp devices
+- Do not trigger a wake up when hiding lockscreen
+- Fallback to global actions if assistant is not available
+- Fix an issue in NPMS blockedReasons computation logic
+- Fix the case where restricted mode allowed reasons are ignored
+- Install seccomp filter even if selinux is permissive
+- Add doubletap/longpress power to toggle torch
+- Add advance reboot options
+- Allow to suppress notifications sound/vibration if screen is on
+- Add less boring heads up
+- Integrate smartspace and backgesture provider from SystemUIGoogle
+- Add volume key music control
+- Make require unlocking for sensitive tile optional
+- Forward port battery style customisation from dumaloo
+- Add heads up qs tile
+- Fix keyguard clock/status and AOD layouts without smartspace
+- Add settings to toggle the phantom process monitoring in dev options
+- Add signature spoofing support
+- Forward port good'ol screen off animations
+- Updated Lawnchair prebuilts
+- Misc upstream and bug fixes
+
+## v5.0.1 (2021.12.30)
+- Monet
+- Monet customization and color override
+- Customize gesture bar size
+- DT2S on lockscreen
+- Three finger swipe-to-screenshot
+- An epic new monet-conforming boot animation
+- An even more epic new wallpaper
+- A brand new Fries experience
+- Good ol' pal Lawnchair, but based on A12
+- PixelProps and SafetyNet spoofing (For those who support it)
+- Delete action chip on screenshot prompt
+- Disable shutter sounds & adjust with ringer volume
+- Light mode on QS panel
+- Monet colours on power menu
+- GMS release for those who support it
+
 ## v4.2.3 (2021.09.10)
 - Merge tag android-11.0.0_r43 - September security patch
 - Disable swap navigation buttons by default
