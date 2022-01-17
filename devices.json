@@ -1,37 +1,22 @@
 {
   "alioth": {
     "repo": "https://github.com/PotatoDevices/device_xiaomi_alioth",
-    "gms": true
   },
   "begonia": {
     "repo": "https://github.com/PotatoDevices/device_xiaomi_begonia"
-  },
-  "beryllium": {
-    "repo": "https://github.com/PotatoDevices/device_xiaomi_beryllium"
-  },
-  "chiron": {
-    "repo": "https://github.com/PotatoDevices/device_xiaomi_chiron"
   },
   "davinci": {
     "repo": "https://github.com/PotatoDevices/device_xiaomi_davinci"
   },
   "DRG_sprout": {
-    "repo": "https://github.com/PotatoDevices/device_nokia_DRG_sprout"
-  },
-  "ginkgo": {
-    "repo": "https://github.com/PotatoDevices/device_xiaomi_ginkgo"
+    "repo": "https://github.com/PotatoDevices/device_nokia_DRG_sprout",
+    "gms": false
   },
   "lavender": {
     "repo": "https://github.com/PotatoDevices/device_xiaomi_lavender"
   },
-  "phoenix": {
-    "repo": "https://github.com/PotatoDevices/device_xiaomi_phoenix"
-  },
   "r2p": {
     "repo": "https://github.com/PotatoDevices/device_realme_r2p"
-  },
-  "violet": {
-    "repo": "https://github.com/PotatoDevices/device_xiaomi_violet"
   },
   "whyred": {
     "repo": "https://github.com/PotatoDevices/device_xiaomi_whyred"
