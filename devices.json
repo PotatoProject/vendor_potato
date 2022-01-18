@@ -22,6 +22,10 @@
     "repo": "https://github.com/PotatoDevices/device_xiaomi_lavender",
     "gms": true
   },
+  "miatoll": {
+    "repo": "https://github.com/PotatoDevices/device_xiaomi_miatoll",
+    "gms": true
+  },
   "onc": {
     "repo": "https://github.com/PotatoDevices/device_xiaomi_onc",
     "gms": true
