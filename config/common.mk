@@ -113,6 +113,9 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/potato/overlay/common
 # Pixel sounds
 include vendor/potato/config/sounds.mk
 
+# Pixel vendor
+vendor/google/pixel/config.mk
+
 # Packages
 include vendor/potato/config/packages.mk
 
