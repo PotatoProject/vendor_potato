@@ -108,7 +108,7 @@ endif
 
 # Overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/potato/overlay/common
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/potato/overlay/common
+PRODUCT_ENFORCE_RRO_TARGETS += framework-res
 
 # Pixel sounds
 include vendor/potato/config/sounds.mk
