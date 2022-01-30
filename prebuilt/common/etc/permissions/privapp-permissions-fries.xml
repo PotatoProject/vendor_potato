@@ -16,7 +16,6 @@
 
 <permissions>
     <privapp-permissions package="com.potatoproject.fries">
-        <permission name="android.permission.READ_EXTERNAL_STORAGE" />
         <permission name="android.permission.WRITE_SETTINGS"/>
         <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
     </privapp-permissions>
