@@ -1,5 +1,32 @@
 # Changelog
 
+## v5.1.1 (2022.02.09)
+- Merge android-12.0.0_r29 - February security release
+- Merge upstream into arm-optimized-routines
+- Backported art/bionic patches from master
+- Add colors to assistant
+- Add unlinked ringtone and notification volumes
+- Switch to Ezio's dt2s on lockscreen
+- Add dt2s on statusbar
+- Glove mode for supported devices
+- Remove aosp battery percentage perf
+- Show actual peak refresh rate in smooth display desc
+- Bring back good ol iconspacks from dumaloo-release
+- Add user avatar in settings
+- Add flipendo
+- Enable battery stats from Pixel
+- Enable smart auto rotate
+- Fix adb root breakage
+- Use monet colors for Updater
+- Kill local updater with fire
+- Enable USAP
+- Use Gsans for lockscreen clock
+- Use monet colors on fingerprint auth ripple anim
+- Update Lawnchair to Alpha 5
+- Import Lawnicons
+- Disable google ota suggestion pop up
+- Misc bug fixes & upstream
+
 ## v5.1.0 (2022.01.17)
 - Merge android-12.0.0_r27 - January security release
 - Switch to zlib-ng
