@@ -3,10 +3,6 @@
     "repo": "https://github.com/PotatoDevices/device_xiaomi_alioth",
     "gms": true
   },
-  "begonia": {
-    "repo": "https://github.com/PotatoDevices/device_xiaomi_begonia",
-    "gms": true
-  },
   "davinci": {
     "repo": "https://github.com/PotatoDevices/device_xiaomi_davinci",
     "gms": true
