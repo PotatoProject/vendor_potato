@@ -88,7 +88,7 @@ ifeq ($(call is-board-platform-in-list, $(UM_4_9_FAMILY) $(UM_4_14_FAMILY) $(UM_
 endif
 
 # List of targets that use master side content protection
-MASTER_SIDE_CP_TARGET_LIST := msm8996 msm8998 sdm660 sdm845 $(UM_4_14_FAMILY) $(UM_4_19_FAMILY) $(UM_5_4_FAMILY)
+MASTER_SIDE_CP_TARGET_LIST := msm8996 msm8998 sdm660 sdm845 $(UM_4_14_FAMILY) $(UM_4_19_FAMILY)
 
 ALLOWED_SELINUX_VIOLATORS += \
     $(B_FAMILY) \
@@ -121,7 +121,6 @@ else ifeq ($(call is-board-platform-in-list, $(UM_4_19_FAMILY)),true)
 MSM_VIDC_TARGET_LIST := $(UM_4_19_FAMILY)
 QCOM_HARDWARE_VARIANT := sm8250
 else ifeq ($(call is-board-platform-in-list, $(UM_5_4_FAMILY)),true)
-MSM_VIDC_TARGET_LIST := $(UM_5_4_FAMILY)
 QCOM_HARDWARE_VARIANT := sm8350
 else
 MSM_VIDC_TARGET_LIST := $(PRODUCT_BOARD_PLATFORM)
