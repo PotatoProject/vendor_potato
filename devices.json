@@ -38,6 +38,10 @@
     "repo": "https://github.com/PotatoDevices/device_realme_r2p",
     "gms": true
   },
+  "sargo": {
+    "repo": "https://github.com/PotatoDevices/device_google_sargo",
+    "gms": true
+  },
   "sweet": {
     "repo": "https://github.com/PotatoDevices/device_xiaomi_sweet",
     "gms": true
