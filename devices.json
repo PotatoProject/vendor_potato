@@ -4,18 +4,7 @@
     "gms": true
   },
   "begonia": {
-    "repo": "https://github.com/PotatoDevices/device_xiaomi_begonia",
-    "gms": true
-  },
-  "davinci": {
-    "repo": "https://github.com/PotatoDevices/device_xiaomi_davinci",
-    "gms": true
-  },
-  "DRG_sprout": {
-    "repo": "https://github.com/PotatoDevices/device_nokia_DRG_sprout"
-  },
-  "ginkgo": {
-    "repo": "https://github.com/PotatoDevices/device_xiaomi_ginkgo",
+    "repo": "https://github.com/PotatoDevices/device_redmi_begonia",
     "gms": true
   },
   "lavender": {
@@ -26,28 +15,8 @@
     "repo": "https://github.com/PotatoDevices/device_xiaomi_miatoll",
     "gms": true
   },
-  "onc": {
-    "repo": "https://github.com/PotatoDevices/device_xiaomi_onc",
-    "gms": true
-  },
-  "phoenix": {
-    "repo": "https://github.com/PotatoDevices/device_xiaomi_phoenix",
-    "gms": true
-  },
-  "r2p": {
-    "repo": "https://github.com/PotatoDevices/device_realme_r2p",
-    "gms": true
-  },
   "sargo": {
     "repo": "https://github.com/PotatoDevices/device_google_sargo",
-    "gms": true
-  },
-  "sweet": {
-    "repo": "https://github.com/PotatoDevices/device_xiaomi_sweet",
-    "gms": true
-  },
-  "whyred": {
-    "repo": "https://github.com/PotatoDevices/device_xiaomi_whyred",
     "gms": true
   }
 }
