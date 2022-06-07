@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3e499614_ab6b3f49",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000156
+      },
+      "writtenOn": "2022-06-07T08:45:37Z",
+      "side": 1,
+      "message": "ready to ship after merge frico-udfps and to make basic wfd working aosp-wfd topics",
+      "revId": "cae4cf7a2f29a25343aa3069a34a8cf7cc160bd1",
+      "serverId": "8720d348-3d66-43e6-b480-1d69039ac554"
+    }
+  ]
+}
