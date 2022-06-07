@@ -7,6 +7,10 @@
     "repo": "https://github.com/PotatoDevices/device_redmi_begonia",
     "gms": true
   },
+  "davinci": {
+    "repo": "https://github.com/PotatoDevices/device_xiaomi_davinci",
+    "gms": true
+  },
   "lavender": {
     "repo": "https://github.com/PotatoDevices/device_xiaomi_lavender",
     "gms": true
