@@ -11,6 +11,10 @@
     "repo": "https://github.com/PotatoDevices/device_xiaomi_davinci",
     "gms": true
   },
+  "DRG_sprout": {
+    "repo": "https://github.com/PotatoDevices/device_nokia_DRG_sprout",
+    "gms": false
+  },
   "lavender": {
     "repo": "https://github.com/PotatoDevices/device_xiaomi_lavender",
     "gms": true
