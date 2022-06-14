@@ -26,5 +26,9 @@
   "sargo": {
     "repo": "https://github.com/PotatoDevices/device_google_sargo",
     "gms": true
+  },
+  "surya": {
+    "repo": "https://github.com/PotatoDevices/device_xiaomi_surya",
+    "gms": true
   }
 }
