@@ -103,10 +103,6 @@ include vendor/potato/config/sounds.mk
 # Pixel vendor
 include vendor/google/pixel/config.mk
 
-# Disable remote keyguard animation
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    persist.wm.enable_remote_keyguard_animation=0
-
 # Packages
 include vendor/potato/config/packages.mk
 
