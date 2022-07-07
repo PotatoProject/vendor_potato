@@ -1,5 +1,31 @@
 # Changelog
 
+## v5.2.3 (2022.07.07)
+- Merge July security patch - android-12.1.0_r11
+- Whitelist some Google apps (Fix breakage caused due to PixelProps)
+- Fix "android" boot animation being shown in dark mode
+- Fixed inverted volume bar expand icon on Victor and Sam icon pack
+- Add back charging ripple 
+- Fix suspicious spaces around QS mobile icons 
+- Fix QS mobile icon disappearing on the theme switch 
+- Slight changes to Potato branding under "Android version" pref
+- Remove the "About phone" avatar
+
+## v5.2.2 (2022.06.09)
+- Merge June security patch - android-12.1.0_r8
+- Add support for QCOM WFD for devices that support it
+- Add support for AB Perf mode for devices that support it
+- Fix rare MTK IMS crash
+- Use AVCProfileMain for screen recorder 
+- Fix several QS related bugs
+- Fix loading iconpack-based Wellbeing icon
+
+## v5.2.1 (2022.05.03)
+- Merge May security patch - android-12.1.0_r5
+
+## v5.2.0 (2022.04.18)
+- Initial release based on android-12.1.0_r4 - Android 12L
+
 ## v5.1.1 (2022.02.09)
 - Merge android-12.0.0_r29 - February security release
 - Merge upstream into arm-optimized-routines
