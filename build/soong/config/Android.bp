@@ -34,26 +34,26 @@ gralloc_10_usage_bits {
 }
 
 // bootloader_message_offset
-soong_config_module_type {
-    name: "bootloader_message_offset",
-    module_type: "cc_defaults",
-    config_namespace: "customGlobalVars",
-    value_variables: ["bootloader_message_offset"],
-    properties: [
-        "cflags",
-        "export_cflags",
-    ],
-}
+//soong_config_module_type {
+//    name: "bootloader_message_offset",
+//    module_type: "cc_defaults",
+//    config_namespace: "customGlobalVars",
+//    value_variables: ["bootloader_message_offset"],
+//    properties: [
+//        "cflags",
+//        "export_cflags",
+//    ],
+//}
 
-bootloader_message_offset {
-    name: "bootloader_message_offset_defaults",
-    soong_config_variables: {
-        bootloader_message_offset: {
-            cflags: ["-DBOARD_RECOVERY_BLDRMSG_OFFSET=%s"],
-            export_cflags: ["-DBOARD_RECOVERY_BLDRMSG_OFFSET=%s"],
-        },
-    },
-}
+//bootloader_message_offset {
+//    name: "bootloader_message_offset_defaults",
+//    soong_config_variables: {
+//        bootloader_message_offset: {
+//            cflags: ["-DBOARD_RECOVERY_BLDRMSG_OFFSET=%s"],
+//            export_cflags: ["-DBOARD_RECOVERY_BLDRMSG_OFFSET=%s"],
+//        },
+//    },
+//}
 
 soong_config_module_type {
     name: "legacy_hw_disk_encryption",

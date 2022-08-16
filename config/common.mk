@@ -101,7 +101,7 @@ PRODUCT_ENFORCE_RRO_TARGETS += framework-res
 include vendor/potato/config/sounds.mk
 
 # Pixel vendor
-include vendor/google/pixel/config.mk
+#include vendor/google/pixel/config.mk
 
 # Packages
 include vendor/potato/config/packages.mk
