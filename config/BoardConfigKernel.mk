@@ -114,6 +114,9 @@ ifeq ($(HOST_OS),darwin)
   KERNEL_MAKE_FLAGS += LIBRARY_PATH=/usr/local/opt/openssl/lib
 endif
 
+# Globally enable LLVM and LLVM_IAS
+KERNEL_MAKE_FLAGS += LLVM=1 LLVM_IAS=1
+
 ifneq ($(TARGET_KERNEL_ADDITIONAL_FLAGS),)
   KERNEL_MAKE_FLAGS += $(TARGET_KERNEL_ADDITIONAL_FLAGS)
 endif
