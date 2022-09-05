@@ -10,3 +10,9 @@ $(call inherit-product-if-exists, vendor/google/modules/build/mainline_modules_t
 else
 $(call inherit-product-if-exists, vendor/google/modules/build/mainline_modules_t_flatten_apex.mk)
 endif
+
+# Set default tones
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.config.ringtone=Your_new_adventure.ogg \
+    ro.config.notification_sound=Eureka.ogg \
+    ro.config.alarm_alert=Fresh_start.ogg
