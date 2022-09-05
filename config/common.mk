@@ -97,18 +97,9 @@ endif
 PRODUCT_PACKAGE_OVERLAYS += vendor/potato/overlay/common
 PRODUCT_ENFORCE_RRO_TARGETS += framework-res
 
-# Pixel sounds
-include vendor/potato/config/sounds.mk
-
-# Pixel vendor
-#include vendor/google/pixel/config.mk
-
-# Packages
-include vendor/potato/config/packages.mk
-
 # GMS
 ifeq ($(WITH_GMS), true)
-    $(call inherit-product, vendor/google/gms/config.mk)
+   include vendor/potato/config/gms.mk
 endif
 
 # Branding
