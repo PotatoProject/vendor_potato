@@ -63,3 +63,6 @@ endif
 
 # Branding
 include vendor/potato/config/branding.mk
+
+# Packages
+include vendor/potato/config/packages.mk
