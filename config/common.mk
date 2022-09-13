@@ -1,5 +1,3 @@
-ALLOWED_SELINUX_VIOLATORS :=
-
 ifeq ($(PRODUCT_USES_QCOM_HARDWARE),true)
 include vendor/potato/config/ProductConfigQcom.mk
 endif
