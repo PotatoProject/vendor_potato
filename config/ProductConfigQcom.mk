@@ -143,8 +143,12 @@ endif
 ifneq ($(filter $(QSSI_SUPPORTED_PLATFORMS),$(PRODUCT_BOARD_PLATFORM)),)
     PRODUCT_SOONG_NAMESPACES += \
         vendor/qcom/opensource/commonsys/display \
-	vendor/qcom/opensource/commonsys-intf/display \
+	vendor/qcom/opensource/commonsys-intf/display
+
+ifeq ($(filter $(UM_5_10_FAMILY),$(TARGET_BOARD_PLATFORM)),)
+PRODUCT_SOONG_NAMESPACES += \
         vendor/qcom/opensource/display
+endif
 endif
 
 include vendor/potato/build/core/qcom_target.mk
