@@ -1,21 +1,4 @@
-// Target surfaceflinger disable postrender cleanup modules
-soong_config_module_type {
-    name: "disable_postrender_cleanup",
-    module_type: "cc_defaults",
-    config_namespace: "customGlobalVars",
-    bool_variables: ["disable_postrender_cleanup"],
-    properties: ["cppflags"],
-}
-disable_postrender_cleanup {
-    name: "disable_postrender_cleanup_defaults",
-    soong_config_variables: {
-        disable_postrender_cleanup: {
-            cppflags: ["-DDISABLE_POSTRENDER_CLEANUP"],
-        },
-    },
-}
-
-// additional_gralloc_10_usage_bits
+// Target platform agnostic config modules
 soong_config_module_type {
     name: "gralloc_10_usage_bits",
     module_type: "cc_defaults",
@@ -33,309 +16,6 @@ gralloc_10_usage_bits {
     },
 }
 
-// bootloader_message_offset
-//soong_config_module_type {
-//    name: "bootloader_message_offset",
-//    module_type: "cc_defaults",
-//    config_namespace: "customGlobalVars",
-//    value_variables: ["bootloader_message_offset"],
-//    properties: [
-//        "cflags",
-//        "export_cflags",
-//    ],
-//}
-
-//bootloader_message_offset {
-//    name: "bootloader_message_offset_defaults",
-//    soong_config_variables: {
-//        bootloader_message_offset: {
-//            cflags: ["-DBOARD_RECOVERY_BLDRMSG_OFFSET=%s"],
-//            export_cflags: ["-DBOARD_RECOVERY_BLDRMSG_OFFSET=%s"],
-//        },
-//    },
-//}
-
-soong_config_module_type {
-    name: "legacy_hw_disk_encryption",
-    module_type: "cc_defaults",
-    config_namespace: "customQcomVars",
-    bool_variables: ["legacy_hw_disk_encryption"],
-    properties: ["cppflags"],
-}
-
-legacy_hw_disk_encryption {
-    name: "legacy_hw_disk_encryption_defaults",
-    soong_config_variables: {
-        legacy_hw_disk_encryption: {
-            cppflags: ["-DLEGACY_HW_DISK_ENCRYPTION"],
-        },
-    },
-}
-
-// has_legacy_camera_hal1
-soong_config_module_type {
-    name: "no_cameraserver",
-    module_type: "cc_defaults",
-    config_namespace: "customGlobalVars",
-    bool_variables: ["has_legacy_camera_hal1"],
-    properties: [
-        "cppflags",
-    ],
-}
-
-no_cameraserver {
-    name: "no_cameraserver_defaults",
-    soong_config_variables: {
-        has_legacy_camera_hal1: {
-            cppflags: [
-                "-DNO_CAMERA_SERVER",
-                "-Wno-overloaded-virtual",
-            ],
-        },
-    },
-}
-
-soong_config_module_type {
-    name: "camera_in_mediaserver",
-    module_type: "cc_defaults",
-    config_namespace: "customGlobalVars",
-    bool_variables: ["has_legacy_camera_hal1"],
-    properties: [
-        "overrides",
-        "shared_libs",
-    ],
-}
-
-camera_in_mediaserver {
-    name: "camera_in_mediaserver_defaults",
-    defaults: ["no_cameraserver_defaults"],
-    soong_config_variables: {
-        has_legacy_camera_hal1: {
-            overrides: ["cameraserver"],
-            shared_libs: [
-                "android.hardware.camera.common@1.0",
-                "android.hardware.camera.device@3.4",
-                "android.hardware.camera.provider@2.6",
-                "libcameraservice",
-                "libgui",
-            ],
-        },
-    },
-}
-
-// should_wait_for_qsee
-soong_config_module_type {
-    name: "qti_cryptfshw_qsee",
-    module_type: "cc_defaults",
-    config_namespace: "customQcomVars",
-    bool_variables: ["should_wait_for_qsee"],
-    properties: ["cflags"],
-}
-
-qti_cryptfshw_qsee {
-    name: "qti_cryptfshw_qsee_defaults",
-    soong_config_variables: {
-        should_wait_for_qsee: {
-            cflags: ["-DWAIT_FOR_QSEE"],
-        },
-    },
-}
-
-// specific_camera_parameter_library
-soong_config_module_type {
-    name: "camera_parameter_library",
-    module_type: "cc_defaults",
-    config_namespace: "customGlobalVars",
-    value_variables: ["uses_camera_parameter_lib"],
-    properties: ["whole_static_libs"],
-}
-
-camera_parameter_library {
-    name: "camera_parameter_library_defaults",
-    soong_config_variables: {
-        uses_camera_parameter_lib: {
-            whole_static_libs: ["%s"],
-        },
-    },
-}
-
-soong_config_module_type {
-    name: "qti_usb_hal_supported_modes",
-    module_type: "cc_defaults",
-    config_namespace: "customQcomVars",
-    bool_variables: ["supports_audio_accessory", "supports_debug_accessory"],
-    properties: [
-        "cppflags",
-    ],
-}
-
-qti_usb_hal_supported_modes {
-    name: "qti_usb_hal_supported_modes_defaults",
-    soong_config_variables: {
-        supports_audio_accessory: {
-            cppflags: ["-DSUPPORTS_AUDIO_ACCESSORY"],
-        },
-        supports_debug_accessory: {
-            cppflags: ["-DSUPPORTS_DEBUG_ACCESSORY"],
-        },
-    },
-}
-
-// supports_extended_compress_format
-soong_config_module_type {
-    name: "extended_compress_format",
-    module_type: "cc_defaults",
-    config_namespace: "customQcomVars",
-    bool_variables: ["supports_extended_compress_format"],
-    properties: ["cflags"],
-}
-
-extended_compress_format {
-    name: "extended_compress_format_defaults",
-    soong_config_variables: {
-        supports_extended_compress_format: {
-            cflags: ["-DENABLE_EXTENDED_COMPRESS_FORMAT"],
-        },
-    },
-}
-
-// supports_hw_fde
-soong_config_module_type {
-    name: "vold_hw_fde",
-    module_type: "cc_defaults",
-    config_namespace: "customQcomVars",
-    bool_variables: ["supports_hw_fde"],
-    properties: [
-        "cflags",
-        "header_libs",
-        "shared_libs",
-    ],
-}
-
-vold_hw_fde {
-    name: "vold_hw_fde_defaults",
-    soong_config_variables: {
-        supports_hw_fde: {
-            cflags: ["-DCONFIG_HW_DISK_ENCRYPTION"],
-            header_libs: ["libcryptfs_hw_headers"],
-            shared_libs: ["libcryptfs_hw"],
-        },
-    },
-}
-
-// supports_hw_fde_perf
-soong_config_module_type {
-    name: "vold_hw_fde_perf",
-    module_type: "cc_defaults",
-    config_namespace: "customQcomVars",
-    bool_variables: ["supports_hw_fde_perf"],
-    properties: [
-        "cflags",
-        "shared_libs",
-    ],
-}
-
-vold_hw_fde_perf {
-    name: "vold_hw_fde_perf_defaults",
-    soong_config_variables: {
-        supports_hw_fde_perf: {
-            cflags: ["-DCONFIG_HW_DISK_ENCRYPT_PERF"],
-            shared_libs: ["libcryptfs_hw"],
-        },
-    },
-}
-
-// target_ignores_ftp_pptp_conntrack_failure
-soong_config_module_type {
-    name: "ignores_ftp_pptp_conntrack_failure_defaults",
-    module_type: "cc_defaults",
-    config_namespace: "customGlobalVars",
-    bool_variables: ["ignores_ftp_pptp_conntrack_failure"],
-    properties: ["cppflags"],
-}
-
-ignores_ftp_pptp_conntrack_failure_defaults {
-    name: "ignores_ftp_pptp_conntrack_failure",
-    soong_config_variables: {
-        ignores_ftp_pptp_conntrack_failure: {
-            cppflags: ["DIGNORES_FTP_PPTP_CONNTRACK_FAILURE"],
-        },
-    },
-}
-
-// target_init_vendor_lib
-soong_config_module_type {
-    name: "vendor_init",
-    module_type: "cc_defaults",
-    config_namespace: "customGlobalVars",
-    value_variables: ["target_init_vendor_lib"],
-    properties: ["whole_static_libs"],
-}
-
-vendor_init {
-    name: "vendor_init_defaults",
-    soong_config_variables: {
-        target_init_vendor_lib: {
-            whole_static_libs: ["%s"],
-        },
-    },
-}
-
-// target_needs_netd_direct_connect_rule
-soong_config_module_type {
-    name: "needs_netd_direct_connect_rule",
-    module_type: "cc_defaults",
-    config_namespace: "customGlobalVars",
-    bool_variables: ["needs_netd_direct_connect_rule"],
-    properties: ["cppflags"],
-}
-
-needs_netd_direct_connect_rule {
-    name: "needs_netd_direct_connect_rule_defaults",
-    soong_config_variables: {
-        needs_netd_direct_connect_rule: {
-            cppflags: ["-DNEEDS_NETD_DIRECT_CONNECT_RULE"],
-        },
-    },
-}
-
-// target_opt_out_safetynet_spoof
-soong_config_module_type {
-    name: "target_opt_out_safetynet_spoof",
-    module_type: "cc_defaults",
-    config_namespace: "customGlobalVars",
-    bool_variables: ["target_opt_out_safetynet_spoof"],
-    properties: ["cppflags"],
-}
-
-target_opt_out_safetynet_spoof {
-    name: "target_opt_out_safetynet_spoof_defaults",
-    soong_config_variables: {
-        target_opt_out_safetynet_spoof: {
-            cppflags: ["-DTARGET_OPT_OUT_SAFETYNET_SPOOF"],
-        },
-    },
-}
-
-// target_process_sdk_version_override
-soong_config_module_type {
-    name: "target_process_sdk_version_overrides",
-    module_type: "cc_defaults",
-    config_namespace: "customGlobalVars",
-    value_variables: ["target_process_sdk_version_override"],
-    properties: ["cppflags"],
-}
-
-target_process_sdk_version_overrides {
-    name: "process_sdk_version_overrides_defaults",
-    soong_config_variables: {
-        target_process_sdk_version_override: {
-            cppflags: ["-DSDK_VERSION_OVERRIDES=\"%s\""],
-        },
-    },
-}
-
-// target_shim_libs
 soong_config_module_type {
     name: "target_shim_libs",
     module_type: "cc_defaults",
@@ -353,8 +33,23 @@ target_shim_libs {
     },
 }
 
+soong_config_module_type {
+    name: "vendor_init",
+    module_type: "cc_defaults",
+    config_namespace: "customGlobalVars",
+    value_variables: ["target_init_vendor_lib"],
+    properties: ["whole_static_libs"],
+}
 
-// target_surfaceflinger_udfps_lib
+vendor_init {
+    name: "vendor_init_defaults",
+    soong_config_variables: {
+        target_init_vendor_lib: {
+            whole_static_libs: ["%s"],
+        },
+    },
+}
+
 soong_config_module_type {
     name: "surfaceflinger_udfps_lib",
     module_type: "cc_defaults",
@@ -376,28 +71,7 @@ surfaceflinger_udfps_lib {
     },
 }
 
-soong_config_module_type {
-    name: "surfaceflinger_qcom_extensions",
-    module_type: "cc_defaults",
-    config_namespace: "customQcomVars",
-    value_variables: ["qcom_display_headers_namespace"],
-    properties: [
-        "cppflags",
-        "header_libs",
-    ],
-}
-
-surfaceflinger_qcom_extensions {
-    name: "surfaceflinger_qcom_ext_defaults",
-    soong_config_variables: {
-        qcom_display_headers_namespace: {
-            cppflags: ["-DQCOM_UM_FAMILY"],
-            header_libs: ["//%s:display_intf_headers"],
-        },
-    },
-}
-
-// uses_pre_uplink_features_netmgrd
+// QCOM specific config modules
 soong_config_module_type {
     name: "librmnetctl_pre_uplink",
     module_type: "cc_defaults",
@@ -415,59 +89,40 @@ librmnetctl_pre_uplink {
     },
 }
 
-// uses_qcom_bsp_legacy
 soong_config_module_type {
-    name: "stagefright_qcom_legacy",
+    name: "extended_compress_format",
     module_type: "cc_defaults",
     config_namespace: "customQcomVars",
-    bool_variables: ["uses_qcom_bsp_legacy"],
-    properties: ["cppflags"],
+    bool_variables: ["supports_extended_compress_format"],
+    properties: ["cflags"],
 }
 
-stagefright_qcom_legacy {
-    name: "stagefright_qcom_legacy_defaults",
+extended_compress_format {
+    name: "extended_compress_format_defaults",
     soong_config_variables: {
-        uses_qcom_bsp_legacy: {
-            cppflags: ["-DQCOM_BSP_LEGACY"],
+        supports_extended_compress_format: {
+            cflags: ["-DENABLE_EXTENDED_COMPRESS_FORMAT"],
         },
     },
 }
 
-// uses_qti_camera_device
 soong_config_module_type {
-    name: "qti_camera_device",
+    name: "surfaceflinger_qcom_extensions",
     module_type: "cc_defaults",
     config_namespace: "customQcomVars",
-    bool_variables: ["uses_qti_camera_device"],
+    value_variables: ["qcom_display_headers_namespace"],
     properties: [
         "cppflags",
-        "shared_libs",
+        "header_libs",
     ],
 }
 
-qti_camera_device {
-    name: "qti_camera_device_defaults",
+surfaceflinger_qcom_extensions {
+    name: "surfaceflinger_qcom_ext_defaults",
     soong_config_variables: {
-        uses_qti_camera_device: {
-            cppflags: ["-DQTI_CAMERA_DEVICE"],
-            shared_libs: ["vendor.qti.hardware.camera.device@1.0"],
-        },
-    },
-}
-
-soong_config_module_type {
-    name: "inputdispatcher_skip_event_key",
-    module_type: "cc_defaults",
-    config_namespace: "customGlobalVars",
-    value_variables: ["target_inputdispatcher_skip_event_key"],
-    properties: ["cppflags"],
-}
-
-inputdispatcher_skip_event_key {
-    name: "inputdispatcher_skip_event_key_defaults",
-    soong_config_variables: {
-        target_inputdispatcher_skip_event_key: {
-            cppflags: ["-DINPUTDISPATCHER_SKIP_EVENT_KEY=%s"],
+        qcom_display_headers_namespace: {
+            cppflags: ["-DQCOM_UM_FAMILY"],
+            header_libs: ["//%s:display_intf_headers"],
         },
     },
 }

@@ -1,5 +1,5 @@
 {
-        "dish": "g-staging",
+        "dish": "gnocchi-release",
         "platform": "13",
-        "vernum": "6.0.0+staging1"
+        "vernum": "6.0.0+1"
 }
