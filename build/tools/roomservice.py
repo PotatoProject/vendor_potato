@@ -1,4 +1,4 @@
-#!/usr/bin/env python2.7
+#!/usr/bin/env python3
 # Copyright (C) 2012-2013, The CyanogenMod Project
 # Copyright (C) 2012-2015, SlimRoms Project
 # Copyright (C) 2016-2017, AOSiP
@@ -45,7 +45,7 @@ DEBUG = False
 default_manifest = ".repo/manifest.xml"
 
 custom_local_manifest = ".repo/local_manifests/potato_manifest.xml"
-custom_default_revision = "frico_mr1-release"
+custom_default_revision = "gnocchi-release"
 custom_dependencies = "potato.dependencies"
 org_manifest = "devices"  # leave empty if org is provided in manifest
 org_display = "PotatoDevices"  # needed for displaying
