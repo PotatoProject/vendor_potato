@@ -29,6 +29,7 @@ $(foreach v,$(EXPORT_TO_SOONG),$(eval $(call addVar,$(v))))
 SOONG_CONFIG_NAMESPACES += customGlobalVars
 SOONG_CONFIG_customGlobalVars += \
     additional_gralloc_10_usage_bits \
+    gralloc_handle_has_reserved_size \
     target_init_vendor_lib \
     target_ld_shim_libs \
     target_surfaceflinger_udfps_lib
@@ -44,8 +45,12 @@ SOONG_CONFIG_customQcomVars += \
     qcom_display_headers_namespace
 endif
 
+# Soong bool variables
+SOONG_CONFIG_customGlobalVars_gralloc_handle_has_reserved_size := $(TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE)
+
 # Set default values
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS ?= 0
+TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE ?= false
 TARGET_INIT_VENDOR_LIB ?= vendor_init
 TARGET_SURFACEFLINGER_UDFPS_LIB ?= surfaceflinger_udfps_lib
 
