@@ -1,34 +1,14 @@
 {
-  "alioth": {
-    "repo": "https://github.com/PotatoDevices/device_xiaomi_alioth",
-    "gms": true
-  },
-  "begonia": {
-    "repo": "https://github.com/PotatoDevices/device_redmi_begonia",
-    "gms": true
-  },
-  "davinci": {
-    "repo": "https://github.com/PotatoDevices/device_xiaomi_davinci",
-    "gms": true
-  },
-  "DRG_sprout": {
-    "repo": "https://github.com/PotatoDevices/device_nokia_DRG_sprout",
-    "gms": false
-  },
-  "lavender": {
-    "repo": "https://github.com/PotatoDevices/device_xiaomi_lavender",
-    "gms": true
-  },
-  "miatoll": {
-    "repo": "https://github.com/PotatoDevices/device_xiaomi_miatoll",
+  "beryllium": {
+    "repo": "https://github.com/PotatoDevices/device_xiaomi_beryllium",
     "gms": true
   },
   "sargo": {
     "repo": "https://github.com/PotatoDevices/device_google_sargo",
     "gms": true
   },
-  "surya": {
-    "repo": "https://github.com/PotatoDevices/device_xiaomi_surya",
+  "spacewar": {
+    "repo": "https://github.com/PotatoDevices/device_nothing_spacewar",
     "gms": true
   }
 }
