@@ -100,16 +100,8 @@ PRODUCT_ENFORCE_RRO_TARGETS += framework-res
 # Pixel sounds
 include vendor/potato/config/sounds.mk
 
-# Pixel vendor
-include vendor/google/pixel/config.mk
-
 # Packages
 include vendor/potato/config/packages.mk
-
-# GMS
-ifeq ($(WITH_GMS), true)
-    $(call inherit-product, vendor/google/gms/config.mk)
-endif
 
 # Branding
 include vendor/potato/config/branding.mk
