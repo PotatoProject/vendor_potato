@@ -48,7 +48,7 @@
     <bool name="config_enableAutoPowerModes">true</bool>
 
     <!-- Disable stock OTA components if installed -->
-    <string-array name="config_disabledComponents" translatable="false">
+    <string-array name="config_globallyDisabledComponents" translatable="false">
         <item>com.google.android.gms/com.google.android.gms.update.OtaSuggestionSummaryProvider</item>
         <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateActivity</item>
         <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateGcmTaskService</item>
