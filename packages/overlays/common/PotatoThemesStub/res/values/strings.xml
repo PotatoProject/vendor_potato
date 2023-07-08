@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App Name  -->
+    <string name="app_name">Teracube Themes</string>
+
+    <!-- Color section -->
+    <string name="bundle1_color_name">Carbon</string>
+    <string name="bundle2_color_name">Paper</string>
+    <string name="bundle3_color_name">Sun</string>
+    <string name="default_color_name">Classic</string>
+    <string name="bundle_name_bundle1">@string/bundle1_color_name</string>
+    <string name="bundle_name_bundle2">@string/bundle2_color_name</string>
+    <string name="bundle_name_bundle3">@string/bundle3_color_name</string>
+    <string name="bundle_name_default">@string/default_color_name</string>
+</resources>

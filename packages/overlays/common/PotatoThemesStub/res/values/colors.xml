@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Color section -->
+    <color name="color_primary_bundle1">#0a8758</color>
+    <color name="color_primary_bundle2">#746bc1</color>
+    <color name="color_primary_bundle3">#a66800</color>
+    <color name="color_primary_default">#ffffff</color>
+    <color name="color_secondary_bundle1">#0a8758</color>
+    <color name="color_secondary_bundle2">#746bc1</color>
+    <color name="color_secondary_bundle3">#a66800</color>
+    <color name="color_secondary_default">#1a73e8</color>
+</resources>

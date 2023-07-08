@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="themes" />
+
+    <!-- Color section -->
+    <array name="color_bundles">
+        <item>default</item>
+        <item>bundle1</item>
+        <item>bundle2</item>
+        <item>bundle3</item>
+    </array>
+</resources>

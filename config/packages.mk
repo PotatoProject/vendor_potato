@@ -20,6 +20,10 @@ PRODUCT_PACKAGES += \
     HideCutout \
     StatusBarStock
 
+# ThemesStub
+PRODUCT_PACKAGES += \
+    PotatoThemesStub
+
 # Navigation overlays
 PRODUCT_PACKAGES += \
     NavigationBarNoHint \
