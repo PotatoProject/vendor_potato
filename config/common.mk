@@ -32,7 +32,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.debug.wfd.enable=1 \
     persist.sys.wfd.virtual=0 \
     ro.build.selinux=1 \
-    persist.sys.disable_rescue=true \
     ro.opa.eligible_device=true \
     ro.setupwizard.rotation_locked=true
 
@@ -65,10 +64,6 @@ PRODUCT_COPY_FILES += \
 ifeq ($(TARGET_USE_LATEST_CLANG),true)
     TARGET_KERNEL_CLANG_VERSION := $(shell grep -v based prebuilts/clang/host/$(HOST_OS)-x86/*/AndroidVersion.txt | sort | tail -n 1 | cut -d : -f 2)
 endif
-
-# Disable Rescue Party
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.disable_rescue=true
 
 # Enable one-handed mode
 PRODUCT_PRODUCT_PROPERTIES += \
