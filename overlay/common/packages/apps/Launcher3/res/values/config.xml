@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default packages -->
+    <string name="wallpaper_picker_package" translatable="false">com.android.wallpaper</string>
+</resources>
