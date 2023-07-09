@@ -84,3 +84,6 @@ include vendor/potato/config/packages.mk
 
 # Branding
 include vendor/potato/config/branding.mk
+
+# GMS
+include vendor/potato/config/partner_gms.mk
